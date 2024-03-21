@@ -1,0 +1,71 @@
+/* 
+    Created on : Feb 18, 2019, 5:31:59 PM
+    Author     : Helal
+*/
+.form-group {
+    margin-bottom: 0px!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 22px;
+}
+#userComboLevel{
+    font-size: 16px;
+    font-weight: bold;
+}
+.none{
+    display: none;
+}
+#viewUserDetails{
+    font-size: 18px;
+    margin-right: 30px!important;
+}
+.form-control {
+    display: inline!important;
+}
+[class*="col"] { margin-bottom: 10px; }
+.small-box {
+    margin-bottom: 3px!important;
+}
+#details{
+    display: none;
+}
+#typeTitle{
+    text-align: center;
+}
+.label{
+    border-radius: 10px;
+}
+div.dt-button-collection {
+    width: 94px!important;
+}
+.dt-print-preview{ font-size: 11px !important; }
+.dt-title{ font-size: 16px!important; }
+.dt-title p { font-size: 13px!important;  margin-top: 7px}
+@media print {
+    table{ font-size: 11px !important; border-collapse: collapse !important; border: 0}
+    table th, table td { border: 1px solid #333}
+    .dt-title{ font-size: 16px!important; }
+    .dt-title p { font-size: 13px!important;  margin-top: 7px}
+    .full-screen, .modal-header, .main-footer{
+        display: none;
+    }
+    .mis1-view{
+        display: none!important;
+    }
+    html, body {
+        border: 1px solid white;
+        height: 99%;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+}
+.modal-body div.dt-buttons {
+    float: right;
+    margin-bottom: 5px;
+}
+.slno{
+    width: 10px;
+}
+.type{
+    width: 80px;
+}

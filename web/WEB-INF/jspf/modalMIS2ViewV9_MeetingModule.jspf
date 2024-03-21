@@ -1,0 +1,252 @@
+<%@ page pageEncoding="UTF-8" %>
+<script>
+            var mis2 = {
+            pageLength: {
+                1: 38,
+                2: 44,
+                3: 35,
+                4: 26,
+                5: 31,
+                6: 32,
+                7: 32,
+                8: 28,
+                9: 37,
+                10: 28
+            },
+            page: {
+                1: "#mis2Page1",
+                2: "#mis2Page2",
+                3: "#mis2Page3",
+                4: "#mis2Page4",
+                5: "#mis2Page5",
+                6: "#mis2Page6",
+                7: "#mis2Page7",
+                8: "#mis2Page8",
+                9: "#mis2Page9",
+                10: "#mis2Page10"
+            },
+            stockvacuum: {
+                1: 'ক',
+                2: 'খ',
+                3: 'গ',
+                4: 'ঘ'
+            },
+            init: function () {
+                mis2.loadBlnakPage();
+                mis2.setArea("..........................", "..........................", "..........................", "..........................");
+            },
+            renderRow: function (length, text, unit, haveName) {
+                var row = "<td>" + $.getUnitName(unit, 1) + "</td>\n";
+                if (haveName != "")
+                    row += "<td colspan='10'>" + haveName + "</td>\n";
+                for (var j = 1; j < length; j++) {
+                    row += "<td>" + text + "</td>\n";
+                    text = "&nbsp;";
+                }
+                return row;
+            },
+            renderFPIRow: function (length, text, unit, index, fpiIndex) {
+
+                var row = "<td>" + $.getUnitName(unit, 1) + "</td>\n";
+                length -= 1;
+
+                for (var j = 0; j < length; j++) {
+                    if ((j == 28 || j == 29) && index == 0) {
+
+                        if (j == 28)
+                            row += "<td rowspan='10'>" + finiteFilter(fpiData.fortnightly_meeting_fpi) + "</td>\n";
+                        if (j == 29)
+                            row += "<td rowspan='10'>" + finiteFilter(fpiData.union_fp_committee_fpi) + "</td>\n";
+                    } else if ((j == 28 || j == 29) && index != 0) {
+                        row += "\n";
+                    } else {
+                        if (j == 22)
+                            row += "<td>" + finiteFilter(fpiData.nsv_inspired_fpi) + "</td>\n";
+                        else if (j == 23)
+                            row += "<td>" + finiteFilter(fpiData.av_van_display_fpi) + "</td>\n";
+                        else if (j == 24)
+                            row += "<td>" + finiteFilter(fpiData.elco_day_count_fpi) + "</td>\n";
+                        else if (j == 25)
+                            row += "<td>" + finiteFilter(fpiData.no_of_elco_count_fpi) + "</td>\n";
+                        else if (j == 26)
+                            row += "<td>" + finiteFilter(fpiData.fwa_register_fpi) + "</td>\n";
+                        else if (j == 27)
+                            row += "<td>" + finiteFilter(fpiData.yard_meeting_fpi) + "</td>\n";
+                        else if (j == 30)
+                            row += "<td>" + finiteFilter(fpiData.satellite_clinic_presence_fpi) + "</td>\n";
+                        else
+                            row += "<td>" + text + "</td>\n";
+                    }
+                    text = "&nbsp;";
+                }
+                return row;
+
+
+            },
+            loadBlnakPage: function () {
+                for (var i = 1; i < 11; i++) {
+                    i == 8 ? mis2.loadRow("mis2Page" + i, mis2.pageLength[i], true) : mis2.loadRow("mis2Page" + i, mis2.pageLength[i], false);
+                }
+            },
+            loadRow: function (pg, length, isLMIS) {
+                page = $('#' + pg);
+                page.html("");
+                for (var i = 0; i < 10; i++) {
+                    if (isLMIS)
+                        page.append("<tr>\n" + mis2.getLMISRow(length, i == 9 ? '<span class="r-v">সর্বমোট</span>' : '&nbsp;') + "</tr>");
+                    else if (pg == "mis2Page6")
+                        page.append("<tr>\n" + mis2.getFPIRow(i, length, i == 9 ? '<span class="r-v">সর্বমোট</span>' : '&nbsp;') + "</tr>");
+                    else
+                        page.append("<tr>\n" + mis2.getRow(length, i == 9 ? '<span class="r-v">সর্বমোট</span>' : '&nbsp;') + "</tr>");
+                }
+            },
+            getRow: function (length, text) {
+                var row = "";
+                for (var j = 0; j < length; j++) {
+                    row += "<td>" + text + "</td>\n";
+                    text = "&nbsp;";
+                }
+                return row;
+            },
+            getLMISRow: function (length, text) {
+                var row = "";
+                for (var j = 0; j < length; j++) {
+                    if (j == 1)
+                        row += "<td colspan='10'>" + text + "</td>\n";
+
+                    row += "<td>" + text + "</td>\n";
+                    text = "&nbsp;";
+                }
+                return row;
+            },
+            getFPIRow: function (index, length, text) {
+                var row = "";
+                for (var j = 0; j < length; j++) {
+                    if ((j == 29 || j == 30) && index == 0)
+                        row += "<td rowspan='10'>" + text + "</td>\n";
+                    else if ((j == 29 || j == 30) && index != 0)
+                        row += "\n";
+                    else
+                        row += "<td>" + text + "</td>\n";
+                    text = "&nbsp;";
+                }
+                return row;
+            },
+            cleanMIS2: function () {
+                for (var i = 1; i < 11; i++) {
+                    $('#mis2Page' + i).html("");
+                }
+            },
+            setArea: function (monthyear, unionValue, upazilaValue, districtValue) {
+                $('#monthyear').html(" <b>" + monthyear + "</b>");
+                $('#unionValue').html(" <b>" + unionValue + "</b>");
+                $('#upazilaValue').html(" <b>" + upazilaValue + "</b>");
+                $('#districtValue').html(" <b>" + districtValue + "</b>");
+            }
+        };
+        
+</script>
+<div id="modal-report-view" class="modal fade" role="dialog">
+    <div class="modal-dialog report-view">
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <button type="button" class="btn btn-flat btn-default btn-xs bold print" id="printTableBtn"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print / PDF</button>
+                <h4 class="modal-title"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; <span id="reportViewTitle"></span></b><span id="provider-info"></span></h4>
+            </div>
+            <div class="modal-body" id="report">
+                <div class="box-body mis-template" id="data-table">
+                    <%@include file="/WEB-INF/jspf/mis2-9-template-view.jspf" %>
+                    <%--<%@include file="/WEB-INF/jspf/mis2-8-template-view.jspf" %>--%>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #slogan{
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 2px;
+        margin-top: 45px;
+        word-wrap: break-word;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-left: 5px;
+        width:50px;
+        height:50px;
+    }
+    #name{
+        font-size: 11px;
+    }
+    .serial-color{
+        background-color: #e8ebf2;
+    }
+    .not-submitted{
+        background-color: #ffeded;
+    }
+    .mis_table th, .mis_table td{ 
+        border: 1px solid #000;
+        padding: 5px;
+    }
+
+    .tableTitle{
+        font-family: SolaimanLipi;
+        display: none;
+    }
+    .mis2 table{
+        font-family: SolaimanLipi;
+        font-size: 13px;
+    }
+    .mis2 table th, .mis2 table td{
+        padding: 3px!important;
+        padding-left: 5px!important;
+        text-align: center;
+    }
+    .print{
+        float: right;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+</style>
+<script>
+    $(function () {
+        $('#printTableBtn').click(function () {
+            $('.mis2').each(function () {
+                $(this).css({
+                    "page-break-after": "always"
+                });
+            });
+            // window.print();
+            var contents = $("#printContent").html();
+            var frame1 = $('<iframe />');
+            frame1[0].name = "frame1";
+            frame1.css({"position": "absolute", "top": "-1000000px"});
+            $("body").append(frame1);
+            var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+            frameDoc.document.open();
+            frameDoc.document.write('<html><head><title>eMIS Initiative</title>');
+            frameDoc.document.write('</head><body>');
+            frameDoc.document.write('<style>.r-v {white-space: nowrap;writing-mode: vertical-rl;transform: rotate(180deg);vertical-align: bottom!important;}   #logo{margin-top: 10px;margin-left: 5px;width:65px;height:65px;}</style>');
+            frameDoc.document.write('<style>table, th{font-weight:normal} , td{} .tg  {border-collapse:collapse;border-spacing:0;} #topheader{border: none; margin-bottom:10px;}</style>');
+            frameDoc.document.write('<style>.tg td{font-family: SolaimanLipi;font-size:12px;padding:7px 9px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}</style>');
+            frameDoc.document.write('<style>.tf td{font-family: SolaimanLipi;font-size:12px;padding:0px!important;padding-right: 26px!important;border-width:0px;overflow:hidden;}</style>');
+            frameDoc.document.write('<style>table, th, td{border:1px solid black; border-collapse: collapse;text-align: center;vertical-align: bottom!important} .head{ font-weight:normal!important;text-align:center}</style>');
+            frameDoc.document.write('<style>#slogan{text-align:center;border: 1px solid #000!important;width: 180px;text-align: center;padding: 2px;}</style>');
+            frameDoc.document.write('<style>.lmis-title{ text-align:center!important;} .lmis-title-table{margin: auto!important;width: 60%!important;padding: 20px!important;} .car-table{float: right!important;}</style>');
+            frameDoc.document.write(contents);
+            frameDoc.document.write('</body></html>');
+            frameDoc.document.close();
+            setTimeout(function () {
+                window.frames["frame1"].focus();
+                window.frames["frame1"].print();
+                frame1.remove();
+            }, 500);
+        });
+    })
+</script>

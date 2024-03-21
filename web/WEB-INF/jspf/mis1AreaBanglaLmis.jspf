@@ -1,0 +1,167 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="resources/css/newStyle.css" rel="stylesheet" type="text/css"/>
+<style>
+    .dateRange{
+        display: none;
+    }
+    #submitDataButton{
+        display: none;
+    }
+</style>
+<script>
+    $(function () {
+        $('.datePicker').datepicker({
+            format: 'dd/mm/yyyy',
+            todayBtn: "linked",
+            clearBtn: false,
+            autoclose: false
+        }).datepicker('setStartDate', $.app.date().firstDate).datepicker('setEndDate', $.app.date().date).on('changeDate', function(e){
+            $(this).datepicker('hide');
+        });
+        
+//        $("#eDate").datepicker("setDate", new Date());
+//        $('#sDate').datepicker("setDate", new Date());
+        $('#sDate').val($.app.date().firstDate);
+        $('#eDate').val($.app.date().date);
+        
+         //$('.datePicker').datepicker("setDate", new Date());
+        //.datepicker('setStartDate', $.app.date().firstDate).datepicker('setEndDate', $.app.date().lastDate).datepicker("setDate", new Date());
+        
+        var $month = $("#month"), $type = $('.dateWiseLevel'), $range = $('.dateRange');
+        $month.change(function () {
+            if ($month.val() == $.app.date().month) {
+                $type.fadeIn(300);
+            } else {
+                $type.fadeOut(300);
+                $range.fadeOut(300);
+                $('.monthWise').prop('checked', true);
+            }
+        });
+        $('input[type=radio][name=reportType]').change(function () {
+            if (this.value == 'monthWise') {
+                $range.fadeOut(400);
+            } else if (this.value == 'dateWise') {
+                $range.fadeIn(400);
+            }
+        });
+    });
+</script>
+<div class="row" id="areaPanel">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <input type="hidden" value="${userLevel}" id="userLevel">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="division">বিভাগ</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="division" id="division"> 
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="district">জেলা</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="district" id="district"> 
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+                    <span id="break1"></span>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="upazila">উপজেলা</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="upazila" id="upazila">
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="union">ইউনিয়ন</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="union" id="union">
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row secondRow">
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="unit">ইউনিট</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="unit" id="unit">
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="provCode">প্রোভাইডার</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="provCode" id="provCode">
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+                    <span id="break2"></span>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="year">বছর</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="year" id="year"> </select>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="month">মাস</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="month" id="month">
+                            <option value="01">জানুয়ারি</option>
+                            <option value="02">ফেব্রুয়ারি</option>
+                            <option value="03">মার্চ</option>
+                            <option value="04">এপ্রিল</option>
+                            <option value="05">মে</option>
+                            <option value="06">জুন</option>
+                            <option value="07">জুলাই</option>
+                            <option value="08">আগষ্ট</option>
+                            <option value="09">সেপ্টেম্বর</option>
+                            <option value="10">অক্টোবর</option>
+                            <option value="11">নভেম্বর</option>
+                            <option value="12">ডিসেম্বর</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+<!--                    <div class="col-md-1 col-xs-2">
+                        <label for="reportType">রিপোর্টের ধরণ</label>
+                    </div>-->
+<!--                    <div class="col-md-2 col-xs-4">
+                        <label class="monthWiseLevel"><input type="radio" class="monthWise" id="reportType" name="reportType" value="monthWise" checked=""> মাস ভিত্তিক</label>&nbsp;
+                        <label class="dateWiseLevel"><input type="radio" class="dateWise" id="reportType" name="reportType" value="dateWise"> তারিখ ভিত্তিক</label>
+                    </div>-->
+
+<!--                    <div class="col-md-1 col-xs-2 dateRange"></div>
+                    <div class="col-md-2 col-xs-4 form-inline dateRange">
+                        <input type="text" class="input form-control input-sm datePicker" placeholder="dd/mm/yyyy" name="sDate" id="sDate" readonly="readonly" style="background-color: rgb(255, 255, 255);">
+                        <label style="margin-top: 3px;margin-bottom: 2px;">হতে</label>
+                        <input type="text" class="input form-control input-sm datePicker" placeholder="dd/mm/yyyy" name="eDate" id="eDate" readonly="readonly" style="background-color: rgb(255, 255, 255);">
+                    </div>-->
+
+                    <div class="col-md-1 col-xs-2">
+                    </div>
+                    <div class="col-md-2 col-xs-4 pull-right">
+                        <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                            <b><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp; ডাটা দেখুন</b>
+                        </button>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+/* 
+    Created on : Apr 25, 2018, 1:03:09 PM
+    Author     : Helal | m.helal.k@gmail.com
+*/
+.table-responsive{
+    margin-top: -10px!important;
+    margin-bottom: -10px;
+}
+
+.tableTitle{
+    font-family: SolaimanLipi;
+    display: none;
+}
+table{
+    font-family: SolaimanLipi;
+    font-size: 12px;
+}
+
+#name{
+    font-size: 11px;
+}
+@media print {
+    .tableTitle{
+        display: block;
+        margin-top: 0px!important;
+    }
+    .table-data{
+        margin-top: -6px!important;
+    }
+    .box{ border: 0}
+    #areaPanel, #back-to-top, .box-header, .main-footer{
+        display: none !important;
+    }
+}
+table th, table td{
+      padding: 2px!important;
+      padding-left: 5px!important;
+  }
+  
+/*    tfoot th, tfoot td{ 
+        border:  none !important;
+    }*/

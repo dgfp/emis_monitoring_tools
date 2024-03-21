@@ -1,0 +1,168 @@
+<style>
+    .box-body {
+        padding: 10px 10px 0px 10px!important;
+    }
+    [class*="col"] { margin-bottom: 10px; }
+</style>    
+<!------------------------------Load Area----------------------------------->
+<div class="row" id="areaDropDownPanel">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <!--            <div class="box-header with-border">
+                            <div class="box-tools pull-right" style="margin-top: -10px;">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>-->
+
+
+            <div class="box-body">
+                <input type="hidden" value="${userLevel}" id="userLevel">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="district">Division</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="division" id="division"> </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="district">District</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="district" id="district">
+                            <option value="">- Select District -</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="upazila">Upazila</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="upazila" id="upazila" >
+                            <option value="">- Select Upazila -</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="union">Union</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="union" id="union" >
+                            <option value="">- Select Union -</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="ward">Ward</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="ward" id="ward" >
+                            <option value="">- Select ward -</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="village">Village</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="village" id="village" >
+                            <option value="">- Select village -</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="one" id="">From</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="startDate" id="startDate" />
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="one" id="">To</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="endDate" id="endDate" />
+                    </div>
+                </div>
+                <!--                <div class="row">
+                                    <div class="col-md-1 col-xs-2 col-md-offset-6">
+                                        <label for="reportType">Type</label>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6" id="">
+                                        <span><input class="providerWise input-combo" type="radio"  id="reportType-1" name="reportType" value="aggregate" checked="checked">  <label for="reportType-1">Aggregate</label> </span>
+                                        <span><input class="overal input-combo" type="radio"  id="reportType-2" name="reportType" value="individual"> <label for="reportType-2">Individual</label></span>
+                                    </div>
+                                    <div class="col-md-2 col-xs-4">
+                                        <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                                        </button>
+                                    </div>
+                                </div>-->
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="reportType">Report Type</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4" id="radioDiv">
+                        <label><input type="radio" class="providerWise" id="reportType" name="reportType" value="aggregate" checked> Aggregate</label>
+                        <label><input type="radio" class="overall" id="reportType" name="reportType" value="individual"> Individual</label>
+                        <!--                            <span><input class="providerWise" type="radio"  id="reportType" name="reportType" value="aggregate" checked="checked"> Aggregate </span><br>
+                                                    <span><input class="overall" type="radio"  id="reportType" name="reportType" value="individual"> Individual</span>-->
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Transparent Text For Blank Space-->
+<section class="content-header" id="transparentTextForBlank" style="display: block;">
+    <center class="emis_hologram">eMIS</center>
+</section>
+<!--Community Data Table-->
+<div class="box box-primary"  id="tableView">
+    <div class="box-header with-border" style="margin-top: -8px;margin-bottom: -5px!important;">
+        <h3 class="box-title"><b><span id="prsTypeTitleForTable"></span></b></h3>
+        <div class="box-tools pull-right" style="margin-top: 0px;">
+            <button id="printTableBtn" type="button" class="btn btn-box-tool"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print / PDF</button>
+            <a href="#" id ="exportCSV" role='button' class="btn btn-box-tool"><i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp;CSV</a>
+            <a href="#" id ="exportText" role='button' class="btn btn-box-tool"><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;Text</a>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+
+    <div class="box-body">
+        <div class="table-responsive fixed" >
+            <table id="data-table" class="table table-bordered table-striped table-hover">
+                <thead id="tableHeader" class="data-table">
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                <tfoot id="tableFooter">
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!--For Print -->
+    <div class="box-body"  id="printTable">
+        <div id="dvData">
+            <table class="table table-bordered table-striped table-hover" align="center">
+                <thead id="tableHeaderP">
+                </thead>
+                <tbody id="tableBodyP">
+                </tbody>
+                <tfoot id="tableFooterP">
+                </tfoot>
+            </table>
+        </div>
+    </div>              
+</div>

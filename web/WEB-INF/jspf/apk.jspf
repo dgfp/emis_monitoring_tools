@@ -1,0 +1,147 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="resources/fileupload/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<!--<script src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>-->
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<!--<script src="resources/fileupload/js/jquery.iframe-transport.js"></script>-->
+<!-- The basic File Upload plugin -->
+<script src="resources/fileupload/js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="resources/fileupload/js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="resources/fileupload/js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="resources/fileupload/js/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="resources/fileupload/js/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="resources/fileupload/js/jquery.fileupload-validate.js"></script>
+
+
+<script>
+    /*jslint unparam: true, regexp: true */
+    /*global window, $ */
+    $(function () {
+        var $apkType = $.app.select.$apkType("#appType"),
+                $zilla = $.app.select.$zilla('select#district', '%'),
+                $upazila = $('select#upazila'),
+                $union = $('select#union');
+        $zilla.change(function (e) {
+            $upazila.Select();
+            $union.Select();
+            $zilla.val() && $.app.select.$upazila($upazila, $zilla.val());
+        });
+        $upazila.change(function (e) {
+            $union.Select();
+            $zilla.val() && $upazila.val() && $.app.select.$union($union, $zilla.val(), $upazila.val());
+        });
+
+        var $systemupdatedt = $('#systemupdatedt').datepicker({
+            format: 'ddmmyyyy',
+            todayBtn: "linked",
+            clearBtn: true,
+            autoclose: true,
+            defaultDate: new Date()
+        });
+
+
+
+        var options = {
+            data: [],
+            bDestroy: true,
+            searching: false,
+            paging: false,
+            ajax: {
+                url: 'apkJsonProvider',
+                dataSrc: ''
+            },
+            columns: [
+                {
+                    orderable: false,
+                    searchable: false,
+                    data: function (d) {
+                        var a = $('<a/>', {html: '<i class="fa fa-download"></i>', 'class': 'btn btn-success btn-flat btn-sx', href: 'apk-download?id=' + d.id}).prop('outerHTML');
+                        return a;
+                    },
+                    defaultContent: '!',
+                    className: "text-nowrap"
+                },
+                {data: function (d) {
+                        return d.typename
+                    }, defaultContent: '-'},
+                {data: 'id', defaultContent: '-'},
+                {data: 'version', defaultContent: '-'},
+                {data: 'filesize', defaultContent: '-'},
+                {data: function (d) {
+                        return d.releasedate.toString().replace(/(.*)\:.*/, '$1');
+                    }, defaultContent: '-'}
+            ]
+        };
+
+        var table = $('#data-table').DataTable(options);
+
+        var progressBar = function (progress) {
+            $('.progress .progress-bar').css('width', progress + '%');
+        };
+
+        $('#fileupload')
+                .on('change', '[name=version]', function () {
+                    this.value = $.app.getVersion(this.value);
+                })
+                .fileupload({
+                    //forceIframeTransport: true,
+                    dataType: 'json',
+                    submit: function (e, data) {
+                        var form = this,
+                                $form = $(form),
+                                $inputs = $form.find(':input').parent().removeClass('has-error').end();
+
+                        var Filter = {
+                            inputDom: '[required]:not(:file)',
+                            inputVal: function (i, o) {
+                                var name = $(o).attr('name'), value = $(o).val();
+                                var valid = name == 'version' ? $.app.hasVersion(value) : value;
+                                return !valid;
+                            },
+                            valid: function () {
+                                return !$inputs.filter(Filter.inputDom).filter(Filter.inputVal).first().parent().addClass('has-error').length;
+                            },
+                            submit: function (data) {
+                                var formData = $inputs.serializeArray();
+                                data.formData = $.merge(formData, [{name: 'id', value: $.now()}, {name: 'typename', value: $apkType.find(":selected").text()}]);
+                                $form.fileupload('send', data);
+                                form.reset();
+                            }
+                        };
+
+                        if (Filter.valid()) {
+                            Filter.submit(data);
+                        }
+
+                        return false;
+                    },
+                    done: function (e, data) {
+                        console.log('done', data.result);
+                        progressBar(0);
+                        //dataTable();
+                        table && table.ajax.reload(null, false);
+                    },
+                    fail: function (e, data) {
+                        console.log('fail', data.result);
+                        progressBar(0);
+                        dataTable();
+                    },
+                    progressall: function (e, data) {
+                        var progress = parseInt(data.loaded / data.total * 100, 10);
+                        progressBar(progress);
+                    }
+                });
+
+
+
+    });
+</script>

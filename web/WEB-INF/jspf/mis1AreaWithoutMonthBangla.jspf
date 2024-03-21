@@ -1,0 +1,87 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="row" id="areaPanel">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <input type="hidden" value="${userLevel}" id="userLevel">
+          <div class="box-body">
+            <div class="row">
+                <div class="col-md-1 col-xs-2">
+                    <label for="division">বিভাগ</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="division" id="division"> 
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                <div class="col-md-1 col-xs-2">
+                    <label for="district">জেলা</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="district" id="district"> 
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                <span id="break1"></span>
+                <div class="col-md-1 col-xs-2">
+                    <label for="upazila">উপজেলা</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="upazila" id="upazila">
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+                    <label for="union">ইউনিয়ন</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="union" id="union">
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="row secondRow">
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="unit">ইউনিট</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="unit" id="unit">
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="provCode">প্রোভাইডার</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="provCode" id="provCode">
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                <span id="break2"></span>
+                <div class="col-md-1 col-xs-2">
+                    <label for="year">বছর</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="year" id="year"> </select>
+                </div>
+                
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="year"></label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                   <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                        <b><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp; রিপোর্ট দেখুন</b>
+                    </button>
+                </div>
+
+            </div>
+                          
+                          
+          </div>
+        </div>
+      </div>
+    </div>

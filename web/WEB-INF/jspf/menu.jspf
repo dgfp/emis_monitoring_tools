@@ -1,0 +1,20 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<ul class="nav" id="side-menu" style="font-size: 13px">
+    <c:forEach var="category" items="${sessionScope.categories}">
+        <li> 
+            <a href="#"> <i class="${category.icon}"> </i>  ${category.name}<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <c:forEach var="item" items="${category.items}">
+                    <li>
+                        <a href="${item.url}"><i class="fa fa-caret-right" aria-hidden="true"></i>  ${item.name}</a>
+                    </li>
+                </c:forEach>
+            </ul>
+        </li>
+    </c:forEach>
+<!--        <li>
+            <a href="loginUser"> <i class="fa fa-user"> </i>  <span>User Management</span></a>
+        </li>-->
+</ul>

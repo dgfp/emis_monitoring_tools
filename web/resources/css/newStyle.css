@@ -1,0 +1,18 @@
+/* 
+    Created on : Oct 27, 2018, 5:01:04 PM
+    Author     : Helal
+*/
+[class*="col"] { margin-bottom: 10px; }
+.box {
+    margin-bottom: 0px!important;
+}
+.box-body {
+    padding: 10px!important;
+    padding-bottom: 0px!important;
+}
+#viewStatus{
+    margin-bottom: 10px;
+}
+#areaPanel{
+    margin-bottom: 0px!important;
+}

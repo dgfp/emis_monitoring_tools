@@ -1,0 +1,15 @@
+<style>
+    h1{
+        color: #305A8A;
+    }
+    .u-dev{
+      padding-top: 80px;
+      padding-bottom: 105px;  
+    }
+</style>
+<div class="u-dev">
+    <center><img src="resources/images/pc_user.JPG" alt=""/>
+        <h1><i class="fa fa-exclamation-circle" aria-hidden="true"></i> This page is under development !</h1>
+        <h4 class="bold">Please, come back later.</h4>
+    </center>
+</div>

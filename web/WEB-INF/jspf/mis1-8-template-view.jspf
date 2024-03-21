@@ -1,0 +1,955 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="mis1-template-8">
+    <div class="col-ld-12 mis1">
+        <div class="col-md-12 mis-form-1"  style="padding: -100px;">
+            <div class="table-responsive" >
+                <table  style="text-align: left; width: 100%;border: 0!important;" id="topHeader">
+                    <tr>
+                        <th style="border:none!important;">
+                            <div id='slogan'>ছেলে হোক, মেয়ে হোক,<br/>দু’টি সন্তানই যথেষ্ট</div>
+                            <img id='logo' src="resources/logo/Fpi_logo.png"  alt="8th"/>
+                        </th>
+                        <th style="text-align:center;border:none!important;" colspan="2">
+                            <small>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার<br>পরিবার পরিকল্পনা অধিদপ্তর</small>
+                            <br>পরিবার পরিকল্পনা, মা ও শিশু স্বাস্থ্য কার্যক্রমের মাসিক অগ্রগতির প্রতিবেদন
+                            <!--                            <br>(পরিবার কল্যান সহকারী কর্তৃক পূরণীয়)-->
+                            <br>মাসঃ <span id='monthValue'>...............................</span> সালঃ <span id="yearValue">...............................</span>
+                        </th>
+                        <th style="text-align:right;border:none!important;" id="page">এম আই এস ফরম - ১<br>পৃষ্ঠা-১</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center;border:none!important;"><br>
+                            ইউনিট নম্বরঃ<span id='unitValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            ওয়ার্ড নম্বরঃ<span id='wardValue'> ..........................</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+                            ইউনিয়নঃ<span id='unionValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            উপজেলা/থানাঃ<span id='upazilaValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            জেলাঃ<span id='districtValue'> ..........................</span>   
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="e2b">
+                <p> <strong> ক) পরিবার পরিকল্পনা পদ্ধতিঃ </strong> </p>
+                <div class="table-responsive" >
+                    <table class="table table-bordered  mis_table mis_form1_ka_new" id="mis_form1_ka_new_8v" style="width: 100%;">
+                        <tr>
+                            <td colspan="2" rowspan="3" style="border: 1px solid black;border-color:#000000;"></td>
+                            <td colspan="18" style="padding: 7px;">পদ্ধতি গ্রহনকারী</td>
+                        </tr>
+                        <tr >
+                            <td rowspan="2" style="text-align: center">খাবার বড়ি</td>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: center">কনডম</td>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: center">ইনজেকটেবল</td>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: center">আইইউডি</td>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: center">ইমপ্ল্যান্ট</td>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: center;padding: 2px;">স্থায়ী পদ্ধতি</td>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: center">সর্বমোট</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: center;padding: 2px;">পুরুষ</td>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: center;padding: 2px;">মহিলা</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;পুরাতন </td>
+                            <td class="v_field" id="r_old_pill" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_condom" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_inject" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_iud" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_implant" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_permanent_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_permanent_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_old_all_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;নতুন</td>
+                            <td class="v_field" id="r_new_pill" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_condom" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_inject" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_iud" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_implant" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_permanent_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_permanent_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_new_all_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;চলতি মাসের মোট</td>
+                            <td class="v_field" id="r_curr_month_pill_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_condom_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_inject_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_iud_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_implant_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_permanent_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_permanent_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_month_all_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;পূর্ববর্তী মাসের মোট</td>
+                            <td class="v_field" id="r_priv_month_pill_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_condom_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_inject_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_iud_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_implant_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_permanent_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_permanent_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_priv_month_all_total" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;ইউনিটের সর্বমোট</td>
+                            <td class="v_field" id="r_unit_pill_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_condom_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_inject_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_iud_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_implant_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_permanent_man_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_permanent_woman_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_unit_all_total_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;চলতি মাসে<br>&nbsp;&nbsp;ছেড়ে <br>&nbsp;&nbsp;দিয়েছে</td>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;">&nbsp;&nbsp;কোন পদ্ধতি নেয়নি </td>
+                            <td class="v_field" id="r_curr_m_left_pill_no_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_condom_no_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_inj_no_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_iud_no_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_implant_no_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field disabled-color" id="r_curr_m_left_per_man_no_method"  style="border: 1px solid black;border-color:#000000;text-align: center;background-color:#aebcc4"></td>
+                            <td class="v_field disabled-color" id="r_curr_m_left_per_woman_no_method"  style="text-align: center;background-color:#aebcc4"></td>
+                            <td class="v_field" id="r_curr_m_left_no_method_all_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;">&nbsp;&nbsp;অন্য পদ্ধতি নিয়েছে </td>
+                            <td class="v_field" id="r_curr_m_left_pill_oth_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_condom_oth_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_inj_oth_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_iud_oth_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_implant_oth_method" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field disabled-color" id="r_curr_m_left_per_man_oth_method"  style="background-color:#aebcc4;text-align: center"></td>
+                            <td class="v_field disabled-color" id="r_curr_m_left_per_woman_oth_mthd"  style="background-color:#aebcc4;text-align: center"></td>
+                            <td class="v_field" id="r_curr_m_left_oth_method_all_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;পদ্ধতির জন্য প্রেরণ</td>
+                            <td class="v_field disabled-color" id="r_sent_method_pill"  style="border: 1px solid black;border-color:#000000;text-align: center;background-color:#aebcc4"></td>
+                            <td class="v_field disabled-color" id="r_sent_method_condom"  style="background-color:#aebcc4" ></td>
+                            <td class="v_field" id="r_sent_method_inj" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_method_iud" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_method_implant" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_method_per_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_method_per_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_method_all_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;পার্শ্ব প্রতিক্রিয়ার জন্য প্রেরণ</td>
+                            <td class="v_field" id="r_sent_side_effect_pill" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_condoms" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_inj" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_iud" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_implant" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_per_man" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_per_woman" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td class="v_field" id="r_sent_side_effect_all_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="table-responsive">
+                    <table class="table-bordered mis_table table-car1" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 301px">
+                            <col style="width: 101px">
+                            <col style="width: 301px">
+                            <col style="width: 101px">
+                        </colgroup>
+                        <tr>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;চলতি মাসে পরিদর্শিত সক্ষম দম্পতির সংখ্যা</td>
+                            <td class="v_field" id="r_curr_m_shown_capable_elco_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;ইউনিটের মোট সক্ষম দম্পতির সংখ্যা</td>
+                            <td class="v_field" id="r_unit_capable_elco_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;পূর্ববর্তী মাসে পরিদর্শিত সক্ষম দম্পতির সংখ্যা</td>
+                            <td class="v_field" id="r_priv_m_shown_capable_elco_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                            <td style="border: 1px solid black;border-color:#000000;text-align: left;padding: 3px;">&nbsp;&nbsp;চলতি মাসে নবদম্পতির সংখ্যা</td>
+                            <td class="v_field" id="r_curr_m_v_new_elco_tot" style="border: 1px solid black;border-color:#000000;text-align: center"></td>
+                        </tr>
+                    </table>
+                </div><br>
+                <!--=======End ka - Family Planning Method==================================================================================-->
+                <!--Car Table-->
+                <div class="table-responsive1">
+                    <table class="no-border table-car2" style="width: 100%;">
+                        <tr>
+                            <td rowspan="2" style="width: 200px;text-align: center;padding: 3px;">&nbsp;&nbsp;পদ্ধতি গ্রহনকারীর হার (CAR):</td>
+                            <td style="width: 200px;text-align: center;padding: 4px;border-bottom: 1px solid black!important;">ইউনিটের সর্বমোট পদ্ধতি গ্রহণকারী</td>
+                            <td rowspan="2" style="text-align: left;width: 90px;">&nbsp;&#10006; ১০০&nbsp;&nbsp;&nbsp;&nbsp;= </td>
+
+                            <td class="v_field" style="width: 60px;text-align: center;padding: 4px;border-bottom: 1px solid black!important;" id="r_unit_all_total_tot"></td>
+                            <td rowspan="2" style="text-align: left;width: 90px;">&nbsp;&#10006; ১০০&nbsp;&nbsp;&nbsp;&nbsp;= </td>
+                            <td class="v_field"  rowspan="2" style="text-align: left;width: 100px;"><span id="r_car"></span>%</td></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px;text-align: center;padding: 4px;">ইউনিটের সর্বমোট সক্ষম দম্পতি</th>
+                            <td class="v_field"  id="r_unit_capable_elco_tot" style="width: 80;text-align: center;padding: 4px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+
+                <p> <strong>খ) প্রজনন স্বাস্থ্য সেবাঃ </strong> </p>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="table-responsive">
+                            <table class="table-bordered mis_table table-kha1" style="width: 100%">
+                                <!--                            <table class="table-bordered mis_table" style="table-layout: fixed; width: 100%;height:627px">-->
+                                <colgroup>
+                                    <col style="width: 80px">
+                                    <col style="width: 80px">
+                                    <col style="width: 230px">
+                                    <col style="width: 50px">
+                                    <col style="width: 50px">
+                                </colgroup>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">&nbsp;&nbsp;&nbsp;সেবার ধরণ<br></td>
+                                    <td style="text-align: center">তথ্য</td>
+                                    <td style="text-align: center">সেবা<br></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" rowspan="3">চলতি মাসে গর্ভবতীর সংখ্যা<br></td>
+                                    <td style="text-align: left;">নতুন<br></td>
+                                    <td class="v_field" id="curr_month_preg_new_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পুরাতন</td>
+                                    <td class="v_field" id="curr_month_preg_old_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">মোট</td>
+                                    <td class="v_field" id="curr_month_preg_tot_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">পূর্ববতী মাসে মোট গর্ভবতীর সংখ্যা<br></td>
+                                    <td class="v_field" id="prir_month_tot_preg_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">ইউনিটের সর্বমোট গর্ভবতীর সংখ্যা<br></td>
+                                    <td class="v_field" id="unit_tot_preg_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="4" class="rotate">গর্ভবতী সেবার  তথ্য<br></td>
+                                    <td colspan="2" style="text-align: left;">পরিদর্শন-১ (৪ মাসের মধ্যে)<br></td>
+                                    <td class="v_field" id="preg_anc_service_visit1_fwa"></td>
+                                    <td class="v_field" id="preg_anc_service_visit1_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">পরিদর্শন-২ (৬ মাসের মধ্যে)<br></td>
+                                    <td class="v_field" id="preg_anc_service_visit2_fwa"></td>
+                                    <td class="v_field" id="preg_anc_service_visit2_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">পরিদর্শন-৩ (৮ মাসের মধ্যে)<br></td>
+                                    <td class="v_field" id="preg_anc_service_visit3_fwa"></td>
+                                    <td class="v_field" id="preg_anc_service_visit3_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">পরিদর্শন-৪ (৯ম মাসে)<br></td>
+                                    <td class="v_field" id="preg_anc_service_visit4_fwa"></td>
+                                    <td class="v_field" id="preg_anc_service_visit4_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="7" class="rotate">প্রসব সেবার তথ্য<br></td>
+                                    <td rowspan="2" style="text-align: left;"><br>বাড়ী</td>
+                                    <td style="text-align: left;">প্রশিক্ষণপ্রাপ্ত ব্যাক্তি দ্বারা<br></td>
+                                    <td class="v_field" id="delivary_service_home_trained_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">প্রশিক্ষণবিহীন ব্যক্তি দ্বারা<br></td>
+                                    <td class="v_field" id="delivary_service_home_untrained_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="2" style="text-align: left;">হাসপাতাল/ক্লিনিক</td>
+                                    <td style="text-align: left;">স্বাভাবিক</td>
+                                    <td class="v_field" id="delivary_service_hospital_normal_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">সিজারিয়ান<br></td>
+                                    <td class="v_field" id="delivary_service_hospital_operation_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">প্রসব করানো হয়েছে<br></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="delivary_service_delivery_done_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">প্রসবের তৃতীয় ধাপের সক্রিয় ব্যবস্থাপনা (AMTSL) অনুসরণ করে প্রসব করানোর সংখ্যা<br></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="delivary_service_3rd_amts1_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">অক্সিটোসিন না থাকলে মিসোপ্রোস্টল বড়ি খাওয়ানো হয়েছে<br></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="delivary_service_misoprostol_taken_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="9" class="rotate">প্রসবোত্তর সেবার তথ্য<br></td>
+                                    <td rowspan="5" class="rotate">মা</td>
+                                    <td style="text-align: left;">পরিদর্শন-১ (২৪ ঘণ্টার মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_mother_visit1_fwa"></td>
+                                    <td class="v_field" id="pnc_mother_visit1_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-২ (২-৩ দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_mother_visit2_fwa"></td>
+                                    <td class="v_field" id="pnc_mother_visit2_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-৩ (৭-১৪ দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_mother_visit3_fwa"></td>
+                                    <td class="v_field" id="pnc_mother_visit3_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-৪ (৪২-৪৮ দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_mother_visit4_fwa"></td>
+                                    <td class="v_field" id="pnc_mother_visit4_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">প্রসব পরবর্তী পরিবার পরিকল্পনা পদ্ধতি বিষয়ে <br>কাউন্সিলিং</td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="pnc_mother_family_planning_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="4" class="rotate">নবজাতক<br></td>
+                                    <td style="text-align: left;">পরিদর্শন-১ (২৪ ঘণ্টার মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_newborn_visit1_fwa"></td>
+                                    <td class="v_field" id="pnc_newborn_visit1_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-২ (২-৩ দিনের দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_newborn_visit2_fwa"></td>
+                                    <td class="v_field" id="pnc_newborn_visit2_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-৩ (৭-১৪ দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_newborn_visit3_fwa"></td>
+                                    <td class="v_field" id="pnc_newborn_visit3_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">পরিদর্শন-৪ (৪২-৪৮ দিনের মধ্যে)<br></td>
+                                    <td class="v_field" id="pnc_newborn_visit4_fwa"></td>
+                                    <td class="v_field" id="pnc_newborn_visit4_csba"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="table-responsive">
+                            <table class="table-bordered mis_table table-kha2" style="width: 100%">
+                                <!--                            <table class="table-bordered mis_table" style="table-layout: fixed; width: 100%;height:647px">-->
+                                <colgroup>
+                                    <col style="width: 80px">
+                                    <col style="width: 60px">
+                                    <col>
+                                    <col style="width: 50px">
+                                    <col style="width: 50px">
+                                </colgroup>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">&nbsp;&nbsp;&nbsp;সেবার ধরণ<br></td>
+                                    <td style="text-align: center">তথ্য</td>
+                                    <td style="text-align: center">সেবা<br></td>
+                                </tr>
+
+                                <tr style="text-align: center;">
+                                    <td rowspan="4" class="">রেফারকৃত</td>
+                                    <td colspan="2" style="text-align: left;">ঝুকিপূর্ণ/জটিল গর্ভবতীর সংখ্যা <br></td>
+                                    <td class="v_field" id="ref_risky_preg_cnt_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">গর্ভকালীন, প্রসবকালীন ও প্রসবোত্তর জটিলতার সংখ্যা<br></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="ref_preg_delivery_pnc_diff_refer_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">একলাম্পসিয়া রোগীকে MgSO4 ইনজেকশন দিয়ে রেফার করার সংখ্যা<br></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"> </td>
+                                    <td class="v_field" id="ref_eclampsia_mgso4_inj_refer_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">নবজাতককে জটিলতার জন্য প্রেরণের সংখ্যা<br></td>
+                                    <td class="ka_table_inactive_field disabled-color"  style="background-color:#aebcc4"></td>
+                                    <td class="v_field" id="ref_newborn_difficulty_csba"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" rowspan="5">টি টি প্রাপ্ত মহিলার সংখ্যা<br></td>
+                                    <td style="text-align: left;">১ম</td>
+                                    <td class="v_field" id="tt_women_1st_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">২য়</td>
+                                    <td class="v_field" id="tt_women_2nd_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">৩য়</td>
+                                    <td class="v_field" id="tt_women_3rd_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">৪র্থ</td>
+                                    <td class="v_field" id="tt_women_4th_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">৫ম<br></td>
+                                    <td class="v_field" id="tt_women_5th_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">ইসিপি গ্রহনকারীর সংখ্যা <br></td>
+                                    <td class="v_field" id="ecp_taken"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">মিসোপ্রোস্টল বড়ি গ্রহণকারীর সংখ্যা<br></td>
+                                    <td class="v_field" id="misoprostol_taken"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" rowspan="2">বন্ধ্যা দম্পতির তথ্য<br></td>
+                                    <td style="text-align: left;">পরামর্শ প্রাপ্ত</td>
+                                    <td class="v_field" id="childless_couple_adviced_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="text-align: left;">রেফারকৃত</td>
+                                    <td class="v_field" id="childless_couple_refered_fwa"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td rowspan="4">কিশোর-কিশোরীর <br>সেবা(১০-১৯ বছর)<br>কাউন্সিলিং<br></td>
+                                    <td colspan="2" style="text-align: left;">কিশোর-কিশোরীকে বয়োসন্ধিকালীন পরিবর্তন বিষয়ে <br></td>
+                                    <td class="v_field" id="teenager_counsiling_referred"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">বাল্য-বিবাহ ও কিশোরী মাতৃত্বের কুফল বিষয়ে<br></td>
+                                    <td class="v_field" id="teenager_counsiling_child_marriage_child_preg_disadvantage"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">কিশোরীকে আয়রন ও ফলিক এসিড বড়ি খাবার বিষয়ে<br></td>
+                                    <td class="v_field" id="teenager_counsiling_healthy_balanced_diet"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="2" style="text-align: left;">প্রজননতন্ত্রের সংক্রমন ও যৌনবাহিত রোগ বিষয়ে<br></td>
+                                    <td class="v_field" id="teenager_counsiling_sexual_disease"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">স্যাটেলাইট ক্লিনিকে উপস্থিতি <br></td>
+                                    <td class="v_field" id="satelite_clinic_presence"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">ইপিআই সেশনে উপস্থিতি<br></td>
+                                    <td class="v_field" id="epi_session_presence"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td colspan="3" style="text-align: left;">কমিউনিট ক্লিনিকে উপস্থিতি<br></td>
+                                    <td class="v_field" id="community_clinic_presence"></td>
+                                    <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"> </td>
+                                </tr>
+                            </table><br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+   
+    <!---------------------------------------------------------------------------Page 2------------------------------------------------------------------------->
+    <div class="col-ld-12 mis1">
+        <div class="col-md-12 mis-form-1"><br><br>
+            <p style='text-align: right'><b> পৃষ্ঠা-২ </b></p>
+            <div class="row">
+                <div class="col-md-7 e2b">
+                    <div class="table-responsive">
+                        <table class="table-bordered mis_table table-ga" style="width: 100%">
+                            <!--                            <table class="table-bordered mis_table" style="table-layout: fixed; width: 100%;height:358px">-->
+                            <colgroup>
+                                <col style="width: 81px">
+                                <col style="width: 91px">
+                                <col style="width: 121px">
+                                <col style="width: 70px">
+                                <col style="width: 50px">
+                                <col style="width: 50px">
+                            </colgroup>
+
+                            <tr>
+                            <p style="font-weight:600;">গ) শিশু (০-৫ বৎসর) সেবাঃ</p>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="4" style="text-align: left;">&nbsp;&nbsp;&nbsp;সেবার ধরণ<br></td>
+                                <td style="text-align: center">তথ্য</td>
+                                <td style="text-align: center">সেবা</td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td rowspan="4" class="rotate" style="padding: 5px;text-align: center;">নবজাতকের সেবা সংক্রান্ত তথ্য<br></td>
+                                <td colspan="3" style="text-align: left;">১ মিনিটের মধ্যে মোছানোর সংখ্যা<br></td>
+                                <td class="v_field" id="newborn_1min_washed_fwa"></td>
+                                <td class="v_field" id="newborn_1min_washed_csba"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">নাড়ি কাটার পর ৭.১% ক্লোরহেক্সিডিন ব্যবহারের সংখ্যা<br></td>
+                                <td class="v_field" id="newborn_71_chlorohexidin_used_fwa"></td>
+                                <td class="v_field" id="newborn_71_chlorohexidin_used_csba"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">জন্মের এক ঘণ্টার মধ্যে বুকের দুধ খাওয়ানোর সংখ্যা<br></td>
+                                <td class="v_field disabled-color" id="newborn_1hr_bfeeded_fwa disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="v_field" id="newborn_1hr_bfeeded_csba"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">জন্মকালীন শ্বাসকষ্টে আক্রান্ত শিশুকে ব্যাগ ও মাস্ক ব্যবহার করে রিসাসসিটেট  করার সংখ্যা<br></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="v_field" id="newborn_diff_breathing_resassite_csba"></td>
+                            </tr>
+                            <!---==============Variable name change (07-03-2017) ============-->
+                            <tr style="text-align: center;">
+                                <td rowspan="7">টিকা প্রাপ্ত (০-১৮ মাস বয়সী) শিশুর সংখ্যা<br></td>
+                                <td colspan="3" style="text-align: left;">বিসিজি</td>
+                                <!--                                    <td id="vaccinated_child_bcg_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_bcg_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td rowspan="3" style="text-align: left;">ওপিভি ও প্যান্টাভেলেন্ট<br>(ডিপিটি, হেপ-বি, হিব)<br></td>
+                                <td rowspan="2" style="text-align: left;">পিসিভি</td>
+                                <td style="text-align: left;">১</td>
+                                <!--                                    <td id="vaccinated_0t01yrs_child_pcv_pentavalent_1_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_pcv1_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">২</td>
+                                <!--                                    <td id="vaccinated_0t01yrs_child_pcv_pentavalent_2_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_pcv2_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="2" style="text-align:center !important">৩</td>
+                                <!--                                    <td id="vaccinated_0t01yrs_child_pcv_pentavalent_3_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_dpt_hepb_hib_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">পিসিভি-৩<br></td>
+                                <!--                                    <td id="vaccinated_0t01yrs_child_pcv_pentavalent_4_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_pcv3_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">এমআর ও ওপিভি-৪<br></td>
+                                <!--                                    <td id="vaccinated_0t01yrs_child_opv3_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_mr_opv4_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="text-align: left;">হামের টিকা<br></td>
+                                <!--                                    <td id="vaccinated_child_ham_fwa"></td>-->
+                                <td class="v_field" id="r_vaccinated_child_0to18mnths_ham_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <!--==========END Changes===========-->
+                            <tr style="text-align: center;">
+                                <td colspan="2" rowspan="3" style="text-align: left;">রেফারকৃত শিশুর সংখ্যা<br></td>
+                                <td colspan="2" style="text-align: left;">খুব মারাত্বক রোগ<br></td>
+                                <td class="v_field" id="referred_child_dangerous_disease_fwa"></td>
+                                <td class="ka_table_inactive_field" id="referred_child_dangerous_disease_csba"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="2" style="text-align: left;">নিউমোনিয়া</td>
+                                <td class="v_field" id="referred_child_neumonia_fwa"></td>
+                                <td class="ka_table_inactive_field" id="referred_child_neumonia_csba"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="2" style="text-align: left;">ডায়রিয়া</td>
+                                <td class="v_field" id="referred_child_diahoea_fwa"></td>
+                                <td class="ka_table_inactive_field"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-md-5 e2b">
+                    <table class="table-bordered mis_table table-gha" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 91px">
+                            <col style="width: 91px">
+                            <col style="width: 121px">
+                            <col style="width: 60px">
+                            <col style="width: 60px">
+                        </colgroup>
+                        <tr>
+                        <p style="font-weight:600;">ঘ) জন্ম-মৃত্যুঃ </p>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="3" style="text-align: left;">&nbsp;&nbsp;&nbsp;সেবার ধরণ<br></td>
+                            <td style="text-align: center">তথ্য</td>
+                            <td style="text-align: center">সেবা</td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="3" style="text-align: left;">মোট জীবিত জন্মের সংখ্যা<br></td>
+                            <td class="v_field" id="tot_live_birth_fwa"></td>
+                            <td id="tot_live_birth_csba" class="disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="3" style="text-align: left;">কম জন্ম ওজনে (জন্ম ওজন&lt;২.৫ কেজি) জন্মগ্রহনকারী নবজাতকের সংখ্যা<br></td>
+                            <td class="v_field" id="less_weight_birth_fwa"></td>
+                            <td id="less_weight_birth_csba" class="disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="3" style="text-align: left;">অপরিণত (৩৭ সপ্তাহের পূর্বে জন্ম) নবজাতকের সংখ্যা<br></td>
+                            <td class="v_field" id="immature_birth_fwa"></td>
+                            <td id="immature_birth_csba" class="disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="3" style="text-align: left;">মৃত জন্ম (Still Birth)<br></td>
+                            <td class="v_field" id="death_birth_fwa"></td>
+                            <td id="death_birth_csba" class="disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;border-bottom: 1px solid black!important;">
+                            <td rowspan="9" style="text-align: center;">মৃতের সংখ্যা</td>
+                            <td rowspan="4" >এক বৎরের কম মৃত শিশুর সংখ্য</td>
+                            <td style="text-align: left;">০-৭ দিন<br></td>
+                            <td class="v_field" id="death_number_less_1yr_0to7days_fwa"></td> <!--  1  one-->
+                            <td class="v_field disabled-color" id="death_number_less_1yr_0to7days_csba" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td style="text-align: left;">৮-২৮ দিন<br></td>
+                            <td class="v_field" id="death_number_less_1yr_8to28days_fwa"></td>
+                            <td class="v_field disabled-color" id="death_number_less_1yr_8to28days_csba" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td style="text-align: left;">২৯ দিন -&lt;১ বছর<br></td>
+                            <td class="v_field" id="death_number_less_1yr_29dystoless1yr_fwa"></td>
+                            <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td style="text-align: left;">মোট</td>
+                            <td class="v_field" id="death_number_less_1yr_tot_fwa"></td> <!--  l  one-->
+                            <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="2" style="text-align: left;">১-&lt;৫ বছর মৃত শিশুর সংখ্যা<br></td>
+                            <td class="v_field" id="death_number_1yrto5yr_fwa"></td>
+                            <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="2" style="text-align: left;">মাতৃ মৃত্যুর সংখ্যা<br></td>
+                            <td class="v_field" id="death_number_maternal_death_fwa"></td>
+                            <td class="v_field disabled-color" id="death_number_maternal_death_csba" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="2" style="text-align: left;">অন্যান্য মৃতের সংখ্যা<br></td>
+                            <td class="v_field" id="death_number_other_death_fwa"></td>
+                            <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td colspan="2" style="text-align: left;">সর্বমোট মৃতের সংখ্যা<br></td>
+                            <td class="v_field" id="death_number_all_death_fwa"></td>
+                            <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-12"> <br><p style="font-weight:600;">ঙ) পুষ্টি সেবাঃ</p> গর্ভবতী ও ০-২৩ মাস বয়সী শিশুর মা  <span class="pull-right" style="text-align:right;">০ - ৫৯ মাস বয়সী শিশু</span></div>
+                <div class="col-md-6 e2b">
+                    <div class="table-responsive">
+                        <table class="table-bordered mis_table table-uma1" style="width: 100%">
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">সেবার ধরণ</td>
+                                <td style="text-align: center">গর্ভবতী মা</td>
+                                <td style="text-align: center"> শিশুর মা <br>০-২৩ মাস</td>
+                            </tr>
+                            <tr style="text-align: center;"> 
+                                <td style="text-align: left;">আয়রন ও ফলিক এসিড বড়ি এবং বাড়তি খাবারের <br> উপর কাউন্সেলিং দেয়া হয়েছে</td>
+                                <td class="v_field" id="iron_folicacid_extrafood_counsiling_preg_woman"></td>
+                                <td class="v_field" id="iron_folicacid_extrafood_counsiling_child_0to23months"></td>
+                            </tr>
+                            <tr style="text-align: center;"> 
+                                <td style="text-align: left;">আয়রন ও ফলিক এসিড বড়ি বিতরণ করা হয়েছে<br></td>
+                                <td class="v_field" id="r_iron_folicacid_distribute_preg_woman"></td>
+                                <td class="v_field" id="r_iron_folicacid_distribute_child_0to23months"></td>
+                            </tr>
+                            <tr style="text-align: center;"> 
+                                <td style="text-align: left;">মায়ের দুধ ও পরিপূরক খাবারের উপর কাউন্সেলিং <br> দেয়া হয়েছে</td>
+                                <td class="v_field" id="bfeeding_complementary_food_counsiling_preg_woman" ></td>
+                                <td class="v_field" id="bfeeding_complementary_food_counsiling_child_0to23months"></td>
+                            </tr
+                            <tr style="text-align: center;"> 
+                                <td style="text-align: left;">শিশুকে মাল্টিপল মাইক্রোনিউট্রিয়েন্ট পাউডার <br> (এমএনপি) খাওয়ানো বিষয়ে কাউন্সেলিং দেয়া হয়েছে</td>
+                                <td class="disabled-color" style="text-align: center;background-color:#aebcc4"></td>
+                                <!--                                        <td id="counseling_of_multiple_micronewtrend_powder_feeding_to_child"></td>-->
+                                <td class="v_field" id="r_mnp_ounsiling_child_0to23months" style="text-align: center;"></td>
+                            </tr>
+                            </tr>
+                            </tr>
+                        </table><!--No break need-->
+                    </div>        
+                </div>
+                <div class="col-md-6 e2b">
+                    <div class="table-responsive">
+                        <table class="table-bordered mis_table table-uma2" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 301px">
+                                <col style="width: 50px">
+                                <col style="width: 50px">
+                                <col style="width: 50px">
+                            </colgroup>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">সেবার ধরণ<br></td>
+                                <td style="text-align: center">০-৬ মাস<br></td>
+                                <td style="text-align: center">৬-২৪ মাস<br></td>
+                                <td style="text-align: center">২৪-৬০ মাস<br></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">জন্মের ১ ঘণ্টার মধ্যে বুকের দুধ খাওয়ানো হয়েছে<br></td>
+                                <td class="v_field" id="birth_1hr_bfeed_0to6mon"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">৬ মাস পর্যন্ত শুধুমাত্র বুকের দুধ খাওয়ানো হয়েছে/হচ্ছে<br></td>
+                                <td class="v_field" id="birth_only_bfeed_0to6mon"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">জন্মের ৬ মাস পর থেকে পরিপূরক খাবার খাওয়ানো হয়েছে/হচ্ছে<br></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="v_field" id="r_0_59_child_complementary_food_6to23mon"></td>
+                                <td class="v_field" id="r_0_59_child_complementary_food_24to59mon"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">মাল্টিপল মাইক্রোনিউট্রিয়েন্ট পাউডার (এম এনপি) পেয়েছে<br></td>
+                                <td class="ka_table_inactive_field disabled-color" style="background-color:#aebcc4"></td>
+                                <td class="v_field" id="mnp_given_6to23mon"></td>
+                                <td class="v_field disabled-color" id="mnp_given_24toless60mon" style="background-color:#aebcc4"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">MAM আক্রান্ত শিশুর সংখ্যা <br></td>
+                                <td class="v_field" id="mam_child_0to6mon"></td>
+                                <td class="v_field" id="mam_child_6to23mon"></td>
+                                <td class="v_field" id="mam_child_24toless60mon"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="text-align: left;">SAM আক্রান্ত রেফারকৃত শিশুর সংখ্যা <br></td>
+                                <td class="v_field" id="sam_child_0to6mon"></td>
+                                <td class="v_field" id="sam_child_6to23mon"></td>
+                                <td class="v_field" id="sam_child_24toless60mon"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <br><h5 style="font-weight:bold;text-align: center">মাসিক মওজুদ ও বিতরণের হিসাব বিষয়কঃ</h5>
+                </div>
+                <div class="col-md-12">
+                    <div class="table-responsive e2b">
+                        <table class="table-bordered mis_table" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 120px">
+                                <col style="width: 120px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 93px">
+                            </colgroup>
+                            <tr>
+                                <td class="tg-glis" style="text-align: left;">*ইস্যু ভাউচার নং<br></td>
+                                <td class="tg-031e"></td>
+                                <td class="tg-s6z2" colspan="2" style="text-align: center">খাবার বড়ি <br> (চক্র)<br></td>
+                                <td class="tg-s6z2" rowspan="2" style="text-align: center">কনডম<br>(নিরাপদ)<br>(পিস)<br></td>
+                                <td class="tg-s6z2" colspan="2" style="text-align: center">ইনজেকটেবল</td>
+                                <td class="tg-s6z2" rowspan="2" style="text-align: center">ইসিপি<br>(ডোজ)<br></td>
+                                <td class="tg-s6z2" rowspan="2" style="text-align: center">মিসো-<br>প্রোস্টল<br>(ডোজ)<br></td>
+                                <td class="tg-s6z2" rowspan="2" style="text-align: center">এমএনপি<br/>(স্যাসেট)</td>
+                                <td class="tg-s6z2" rowspan="2" style="text-align: center">আয়রন<br/>ফলিক<br/>এসিড<br/>(সংখ্যা)</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-glis" style="text-align: left;">তারিখ</td>
+                                <td class="tg-031e"></td>
+                                <td class="tg-s6z2">সুখী<br></td>
+                                <td class="tg-s6z2">আপন<br></td>
+                                <td class="tg-s6z2" style="text-align: center">ভায়াল</td>
+                                <td class="tg-s6z2" style="text-align: center">সিরিঞ্জ</td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">পূর্বের মওজুদ<br></td>
+                                <td class="tg-031e v_field" id="openingbalance1"></td>
+                                <td class="tg-031e v_field" id="openingbalance10"></td>
+                                <td class="tg-031e v_field" id="openingbalance2"></td>
+                                <td class="tg-031e v_field" id="openingbalance3"></td>
+                                <td class="tg-031e v_field" id="openingbalance5"></td>
+                                <td class="tg-031e v_field" id="openingbalance4"></td>
+                                <td class="tg-031e v_field" id="openingbalance9"></td>
+                                <td class="tg-031e v_field" id="openingbalance20"></td>
+                                <td class="tg-031e v_field" id="openingbalance19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে পাওয়া গেছে* (+)<br></td>
+                                <td class="tg-031e v_field" id="receiveqty1"></td>
+                                <td class="tg-031e v_field" id="receiveqty10"></td>
+                                <td class="tg-031e v_field" id="receiveqty2"></td>
+                                <td class="tg-031e v_field" id="receiveqty3"></td>
+                                <td class="tg-031e v_field" id="receiveqty5"></td>
+                                <td class="tg-031e v_field" id="receiveqty4"></td>
+                                <td class="tg-031e v_field" id="receiveqty9"></td>
+                                <td class="tg-031e v_field" id="receiveqty20"></td>
+                                <td class="tg-031e v_field" id="receiveqty19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসের মোট মওজুদ<br></td>
+                                <td class="tg-031e v_field" id="current_month_stock1"></td>
+                                <td class="tg-031e v_field" id="current_month_stock10"></td>
+                                <td class="tg-031e v_field" id="current_month_stock2"></td>
+                                <td class="tg-031e v_field" id="current_month_stock3"></td>
+                                <td class="tg-031e v_field" id="current_month_stock5"></td>
+                                <td class="tg-031e v_field" id="current_month_stock4"></td>
+                                <td class="tg-031e v_field" id="current_month_stock9"></td>
+                                <td class="tg-031e v_field" id="current_month_stock20"></td>
+                                <td class="tg-031e v_field" id="current_month_stock19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" rowspan="2" style="text-align: left;">সমন্বয়</td>
+                                <td class="tg-031e v_field" style="text-align: left;">(+)</td>
+                                <td class="tg-031e v_field" id="adjustment_plus1"></td>
+                                <td class="tg-031e v_field" id="adjustment_plus10"></td>    
+                                <td class="tg-031e v_field" id="adjustment_plus2"></td>
+                                <td class="tg-031e v_field" id="adjustment_plus3"></td>
+                                <td class="tg-031e v_field" id="adjustment_plus5"></td>
+                                <td class="tg-031e v_field"  id="adjustment_plus4"></td>
+                                <td class="tg-031e v_field"  id="adjustment_plus9"></td>
+                                <td class="tg-031e v_field"  id="adjustment_plus20"></td>
+                                <td class="tg-031e v_field"  id="adjustment_plus19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" style="text-align: left;">(-)</td>
+                                <td class="tg-031e v_field" id="adjustment_minus1"></td>
+                                <td class="tg-031e v_field" id="adjustment_minus10"></td>    
+                                <td class="tg-031e v_field" id="adjustment_minus2"></td>
+                                <td class="tg-031e v_field" id="adjustment_minus3"></td>
+                                <td class="tg-031e v_field" id="adjustment_minus5"></td>
+                                <td class="tg-031e v_field"  id="adjustment_minus4"></td>
+                                <td class="tg-031e v_field"  id="adjustment_minus9"></td>
+                                <td class="tg-031e v_field"  id="adjustment_minus20"></td>
+                                <td class="tg-031e v_field"  id="adjustment_minus19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">সর্বমোট</td>
+                                <td class="tg-031e v_field" id="total1"></td>
+                                <td class="tg-031e v_field" id="total10"></td>    
+                                <td class="tg-031e v_field" id="total2"></td>
+                                <td class="tg-031e v_field" id="total3"></td>
+                                <td class="tg-031e v_field" id="total5"></td>
+                                <td class="tg-031e v_field"  id="total4"></td>
+                                <td class="tg-031e v_field"  id="total9"></td>
+                                <td class="tg-031e v_field"  id="total20"></td>
+                                <td class="tg-031e v_field"  id="total19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে বিতরণ করা হয়েছে(-)</td>
+                                <td class="tg-031e v_field" id="distribution1"></td>
+                                <td class="tg-031e v_field" id="distribution10"></td>    
+                                <td class="tg-031e v_field" id="distribution2"></td>
+                                <td class="tg-031e v_field" id="distribution3"></td>
+                                <td class="tg-031e v_field" id="distribution5"></td>
+                                <td class="tg-031e v_field"  id="distribution4"></td>
+                                <td class="tg-031e v_field"  id="distribution9"></td>
+                                <td class="tg-031e v_field"  id="distribution20"></td>
+                                <td class="tg-031e v_field"  id="distribution19"></td>
+                            </tr>
+                            <tr  style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">অবশিষ্ট</td>
+                                <td class="tg-031e v_field" id="closingbalance1"></td>
+                                <td class="tg-031e v_field" id="closingbalance10"></td>    
+                                <td class="tg-031e v_field" id="closingbalance2"></td>
+                                <td class="tg-031e v_field" id="closingbalance3"></td>
+                                <td class="tg-031e v_field" id="closingbalance5"></td>
+                                <td class="tg-031e v_field"  id="closingbalance4"></td>
+                                <td class="tg-031e v_field"  id="closingbalance9"></td>
+                                <td class="tg-031e v_field"  id="closingbalance20"></td>
+                                <td class="tg-031e v_field"  id="closingbalance19"></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে কখনও মওজুদ শূন্যতা<br/> হয়ে থাকলে কারণ (কোড) লিখুন <br></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                                <td class="tg-031e v_field"></td>
+                            </tr>
+                        </table>
+
+                    </div> <!--End Table Responsive-->
+
+                    <div class="table-responsive">
+                        <table border="0"  style="table-layout: fixed; width: 100%;border:0px solid white!important;" class="table-responsive">
+                            <tr>
+                                <td style="text-align:center;border:none!important;"><br>
+                                    মওজুদ শূন্যতার কোডঃ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">ক</span>&nbsp;সরবরাহ পাওয়া যায়নি<span id=''></span>    
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">খ</span>&nbsp;অপর্যাপ্ত সরবরাহ<span id=''></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">গ</span>&nbsp;হঠাৎ চাহিদা বৃদ্ধি পাওয়া<span id=''></span> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">ঘ</span>&nbsp;অন্যান্য<span id=''></span>
+                                </td><br><br>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;border:none!important;"><br>
+                                    পরিবার  কল্যাণ সহকারীর নামঃ<span id='providerName'>........................................</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                                    স্বাক্ষরঃ<span id=''>........................................</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    তারিখঃ<span id='submissionDate'>........................................</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br/>
+                </div>
+                <br/> 
+            </div>
+        </div>
+    </div>
+</div>

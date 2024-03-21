@@ -1,0 +1,57 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="modal-report-response" class="modal modal-center fade" role="dialog">
+    <div class="modal-dialog modal-dialog-center modal-lg report-response">
+
+        <div class="modal-content">
+            <div class="modal-header label-warning">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <h4 class="modal-title"><b><i class="fa fa-edit" aria-hidden="true"></i>&nbsp; <span id="responseViewTitle"></span></b></h4>
+            </div>
+            <div class="modal-body" >
+                <div class="box box-chat box-default  direct-chat direct-chat-warning">
+                    <div class="box-body">
+                        <div class="direct-chat-messages">
+                            <div class="direct-chat-msg">
+                                <div class="direct-chat-info clearfix">
+                                    <span class="direct-chat-name pull-left">Helal Khan</span>
+                                    <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                                </div>
+                                <img class="direct-chat-img" src="https://metaclinician.com/assets/avatar_Dummy.png" alt="message user image">
+                                <div class="direct-chat-text">
+                                    এম আই এস রিপোর্ট টি জমা দেয়া হলো 
+                                </div>
+                            </div>
+                            <div class="direct-chat-msg right">
+                                <div class="direct-chat-info clearfix">
+                                    <span class="direct-chat-name pull-right">Shamsul Haque</span>
+                                    <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                                </div>
+                                <img class="direct-chat-img" src="https://metaclinician.com/assets/avatar_Dummy.png" alt="message user image">
+                                <div class="direct-chat-text">
+                                    আপনার রিপোর্ট কি অনুমোদন করা হলো
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer"> 
+                        <form action="ReportSubmission?action=actionOnResponse" method="post" id="form-report-response" class="overlay-relative">
+                            <input type="hidden" name="districtid" id="districtid">
+                            <input type="hidden" name="upazilaid" id="upazilaid">
+                            <input type="hidden" name="unionid" id="unionid">
+                            <div class="overlay hidden"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn input-group-return">
+                                    <button type="submit" class="btn btn-warning btn-flat" data-status="2" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading"><b><i class="fa fa-reply-all" aria-hidden="true"></i> Return</b></button>
+                                </span>
+                                <input type="text" name="message" placeholder="" class="form-control">
+                                <span class="input-group-btn input-group-approve">
+                                    <button type="submit" class="btn btn-warning btn-flat"  data-status="1" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading"><b><i class="fa fa-check-square-o" aria-hidden="true"></i> Approve</b></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-1">
+        <label for="district">District</label>
+    </div>
+    <div class="col-md-2">
+        <select class="form-control input-sm" name="district" id="district"> </select>
+    </div>
+
+    <div class="col-md-1">
+        <label for="upazila">Upazila</label>
+    </div>
+
+    <div class="col-md-2">
+        <select class="form-control input-sm" name="upazila" id="upazila">
+            <option value="">All</option>
+        </select>
+    </div>
+
+    <div class="col-md-1">
+        <label for="union">Union</label>
+    </div>
+
+    <div class="col-md-2">
+        <select class="form-control input-sm" name="union" id="union">
+            <option value="">All</option>
+        </select>
+    </div>
+</div>

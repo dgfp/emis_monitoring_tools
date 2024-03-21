@@ -1,0 +1,130 @@
+<%@ page pageEncoding="UTF-8" %>
+<style>
+    .modal-body .table-responsive {
+        border: 1px solid #6AA9F2;
+    }
+    table, th, td {
+        padding: 3px;
+        padding-left: 5px;
+    }
+    #slogan{
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 2px;
+        margin-top: 45px;
+        word-wrap: break-word;
+    }
+    #page{
+        margin-top: -55px;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-left: 5px;
+        width:50px;
+        height:50px;
+    }
+    @font-face {
+        font-family: 'NikoshBAN';
+        src: url('resources/fonts/NikoshBAN.ttf');
+    }
+    textarea {
+        resize: vertical; /* user can resize vertically, but width is fixed */
+    }
+    table td.disabled-color{
+        background-color:#A1AFB7!important;  
+    }
+    .middle {
+        height: 90px!important;
+        line-height: 90px!important;
+        text-align: center!important;
+    }
+    .middle_ {
+        height: 90px!important;
+        line-height: 220px!important;
+        text-align: center!important;
+    }
+    .insert-lmis-data {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .insert-lmis-data-table{
+        width: 130%;
+    }
+    .error{
+        border: 2px solid red;
+    }
+    .tg-031e > select.input-sm {
+        height: 40px!important;
+    }
+
+    table {
+        height: 1em;
+    }
+    table table{
+        height:100%;
+        border:0px !important;
+    }
+    tr.row-sum td.cell-disabled{ position: relative; }
+    tr.row-sum td.cell-disabled:before{ content: ""; display: block; background: rgba(255,255,255,.7);position: absolute; z-index: 1; top:0; right:0;bottom: 0;left:0 }
+    .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+        background-color: #fcfcfc!important;
+    }
+    .mis-form-1 {
+        background: #6AA9F2!important;
+    }
+    table.mis_form1_ka_new tbody tr td:not([rowspan="3"])+td{ text-align: center !important; }
+</style>
+<script>
+    $(function () {
+        $('tr.row-input').find('input').attr('min', 0);
+        $('tr.row-sum').find('input').prop('readonly', 1);
+    });
+</script>
+<style media="print" type="text/css">
+    .box, .carTable{
+        border: 0!important;
+    }
+    #areaPanel, #back-to-top, .box-header, .main-footer, #viewStatus{
+        display: none !important;
+    }
+    table td.disabled-color{
+        background-color:#aebcc4!important;  
+    }
+    .mis-template,.print-exact{
+        -webkit-print-color-adjust: exact;
+    }
+    .mis1+.mis1,.page-break+.page-break {
+        display: block; page-break-before: always;
+    }
+    .table-responsive {
+        border: 1px solid #fff;
+    }
+    table, th, td {
+        padding: 3px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .mis-form-1 {
+        background: #fff!important;
+    }
+</style>
+<div id="modalReportView" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg report-view">
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <button type="button" class="btn btn-flat btn-default btn-xs bold print" onclick="window.print();"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print / PDF</button>
+                <h4 class="modal-title"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; <span id="reportViewTitle"></span></b><span id="provider-info"></span></h4>
+            </div>
+            <div class="modal-body" id="mis1Html">
+                <div class="box-body mis-template" id="data-table">
+                    <%@include file="/WEB-INF/jspf/mis1-9-template-view.jspf" %>
+                    <%@include file="/WEB-INF/jspf/mis1-8-template-view.jspf" %>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

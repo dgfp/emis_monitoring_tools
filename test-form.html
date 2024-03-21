@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="web/resources/jquery/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var timerID = 0,
+                update = function (e) {
+                    var $t = $(e.target),
+                        v = $t.val(),
+                        n = v.replace(/[^a-z\-\s\']/ig, '')
+                            .replace(/(\s|\-|\')+/g, '$1');
+
+                    if (e.type == 'change') {
+                        console.log(e.type);
+                        n = v.replace(/^[^a-z]|[^a-z]$/ig, '')
+                            .toLowerCase()
+                            .replace(/\b(\w)/g, function (_, r, i) {
+                                console.log('---', _, i, r);
+                                return r.toUpperCase();
+                            });
+                    }
+
+                    $t.val(n);
+                    //$('pre').html(n);
+                };
+
+            $('body').on('input', '.check-name', function (e) {
+                clearTimeout(timerID);
+                timerID = setTimeout(function () { update(e); }, 13);
+            }).on('change', '.check-name', function (e) {
+                update(e);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" name="name" required class="check-name" style="width:100%; box-sizing: border-box">
+            <pre></pre>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>

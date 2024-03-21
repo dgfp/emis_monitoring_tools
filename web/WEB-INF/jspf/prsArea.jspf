@@ -1,0 +1,288 @@
+<style>
+    [class*="col"] { margin-bottom: 10px; }
+    .no-margin{
+        margin-bottom: 0px!important;
+    }
+    .box-header.with-border {
+        border-bottom: 0px solid #f4f4f4!important;
+    }
+    .head {
+        padding: 0px!important;
+    }
+</style>
+<div class="row" id="areaDropDownPanel" style="display:none;">
+    <div class="col-md-12 no-margin">
+        <div class="box box-primary">
+            <div class="box-header with-border head">
+            </div>
+            <div class="box-body" >
+                <div class="nav-tabs-custom" style="margin-top:  -10px;margin-bottom:  -9px;">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#districtWise" data-toggle="tab" onclick="resetArea('District')"> District Wise</a></li>
+                        <li><a href="#upazilaWise" data-toggle="tab" onclick='resetArea("Upazila")'> Upazila Wise</a></li>
+                        <li><a href="#unionWise" data-toggle="tab" onclick='resetArea("Union")'> Union Wise</a></li>
+                        <li><a href="#providerWise" data-toggle="tab" onclick='resetArea("Provider")'> Provider Wise</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <input type="hidden" value="${userLevel}" id="userLevel">
+                        <!--------------------------District Wise---------------------------------------------------->                
+                        <div class="tab-pane active" id="districtWise">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="division1" id="">Division</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" name="divid" id="division1">
+                                        <option value="">- Select Division -</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="district1" id="">District</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" name="zillaid" id="district1">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">From</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" name="startDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" id="startDate1" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">To</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" name="endDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" id="endDate1" />
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                </div>     
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                </div>                        
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="button" id="showDistrictPRS" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--------------------------Upazilla Wise---------------------------------------------------->
+                        <div class="tab-pane" id="upazilaWise">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="division2" id="">Division</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" name="divid" id="division2">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="district2" id="">District</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" name="zillaid" id="district2">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="upazila2" id="">Upazila</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" name="upazilaid" id="upazila2">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">From</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" name="startDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy"  id="startDate2" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">To</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" name="endDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" id="endDate2" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="button" id="showUpazilaPRS" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------------Union Wise---------------------------------------------------->               
+                        <div class="tab-pane" id="unionWise">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">Division</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="division3">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="district3" id="">District</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="district3">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="upazila3" id="">Upazila</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="upazila3">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="union3" id="">Union</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="union3">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">From</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="startDate" id="startDate3" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">To</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="endDate" id="endDate3" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="button" id="showUnionPRS" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------------Provider Wise---------------------------------------------------->               
+                        <div class="tab-pane" id="providerWise">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="division5" id="">Division</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="division5">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="district5" id="">District</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="district5">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="upazila5" id="">Upazila</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="upazila5">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="union5" id="">Union</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="union5">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="designation" id="">Designation</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control input-sm" id="designation5">
+                                        <option value="%">All</option>
+                                        <option value="2">HA</option>
+                                        <option value="3">FWA</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">From</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="startDate" id="startDate5" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="one" id="">To</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="endDate" id="endDate5" />
+                                </div>
+
+                                <div class="col-md-1 col-xs-2">
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="button" id="showProviderPRS" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i> View Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><h4><center id="area"></center></h4>
+        </div>
+    </div>
+</div>

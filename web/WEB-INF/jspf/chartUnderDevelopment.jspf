@@ -1,0 +1,16 @@
+<style>
+    h1{
+        color: #305A8A;
+    }
+    .u-dev{
+      padding-top: 30px;
+      padding-bottom: 105px;  
+    }
+</style>
+<div class="u-dev">
+    <center>
+        <h1><i class="fa fa-exclamation-circle" aria-hidden="true"></i> The chart is under development !</h1>
+        <img src="resources/images/analysis.png" width="200" height="200" alt=""/>
+        <h4 class="bold">Please, come back later.</h4>
+    </center>
+</div>

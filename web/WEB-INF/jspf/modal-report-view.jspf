@@ -1,0 +1,55 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="modal-report-view" class="modal fade" role="dialog">
+    <div class="modal-dialog report-view">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <h4 class="modal-title"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; <span id="reportViewTitle">Loading ...</span></b><span id="provider-info"></span></h4>
+            </div>
+
+            <div class="modal-body" id="report">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    tr {
+        max-height: 15px !important;
+        height: 15px !important;
+    }
+    #data-table{
+        font-size: 15px;
+    }
+    .nav-tabs-custom>.nav-tabs>li.active {
+        border-top-color: #F39C12;
+    }
+    .mis-form-1{
+        background:#87bbf9;
+    }
+
+    #slogan{
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 2px;
+        margin-top: 45px;
+        word-wrap: break-word;
+    }
+    #page{
+        margin-top: -55px;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-left: 5px;
+        width:50px;
+        height:50px;
+    }
+    .mis_table th, .mis_table td{ 
+        border: 1px solid black!important;
+    }
+    [class*="col"] { margin-bottom: 10px; }
+</style>

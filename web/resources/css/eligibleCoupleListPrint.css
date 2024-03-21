@@ -1,0 +1,39 @@
+
+/* 
+    Created on : Nov 26, 2017, 1:28:27 AM
+    Author     : m.helal.k@gmail.com
+*/
+    /*@font-face {
+        font-family: SolaimanLipi;
+        src: url('resources/fonts/SolaimanLipi.ttf');
+    }
+    table, th, td{
+            border:1px solid black; 
+    border-collapse: collapse;
+        width: 1445%!important;
+        height:10%!important;
+        text-align: center;
+    } */ 
+    /*
+    table, th, td .tf{
+        border-left: 1px solid #000!important;
+        border-right: 1px solid #000!important;
+        border-top: 1px solid #000!important;
+        border-bottom: 1px solid #000!important;
+        width: 2045px!important;
+    } */
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family: SolaimanLipi;font-size:15px;padding:1px 6px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family: SolaimanLipi;font-size:15px;font-weight:normal;padding:3px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-0e45{font-size:11px}
+    .tg .tg-q19q{font-size:11px;vertical-align:top}
+    .tg .tg-yw4l{vertical-align:top}
+    
+    
+    .tf td{font-family: SolaimanLipi;font-size:15px;padding:0px!important;padding-right: 10px!important;border-width:0px;overflow:hidden;}
+    
+    
+    .center{
+        text-align: center;
+    }
+

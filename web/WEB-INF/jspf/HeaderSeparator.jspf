@@ -1,0 +1,11 @@
+<%
+    if(session.getAttribute("isTabAccess")!=null) {
+%>
+    <%@include file="/WEB-INF/jspf/templateHeaderWithoutSidebar.jspf" %>
+<%
+    } else {
+%>
+    <%@include file="/WEB-INF/jspf/templateHeader.jspf" %>
+<%
+    }
+%>

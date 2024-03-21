@@ -1,0 +1,29 @@
+<style>
+	
+	li{padding-top: 5px;}
+</style>
+<center>
+        <h1>Release Notes</h1>
+        <img src="resources/release-notes/logo-emis/logo-emis-facility.png" width=90 alt="">
+        <h3>Facility Module </h3>
+        <h4>Version: 2.51-20200125</h4>
+        <h4>Date: 26 January, 2020</h4>
+    </center>
+    <h4>Targeted SPs: All the FWVs, SACMOs (both FP & HS), CSBAs and paramedics:</h4>
+
+<ul>
+    <li>Provision for direct delivery/PNC is re-activated.							 </li>
+    <li>Dashboard is redesigned with incorporating FP services.                      </li>
+    <li>A new feature of (showing last search result) search option is added.        </li>
+    <li>Data entry issue regarding caesarian delivery by CSBA is resolved.           </li>
+    <li>Age calculation is rectified.                                                </li>
+    <li>Validation during revisit of PNC child is rectified.                         </li>
+    <li>Login UI issues are resolved                                                 </li>
+    <li>NRC (Partial PRS) entry during confirmation stage is restricted              </li>
+    <li>Some new villages in Natore and Madaripur municipalities are added           </li>
+    <li>Validation in delivery entry after 294 days is added                         </li>
+    <li>ANC save button issue after performing an entry is resolved.                 </li>
+    <li>Issue of PillCondom entry in satellite is resolved.                          </li>
+    <li>Miscellaneous functional and cosmetic  bugs are resolved.                    </li>
+
+</ul>

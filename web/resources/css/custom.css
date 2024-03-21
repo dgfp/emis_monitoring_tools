@@ -1,0 +1,125 @@
+/* 
+    Created on : Jan 9, 2016, 7:34:44 PM
+    Author     : shahaz
+*/
+.table td {
+    text-align: left;
+    border: 1px solid black;
+}
+
+.table th{
+    text-align: center;
+    background-color: #e6e6e6;
+    border: 1px solid black;
+}
+#tableFooter {
+    text-align: left;
+    background-color: #e6e6e6;
+    font-weight:bold;
+}
+
+.numeric_field{
+    text-align: right !important;
+}
+
+.modal-body td{
+    
+    font-size: 12px; 
+    text-align: left;
+}
+
+
+
+/*MIS table table data
+*/
+
+.ka_table_inactive_field{
+    background-color:#BDBDBD;
+}
+
+
+.mis_table{
+    border: 1px solid black;
+    padding-left: 0px;
+    padding-bottom: .1px;
+    font-size: 14px;
+    border-collapse: collapse;
+    table-layout: auto;
+    border: 1px solid black!important;
+}
+
+.mis_table td{
+    border: 1px outset black!important;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-top: 1px;
+    font-size: 14px;
+    text-align: center;
+    overflow-x:auto;
+    border: 1px solid black;
+    
+}
+
+.mis_table th{
+    text-align:center;
+    background-color:#e6e6e6 ;
+    font-size: 15px;
+    border-left: 1px solid;
+    border-top: 1px solid black;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+}
+
+.rotate {
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+    -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+    -ms-transform: rotate(-90.0deg);  /* IE9+ */
+    -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(-90.0deg);  /* Safari 3.1+, Chrome */
+    transform: rotate(-90.0deg);  /* Standard */
+}
+
+.wdth-40{
+    width: 40px;
+}
+
+
+/*dailyServiceTable*/
+
+.daily_service_table{
+    border: 1px solid black;
+    padding-left: 0px;
+    padding-bottom: .1px;
+    font-size: 14px;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 50%;
+}
+
+.daily_service_table th{
+    text-align:center;
+    background-color:#e6e6e6 ;
+    font-size: 14px;
+    border-left: 1px solid;
+    border-top: 1px solid black;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.daily_service_table td{
+    border: 1px outset black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-top: 1px;
+    font-size: 14px;
+    text-align: left;
+    overflow-x:auto;
+}

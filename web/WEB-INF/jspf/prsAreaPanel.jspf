@@ -1,0 +1,80 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="row"  id="areaPanel">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body" id="a">
+                    <form action="prs-coverage" method="post" id="showData">
+                        <div class="row">
+                            <div class="col-md-1 col-xs-2">
+                                <label for="division">Division</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="divid" id="divid">
+                                    <option selected="selected">- Select Division -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="zilla">District</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="zillaid" id="zillaid">
+                                    <option selected="selected">- Select District -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="upazila">Upazila</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="upazilaid" id="upazilaid">
+                                    <option selected="selected">- Select Upazila -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="union">Union</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="unionid" id="unionid">
+                                    <option selected="selected">- Select Union -</option>
+                                </select>
+                            </div>
+                            <span id="unitDiv"></span>
+                        </div>
+
+                        <div class="row" id="dateBlock">
+                            <div class="col-md-1 col-xs-2">
+                                <label for="one" id="">Date</label>
+                            </div>
+                            <div class="col-md-1 col-xs-2">
+                                <label for="startDate">From</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <input type="text" name="startDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" id="startDate" readonly="readonly" style="background-color: rgb(255, 255, 255);">
+                            </div>
+                            <div class="col-md-1 col-xs-2">
+                                <label for="endDate">To</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <input type="text" name="endDate" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" id="endDate" readonly="readonly" style="background-color: rgb(255, 255, 255);">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <span class="viewBtnBlock">
+                                <div class="col-md-1 col-xs-2 btn-label col-md-offset-4 col-xs-offset-2">
+                                    <label for="one" id=""></label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="submit" class="btn btn-flat btn-primary btn-sm btn-block bold" autocomplete="off" >
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp; Show Data
+                                </button>
+                                </div>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

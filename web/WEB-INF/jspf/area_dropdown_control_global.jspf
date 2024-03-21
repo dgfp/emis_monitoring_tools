@@ -1,0 +1,52 @@
+<style>
+    #areaDropDownPanel [class*="col"] { margin-bottom: 10px; }
+</style>
+<div class="row" id="areaDropDownPanel">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-body">
+                <form role="form" id="globalReportForm">
+                    <input type="hidden" value="${userLevel}" id="userLevel">
+                     <!--<div class="row">
+                       <div class="col-md-1 col-xs-2">
+                            <label for="district">Division</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="division" id="division"> 
+                                <option value="">- Select Division -</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <label for="district">District</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="zilla" id="district">
+                                <option value="">- Select District -</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <label for="upazila">Upazila</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="upazila" id="upazila" >
+                                <option value="">- Select Upazila -</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="viewBtnBlock">
+                            <div class="col-md-1 col-xs-2 btn-label col-md-offset-4 col-xs-offset-2">
+                                <label for="one" id=""></label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <button type="submit" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm bold" autocomplete="off">
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp; Show Data
+                                </button>
+                            </div>
+                        </span>
+                    </div>-->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

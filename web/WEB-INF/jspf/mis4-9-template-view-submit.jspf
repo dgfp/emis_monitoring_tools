@@ -1,0 +1,1624 @@
+<span class="utf">
+    <%@ page pageEncoding="UTF-8" %>
+</span>
+
+<style>
+    .insert-mis4-manual-data {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .insert-mis4-manual-data-table{
+        font-family: SolaimanLipi;
+        font-size: 15px!important;
+        table-layout:fixed;
+        width: 300%;
+    }
+    .direct-chat-messages {
+        height: 74px!important;
+    }
+    .error{
+        border: 2px solid red;
+    }
+    .tg-031e > select.input-sm {
+        height: 40px!important;
+    }
+
+    table {
+        height: 1em;
+    }
+    table table{
+        height:100%;
+        border:0px !important;
+    }
+    .utf{
+        display: none;
+    }
+</style>
+<script>
+    $(function () {
+    });
+</script>
+<div class="insert-mis4-manual-data">
+    <!---page-1-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-১</th>
+            </tr>
+            <tr>
+                <td rowspan="5"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="5">ইউনিয়নের নাম</td>
+                <td rowspan="5"><span class="r-v"> মোট সক্ষম দম্পতির সংখ্যা </span></td>
+                <td colspan="24"><b>পরিবার পরিকল্পনা পদ্ধতি গ্রহণকারী</b></td>
+            </tr>
+            <tr>
+                <td colspan="12">খাবার বড়ি</td>
+                <td colspan="12">কনডম</td>
+            </tr>
+            <tr>
+                <td colspan="5">স্বাভাবিক</td>
+                <td colspan="6">প্রসব পরবর্তী</td>
+                <td rowspan="3"><span class="r-v"> সর্বমোট খাবার বড়ি </span></td>
+                <td colspan="5">স্বাভাবিক</td>
+                <td colspan="6">প্রসব পরবর্তী</td>
+                <td rowspan="3"><span class="r-v">সর্বমোট কনডম </span></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                <td rowspan="2"><span class="r-v">নতুন</span></td>
+                <td rowspan="2"><span class="r-v">মোট</span></td>
+                <td colspan="2">ছেড়ে দিয়েছে</td>
+                <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                <td rowspan="2"><span class="r-v">নতুন</span></td>
+                <td rowspan="2"><span class="r-v">মোট</span></td>
+                <td colspan="3">ছেড়ে দিয়েছে</td>
+                <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                <td rowspan="2"><span class="r-v">নতুন</span></td>
+                <td rowspan="2"><span class="r-v">মোট</span></td>
+                <td colspan="2">ছেড়ে দিয়েছে</td>
+                <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                <td rowspan="2"><span class="r-v">নতুন</span></td>
+                <td rowspan="2"><span class="r-v">মোট</span></td>
+                <td colspan="3">ছেড়ে দিয়েছে</td>
+            </tr>
+            <tr>
+                <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                <td><span class="r-v">প্রসব পরবর্তী  মেয়াদ উত্তীর্ণ </span></td>
+                <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                <td><span class="r-v">প্রসব পরবর্তী  মেয়াদ উত্তীর্ণ </span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td>৪</td>
+                <td>৫</td>
+                <td>৬</td>
+                <td>৭</td>
+                <td>৮</td>
+                <td>৯</td>
+                <td>১০</td>
+                <td>১১</td>
+                <td>১২</td>
+                <td>১৩</td>
+                <td>১৪</td>
+                <td>১৫</td>
+                <td>১৬</td>
+                <td>১৭</td>
+                <td>১৮</td>
+                <td>১৯</td>
+                <td>২০</td>
+                <td>২১</td>
+                <td>২২</td>
+                <td>২৩</td>
+                <td>২৪</td>
+                <td>২৫</td>
+                <td>২৬</td>
+                <td>২৭</td>
+            </tr>
+            <tbody id="mis4Page1">
+                <tr>
+                    <td colspan="2">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="unit_capable_elco_tot"/></td>
+                    <td><input type="number" class="form-control" name="old_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_pill_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_pill_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_pill_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_pill_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="pill_total"/></td>
+                    <td><input type="number" class="form-control" name="old_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_condom_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_condom_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_condom_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_condom_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="condom_total"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="unit_capable_elco_tot"/></td>
+                    <td><input type="number" class="form-control" name="old_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_pill_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_pill_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_pill_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_pill_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_pill_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_pill_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="pill_total"/></td>
+                    <td><input type="number" class="form-control" name="old_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_condom_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_condom_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_condom_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_condom_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_condom_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_condom_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="condom_total"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-2-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-২</th>
+                </tr>
+                <tr>
+                    <td rowspan="5"><span class="r-v">ক্রমিক নম্বর </span></span></td>
+                    <td rowspan="5">ইউনিয়নের নাম</td>
+                    <td colspan="24"><b>পরিবার</b> <b>পরিকল্পনা</b> <b>পদ্ধতি</b> <b>গ্রহণকারী</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">ইনজেকটেবল</td>
+                    <td colspan="12">আইইউডি</td>
+                </tr>
+                <tr>
+                    <td colspan="5">স্বাভাবিক</td>
+                    <td colspan="6">প্রসব পরবর্তী</td>
+                    <td rowspan="3"><span class="r-v"><span
+                                class="r-v">সর্বমোট ইনজেকটেবল</span></span></td>
+                    <td colspan="5">স্বাভাবিক</td>
+                    <td colspan="6">প্রসব পরবর্তী</td>
+                    <td rowspan="3"><span class="r-v">সর্বমোট আইইউডি</span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="2">ছেড়ে দিয়েছে</td>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="3">ছেড়ে দিয়েছে</td>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="2">ছেড়ে দিয়েছে</td>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="3">ছেড়ে দিয়েছে</td>
+                </tr>
+                <tr>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v">প্রসব পরবর্তী মেয়াদ উত্তীর্ণ</span></td>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v">প্রসব পরবর্তী মেয়াদ উত্তীর্ণ</span></td>
+                </tr>
+                <tr class="serial-color">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>২৮</td>
+                    <td>২৯</td>
+                    <td>৩০</td>
+                    <td>৩১</td>
+                    <td>৩২</td>
+                    <td>৩৩</td>
+                    <td>৩৪</td>
+                    <td>৩৫</td>
+                    <td>৩৬</td>
+                    <td>৩৭</td>
+                    <td>৩৮</td>
+                    <td>৩৯</td>
+                    <td>৪০</td>
+                    <td>৪১</td>
+                    <td>৪২</td>
+                    <td>৪৩</td>
+                    <td>৪৪</td>
+                    <td>৪৫</td>
+                    <td>৪৬</td>
+                    <td>৪৭</td>
+                    <td>৪৮</td>
+                    <td>৪৯</td>
+                    <td>৫০</td>
+                    <td>৫১</td>
+                </tr>
+            </thead>
+            <tbody id="mis4Page2">
+                <tr>
+                    <td colspan="2">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="old_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_inject_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_inj_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_inject_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_inj_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="injectable_total"/></td>
+                    <td><input type="number" class="form-control" name="old_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_iud_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_iud_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_iud_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_iud_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="iud_total"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="old_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_inject_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_inject_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_inj_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_inject_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_inj_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_inject_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="injectable_total"/></td>
+                    <td><input type="number" class="form-control" name="old_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_iud_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_iud_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_iud_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_iud_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_iud_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_iud_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="iud_total"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-3-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৩</th>
+                </tr>
+                <tr>
+                    <td rowspan="5"><span class="r-v">ক্রমিক নম্বর </span></td>
+                    <td rowspan="5">&nbsp;&nbsp;&nbsp;&nbsp;ইউনিয়নের<span style="padding: 2px;"></span>নাম&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td colspan="33"><b>পরিবার</b> <b>পরিকল্পনা</b> <b>পদ্ধতি</b> <b>গ্রহণকারী</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">ইমপ্ল্যান্ট</td>
+                    <td colspan="16">স্থায়ী পদ্ধতি</td>
+                    <td colspan="2" rowspan="2">
+                        <p>পদ্ধতিভিত্তিক মোট গ্রহণকারী</p>
+                    </td>
+                    <td rowspan="4"><span class="r-v">সর্বমোট গ্রহণকারী</span></td>
+                    <td rowspan="4"><span class="r-v">গ্রহণকারীর হার (CAR) %</span></td>
+                    <td rowspan="4">
+                        <span class="r-v">গর্ভপাত, এমআর এবং এমআরএম <br/>পরবর্তী পরিবার পরিকল্পনা পদ্ধতি গ্রহণকারীর সংখ্যা</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">স্বাভাবিক</td>
+                    <td colspan="6">প্রসব পরবর্তী</td>
+                    <td rowspan="3"><span class="r-v">সর্বমোট ইমপ্ল্যান্ট</span></td>
+                    <td colspan="7">পুরুষ</td>
+                    <td colspan="7">মহিলা</td>
+                    <td rowspan="3">
+                        <span class="r-v">স্থায়ী পদ্ধতির সর্বমোট প্রসব পরবর্তী মেয়াদ <br/>উর্ত্তীণ</span>
+                    </td>
+                    <td rowspan="3"><span class="r-v">স্থায়ী পদ্ধতি সর্বমোট</span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="2">ছেড়ে দিয়েছে</td>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td colspan="3">ছেড়ে দিয়েছে</td>
+                    <td colspan="3">স্বাভাবিক</td>
+                    <td colspan="3">প্রসব পরবর্তী</td>
+                    <td rowspan="2"><span class="r-v">সর্বমোট পুরুষ</span></td>
+                    <td colspan="3">স্বাভাবিক</td>
+                    <td colspan="3">প্রসব পরবর্তী</td>
+                    <td rowspan="2"><span class="r-v">সর্বমোট মহিলা</span></td>
+                    <td rowspan="2"><span class="r-v">স্বাভাবিক</span></td>
+                    <td rowspan="2"><span class="r-v">প্রসব পরবর্তী</span></td>
+                </tr>
+                <tr>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v"> কোন পদ্ধতি নেয়নি</span></td>
+                    <td><span class="r-v">অন্য পদ্ধতি নিয়েছে</span></td>
+                    <td><span class="r-v">প্রসব পরবর্তী মেয়াদ উত্তীর্ণ</span></td>
+                    <td><span class="r-v">পুরাতন</span></td>
+                    <td><span class="r-v">নতুন</span></td>
+                    <td><span class="r-v">মোট</span></td>
+                    <td><span class="r-v">পুরাতন</span></td>
+                    <td><span class="r-v">নতুন</span></td>
+                    <td><span class="r-v">মোট</span></td>
+                    <td><span class="r-v">পুরাতন</span></td>
+                    <td><span class="r-v">নতুন</span></td>
+                    <td><span class="r-v">মোট</span></td>
+                    <td><span class="r-v">পুরাতন</span></td>
+                    <td><span class="r-v">নতুন</span></td>
+                    <td><span class="r-v">মোট</span></td>
+                </tr>
+                <tr class="serial-color">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>৫২</td>
+                    <td>৫৩</td>
+                    <td>৫৪</td>
+                    <td>৫৫</td>
+                    <td>৫৬</td>
+                    <td>৫৭</td>
+                    <td>৫৮</td>
+                    <td>৫৯</td>
+                    <td>৬০</td>
+                    <td>৬১</td>
+                    <td>৬২</td>
+                    <td>৬৩</td>
+                    <td>৬৪</td>
+                    <td>৬৫</td>
+                    <td>৬৬</td>
+                    <td>৬৭</td>
+                    <td>৬৮</td>
+                    <td>৬৯</td>
+                    <td>৭০</td>
+                    <td>৭১</td>
+                    <td>৭২</td>
+                    <td>৭৩</td>
+                    <td>৭৪</td>
+                    <td>৭৫</td>
+                    <td>৭৬</td>
+                    <td>৭৭</td>
+                    <td>৭৮</td>
+                    <td>৭৯</td>
+                    <td>৮০</td>
+                    <td>৮১</td>
+                    <td>৮২</td>
+                    <td>৮৩</td>
+                    <td>৮৪</td>
+                </tr>
+            </thead>
+            <tbody id="mis4Page3">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="old_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_implant_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_implant_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_implant_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_implant_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_implan_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="implant_total"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_man_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_man_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_normal_man"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_man_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_man_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_after_delivery_man"/></td>
+                    <td><input type="number" class="form-control" name="permanent_method_men_total"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_woman_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_woman_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_normal_woman"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_woman_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_woman_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_after_delivery_woman"/></td>
+                    <td><input type="number" class="form-control" name="permanent_method_woman_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_all_tot"/></td>
+                    <td><input type="number" class="form-control" name="total_permanent_method"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="unit_all_total_tot"/></td>
+                    <td><input type="number" class="form-control" name="car"/></td>
+                    <td><input type="number" class="form-control" name="pac_mr_mrm_after_fp"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="old_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_implant_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_implant_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_implant_oth_method_normal"/></td>
+                    <td><input type="number" class="form-control" name="old_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_implant_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_left_no_method_implant_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_implant_oth_method_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_implan_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="implant_total"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_man_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_man_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_normal_man"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_man_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_man_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_after_delivery_man"/></td>
+                    <td><input type="number" class="form-control" name="permanent_method_men_total"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_woman_normal"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_woman_normal"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_normal_woman"/></td>
+                    <td><input type="number" class="form-control" name="old_permanent_woman_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="new_permanent_woman_after_delivery"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_permanent_after_delivery_woman"/></td>
+                    <td><input type="number" class="form-control" name="permanent_method_woman_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_m_left_ppfp_expired_all_tot"/></td>
+                    <td><input type="number" class="form-control" name="total_permanent_method"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_normal_total"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_after_delivery_total"/></td>
+                    <td><input type="number" class="form-control" name="unit_all_total_tot"/></td>
+                    <td><input type="number" class="form-control" name="car"/></td>
+                    <td><input type="number" class="form-control" name="pac_mr_mrm_after_fp"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-4-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৪</th>
+                </tr>
+                <tr>
+                    <td rowspan="4"><span class="r-v">ক্রমিক নম্বর </span></td>
+                    <td rowspan="4">ইউনিয়নের নাম<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td rowspan="4"><span class="r-v">চলতি মাসে নবদম্পতির সংখ্যা</span></td>
+                    <td colspan="25"><b>প্রজনন স্বাস্থ্য সেবা</b></td>
+                </tr>
+                <tr>
+                    <td colspan="3">চলতি মাসে গর্ভবতীর সংখ্যা</td>
+                    <td rowspan="3"><span class="r-v">পূর্ববর্তী মাসে মোট গর্ভবতীর সংখ্যা</span></td>
+                    <td rowspan="3"><span class="r-v">ইউনিয়নের সর্বমোট গর্ভবতীর সংখ্যা </span>
+                    </td>
+                    <td colspan="9">গর্ভকালীন সেবার তথ্য</td>
+                    <td colspan="9">প্রসব<b>&nbsp; </b>সেবার<b> </b>তথ্য</td>
+                    <td rowspan="3"><span
+                            class="r-v">গর্ভপাত পরবর্তী সেবা (PAC) প্রদানের সংখ্যা</span>
+                    </td>
+                    <td rowspan="3"><span class="r-v">মারাত্নক প্রি-একলামপসিয়া/একলামপসিয়া রোগীর <br/>সংখ্যা</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><span class="r-v">পুরাতন</span></td>
+                    <td rowspan="2"><span class="r-v">নতুন</span></td>
+                    <td rowspan="2"><span class="r-v">মোট</span></td>
+                    <td rowspan="2"><span class="r-v">পরিদর্শন-১</span></td>
+                    <td rowspan="2"><span class="r-v">পরিদর্শন-২</span></td>
+                    <td rowspan="2"><span class="r-v">পরিদর্শন-৩</span></td>
+                    <td rowspan="2"><span class="r-v">পরিদর্শন-৪</span></td>
+                    <td rowspan="2"><span class="r-v">প্রসব<b> </b>পরবর্তী<b> </b>পরিবার<b> </b>পরিকল্পনা<b> </b>পদ্ধতি<b> </b><br/>বিষয়ে<b> </b>কাউন্সেলিং</span>
+                    </td>
+                    <td rowspan="2"><span class="r-v">মিসোপ্রোস্টাল বড়ি সরবরাহপ্রাপ্ত গর্ভবতীর <br/>সংখ্যা</span>
+                    </td>
+                    <td rowspan="2"><span class="r-v">৭.১% ক্লোরোহেক্সিডিন সরবরাহপ্রাপ্ত <br/>গর্ভবতীর সংখ্যা</span>
+                    </td>
+                    <td rowspan="2"><span class="r-v">প্রসবপূর্ব রক্তক্ষরণ (APH) আক্রান্ত মায়ের সংখ্যা</span>
+                    </td>
+                    <td rowspan="2"><span class="r-v">২৪-৩৪ সপ্তাহের মধ্যে ইনজেকশন এন্টিন্যাটাল <br/>করটিকোস্টেরয়েড প্রাপ্ত
+                            গর্ভবতী মায়ের&nbsp; সংখ্যা
+                            <br/>(MCWC)</span>
+                    </td>
+                    <td colspan="2">বাড়ী</td>
+                    <td colspan="6">হাসপাতাল/ ক্লিনিক</td>
+                    <td rowspan="2"><span
+                            class="r-v">মিসোপ্রোস্টল<b> </b>বড়ি<b> </b>খাওয়ানোর<b> </b>সংখ্যা</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="r-v">প্রশিক্ষণপ্রাপ্ত ব্যক্তি দ্বারা</span></td>
+                    <td><span class="r-v">প্রশিক্ষণ বিহীন ব্যক্তি দ্বারা</span></td>
+                    <td><span class="r-v">স্বাভাবিক</span></td>
+                    <td><span class="r-v">সিজারিয়ান</span></td>
+                    <td><span class="r-v">অন্যান্য (ফর্&zwnj;সেপ/ভ্যাকুয়াম/ব্রিচ)</span></td>
+                    <td><span class="r-v">প্রসবের তৃতীয় ধাপের সক্রিয় ব্যবস্থাপনা <br/>(AMTSL) অনুসরণ করে প্রসব করানো সংখ্যা</span>
+                    </td>
+                    <td><span class="r-v">পার্টোগ্রাফ ব্যবহারের সংখ্যা</span></td>
+                    <td><span
+                            class="r-v">প্রসবকালীন অতিরিক্ত রক্তক্ষরণ (IPH) <br/>আক্রান্ত মায়ের সংখ্যা</span>
+                    </td>
+                </tr>
+                <tr class="serial-color">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>৮৫</td>
+                    <td>৮৬</td>
+                    <td>৮৭</td>
+                    <td>৮৮</td>
+                    <td>৮৯</td>
+                    <td>৯০</td>
+                    <td>৯১</td>
+                    <td>৯২</td>
+                    <td>৯৩</td>
+                    <td>৯৪</td>
+                    <td>৯৫</td>
+                    <td>৯৬</td>
+                    <td>৯৭</td>
+                    <td>৯৮</td>
+                    <td>৯৯</td>
+                    <td>১০০</td>
+                    <td>১০১</td>
+                    <td>১০২</td>
+                    <td>১০৩</td>
+                    <td>১০৪</td>
+                    <td>১০৫</td>
+                    <td>১০৬</td>
+                    <td>১০৭</td>
+                    <td>১০৮</td>
+                    <td>১০৯</td>
+                    <td>১১০</td>
+                </tr>
+            </thead>
+            <tbody id="mis4Page4">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="curr_m_v_new_elco_tot"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_new_fwa"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_old_fwa"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_tot_fwa"/></td>
+                    <td><input type="number" class="form-control" name="priv_month_tot_preg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="unit_tot_preg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_counselling_after_delivery_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_misoprostol_supplied_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_chlorohexidin_supplied_csba"/></td>
+                    <td><input type="number" class="form-control" name="ancadvicecenter_ancadvicesatelite"/></td>
+                    <td><input type="number" class="form-control" name="ancAntinatalKortisatelite"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_home_trained_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_home_untrained_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_hospital_normal_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_hospital_operation_fwa"/></td>
+                    <td><input type="number" class="form-control" name="others_forcep_center"/></td>
+                    <td><input type="number" class="form-control" name="amtsl"/></td>
+                    <td><input type="number" class="form-control" name="partograph_using_center"/></td>
+                    <td><input type="number" class="form-control" name="deliveryIPHcenter"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_eight"/></td>
+                    <td><input type="number" class="form-control" name="pacservicecount"/></td>
+                    <td><input type="number" class="form-control" name="anchighpreeclampsia"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="curr_m_v_new_elco_tot"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_new_fwa"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_old_fwa"/></td>
+                    <td><input type="number" class="form-control" name="curr_month_preg_tot_fwa"/></td>
+                    <td><input type="number" class="form-control" name="priv_month_tot_preg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="unit_tot_preg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_service_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_counselling_after_delivery_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_misoprostol_supplied_csba"/></td>
+                    <td><input type="number" class="form-control" name="preg_anc_chlorohexidin_supplied_csba"/></td>
+                    <td><input type="number" class="form-control" name="ancadvicecenter_ancadvicesatelite"/></td>
+                    <td><input type="number" class="form-control" name="ancAntinatalKortisatelite"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_home_trained_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_home_untrained_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_hospital_normal_fwa"/></td>
+                    <td><input type="number" class="form-control" name="delivary_service_hospital_operation_fwa"/></td>
+                    <td><input type="number" class="form-control" name="others_forcep_center"/></td>
+                    <td><input type="number" class="form-control" name="amtsl"/></td>
+                    <td><input type="number" class="form-control" name="partograph_using_center"/></td>
+                    <td><input type="number" class="form-control" name="deliveryIPHcenter"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_eight"/></td>
+                    <td><input type="number" class="form-control" name="pacservicecount"/></td>
+                    <td><input type="number" class="form-control" name="anchighpreeclampsia"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!---page-5-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৫</th>
+            </tr>
+            <tr>
+                <td rowspan="4"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="4">ইউনিয়নের নাম</td>
+                <td colspan="23">প্রজনন স্বাস্থ্য সেবা</td>
+            </tr>
+            <tr>
+                <td colspan="16"><b>প্রসবোত্তর</b> <b>সেবার</b> <b>তথ্য</b></td>
+                <td colspan="5" rowspan="2"><b>রেফারকৃত</b></td>
+                <td colspan="2" rowspan="2">বন্ধ্যা দম্পতির <br/>তথ্য</td>
+            </tr>
+            <tr>
+                <td colspan="7">মা</td>
+                <td colspan="9">নবজাতক</td>
+            </tr>
+            <tr>
+                <td><span class="r-v">পরিদর্শন-১</span></td>
+                <td><span class="r-v">পরিদর্শন-২</span></td>
+                <td><span class="r-v">পরিদর্শন-৩</span></td>
+                <td><span class="r-v">পরিদর্শন-৪</span></td>
+                <td><span class="r-v">বাড়ীতে ডেলিভারীর ক্ষেত্রে প্রশিক্ষণপ্রাপ্ত <br/>ব্যক্তি দ্বারা ২ দিনের মধ্যে
+                        প্রসবোত্তর সেবা <br/>গ্রহণকারী</span>
+                </td>
+                <td><span
+                        class="r-v">প্রসব<b> </b>পরবর্তী<b> </b>পরিবার<b> </b>পরিকল্পনা<b> </b>পদ্ধতি<b> </b><br/>বিষয়ে<b> </b>কাউন্সেলিং</span>
+                </td>
+                <td><span
+                        class="r-v">প্রসবোত্তর অতিরিক্ত রক্তক্ষরণ (PPH)<br/> আক্রান্ত মায়ের সংখ্যা</span>
+                </td>
+                <td><span class="r-v">১ মিনিটের মধ্যে মোছানোর সংখ্যা</span></td>
+                <td><span class="r-v">নাড়ি কাটার পর ৭.১% ক্লোরোহক্সিডিন <br/>ব্যবহারের সংখ্যা</span>
+                </td>
+                <td><span
+                        class="r-v">নাড়ি কাটার পর মায়ের ত্বকে-ত্বক স্পর্শ <br/>প্রদানের সংখ্যা</span>
+                </td>
+                <td><span class="r-v">জন্মের ১ ঘন্টার মধ্যে বুকের দুধ খাওয়ানোর <br/>সংখ্যা</span>
+                </td>
+                <td><span class="r-v">জন্মকালীন শ্বাসকষ্টে আক্রান্ত&nbsp; শিশুকে ব্যাগ ও <br/>মাস্ক ব্যবহার করে
+                        রিসাসিটেইট করার সংখ্যা</span>
+                </td>
+                <td><span class="r-v">পরিদর্শন-১</span></td>
+                <td><span class="r-v">পরিদর্শন-২</span></td>
+                <td><span class="r-v">পরিদর্শন-৩</span></td>
+                <td><span class="r-v">পরিদর্শন-৪</span></td>
+                <td><span class="r-v">ঝুঁকিপূর্ণ/জটিল গর্ভবতীর সংখ্যা</span></td>
+                <td><span class="r-v">একলাম্পসিয়া রোগীকে লোডিং ডোজ MgSO<sub>4</sub><br/> ইনজেকশন দিয়ে রেফার করার <br/>সংখ্যা</span>
+                </td>
+                <td><span class="r-v">প্রসবকালীন জটিলতায় রেফারের সংখ্যা</span></td>
+                <td><span class="r-v">প্রসবোত্তর<b> </b>জটিলতায় রেফারের সংখ্যা</span></td>
+                <td><span class="r-v">নবজাতককে জটিলতার জন্য প্রেরণের সংখ্যা</span></td>
+                <td><span class="r-v">চিকিৎসা/পরামর্শ প্রাপ্ত</span></td>
+                <td><span class="r-v">রেফারকৃত</span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>১১১</td>
+                <td>১১২</td>
+                <td>১১৩</td>
+                <td>১১৪</td>
+                <td>১১৫</td>
+                <td>১১৬</td>
+                <td>১১৭</td>
+                <td>১১৮</td>
+                <td>১১৯</td>
+                <td>১২০</td>
+                <td>১২১</td>
+                <td>১২২</td>
+                <td>১২৩</td>
+                <td>১২৪</td>
+                <td>১২৫</td>
+                <td>১২৬</td>
+                <td>১২৭</td>
+                <td>১২৮</td>
+                <td>১২৯</td>
+                <td>১৩০</td>
+                <td>১৩১</td>
+                <td>১৩২</td>
+                <td>১৩৩</td>
+            </tr>
+            <tbody id="mis4Page5">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_home_delivery_training_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_family_planning_counselling_csba"/></td>
+                    <td><input type="number" class="form-control" name="pncmotherPPH"/></td>
+                    <td><input type="number" class="form-control" name="newborn_1min_washed_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_71_chlorohexidin_used_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_with_mother_skin_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_1hr_bfeeded_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_diff_breathing_resassite_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_twenty_seven"/></td>
+                    <td><input type="number" class="form-control" name="ref_eclampsia_mgso4_inj_refer_csba"/></td>
+                    <td><input type="number" class="form-control" name="deliveryrefer"/></td>
+                    <td><input type="number" class="form-control" name="pncmotherrefer"/></td>
+                    <td><input type="number" class="form-control" name="ref_newborn_difficulty_csba"/></td>
+                    <td><input type="number" class="form-control" name="infertile_consultstatus"/></td>
+                    <td><input type="number" class="form-control" name="infertile_referstatus"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_home_delivery_training_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_mother_family_planning_counselling_csba"/></td>
+                    <td><input type="number" class="form-control" name="pncmotherPPH"/></td>
+                    <td><input type="number" class="form-control" name="newborn_1min_washed_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_71_chlorohexidin_used_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_with_mother_skin_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_1hr_bfeeded_csba"/></td>
+                    <td><input type="number" class="form-control" name="newborn_diff_breathing_resassite_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit1_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit2_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit3_csba"/></td>
+                    <td><input type="number" class="form-control" name="pnc_newborn_visit4_csba"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_twenty_seven"/></td>
+                    <td><input type="number" class="form-control" name="ref_eclampsia_mgso4_inj_refer_csba"/></td>
+                    <td><input type="number" class="form-control" name="deliveryrefer"/></td>
+                    <td><input type="number" class="form-control" name="pncmotherrefer"/></td>
+                    <td><input type="number" class="form-control" name="ref_newborn_difficulty_csba"/></td>
+                    <td><input type="number" class="form-control" name="infertile_consultstatus"/></td>
+                    <td><input type="number" class="form-control" name="infertile_referstatus"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-6-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৬</th>
+            </tr>
+            <tr>
+                <td rowspan="3"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="3">ইউনিয়নের নাম<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="24">প্রজনন স্বাস্থ্য সেবা</td>
+            </tr>
+            <tr>
+                <td colspan="5">টিটি প্রাপ্ত মহিলার সংখ্যা</td>
+                <td rowspan="2"><span class="r-v">ইসিপি গ্রহণকারীর সংখ্যা</span></td>
+                <td colspan="11">কিশোর-কিশোরীর সেবা (১০-১৯ বৎসর)</td>
+                <td rowspan="2"><span class="r-v">RTI/STI সংক্রান্ত চিকিৎসা প্রদানকৃত রোগীর সংখ্যা</span>
+                </td>
+                <td rowspan="2"><span class="r-v">এমআর<b> </b>(এমভিএ)<b> </b>সেবা<b> </b>প্রদানের<b> </b>সংখ্যা</span>
+                </td>
+                <td rowspan="2">
+                    <span class="r-v"> এমআরএম<b> </b>(ঔষধের<b> </b>মাধ্যমে<b> </b>এমআর)<b> </b>সেবা<b> </b>প্রদানের<b> </b><br/>সংখ্যা</span>
+                </td>
+                <td colspan="4">
+                    জরায়ুর<b> </b>মুখ<b>&nbsp; </b>ও<b> </b>স্তন<b> </b>ক্যান্সার<b> </b>স্ক্রীনিং
+                </td>
+            </tr>
+            <tr>
+                <td>১ম</td>
+                <td>২য়</td>
+                <td>৩য়</td>
+                <td>৪র্থ</td>
+                <td>৫ম</td>
+                <td><span class="r-v">বয়ঃসন্ধিকালীন পরিবর্তন বিষয়ে কাাউন্সেলিং</span></td>
+                <td><span class="r-v">বাল্যবিবাহ ও কিশোরী মাতৃত্বের কুফল বিষয়ে <br/>কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">কিশোরীকে আয়রন ফলিক এসিড বড়ি খাবার <br/>বিষয়ে কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">আয়রন ফলিক এসিড বড়ি সরবরাহপ্রাপ্ত <br/>কিশোরীর সংখ্যা</span>
+                </td>
+                <td><span
+                        class="r-v">প্রজননতন্ত্রের সংক্রমন ও যৌনবাহিত রোগ <br/>বিষয়ে কাউন্সেলিং</span>
+                </td>
+                <td><span
+                        class="r-v">প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগ <br/>নিরাময়ে চিকিৎসা</span>
+                </td>
+                <td><span
+                        class="r-v">বিভিন্ন ধরণের পুষ্টিকর ও সুষম খাবার বিষয়ে <br/>কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">কৈশোর সহিংসতা প্রতিরোধ বিষয়ে কাউন্সেলিং</span></td>
+                <td><span class="r-v">মানসিক সমস্যা এবং মাদকাসক্তি প্রতিরোধ ও <br/>নিরাময় বিষয়ে কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">কিশোর-কিশোরীর ব্যক্তিগত পরিষ্কার পরিচ্ছন্নতা ও <br/>কিশোরীর স্যানিটারি প্যাড
+                        ব্যবহার বিষয়ে কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">রেফার</span></td>
+                <td><span class="r-v">মোট<b> </b>VIA পজিটিভ</span></td>
+                <td><span class="r-v">মোট<b> </b>VIA নেগেটিভ</span></td>
+                <td><span class="r-v">মোট<b> </b>CBE পজিটিভ</span></td>
+                <td><span class="r-v">মোট<b> </b>CBE নেগেটিভ</span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>১৩৪</td>
+                <td>১৩৫</td>
+                <td>১৩৬</td>
+                <td>১৩৭</td>
+                <td>১৩৮</td>
+                <td>১৩৯</td>
+                <td>১৪০</td>
+                <td>১৪১</td>
+                <td>১৪২</td>
+                <td>১৪৩</td>
+                <td>১৪৪</td>
+                <td>১৪৫</td>
+                <td>১৪৬</td>
+                <td>১৪৭</td>
+                <td>১৪৮</td>
+                <td>১৪৯</td>
+                <td>১৫০</td>
+                <td>১৫১</td>
+                <td>১৫২</td>
+                <td>১৫৩</td>
+                <td>১৫৪</td>
+                <td>১৫৫</td>
+                <td>১৫৬</td>
+                <td>১৫৭</td>
+            </tr>
+            <tbody id="mis4Page6">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="tt_women_1st_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_2nd_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_3rd_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_4th_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_5th_fwa"/></td>
+                    <td><input type="number" class="form-control" name="ecp_taken"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_adolescent_change_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_child_marriage_preg_effect_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_iron_folic_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_iron_folic_distribution_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_sexual_disease_fwa"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_fourty_five"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_healthy_balanced_diet_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_adolescence_violence_prevention_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_mental_prob_drug_addict_prevention_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_cleanliness_sanitary_pad_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_referred_fwa"/></td>
+                    <td><input type="number" class="form-control" name="gp_rta_sta_all"/></td>
+                    <td><input type="number" class="form-control" name="mr_mva_treatment"/></td>
+                    <td><input type="number" class="form-control" name="mrm_treatment"/></td>
+                    <td><input type="number" class="form-control" name="total_via_positive"/></td>
+                    <td><input type="number" class="form-control" name="total_via_negative"/></td>
+                    <td><input type="number" class="form-control" name="total_cbe_positive"/></td>
+                    <td><input type="number" class="form-control" name="total_cbe_negative"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="tt_women_1st_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_2nd_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_3rd_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_4th_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tt_women_5th_fwa"/></td>
+                    <td><input type="number" class="form-control" name="ecp_taken"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_adolescent_change_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_child_marriage_preg_effect_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_iron_folic_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_iron_folic_distribution_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_sexual_disease_fwa"/></td>
+                    <td><input type="number" class="form-control" name="one_hundred_fourty_five"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_healthy_balanced_diet_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_adolescence_violence_prevention_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_mental_prob_drug_addict_prevention_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_cleanliness_sanitary_pad_fwa"/></td>
+                    <td><input type="number" class="form-control" name="teen_counseling_referred_fwa"/></td>
+                    <td><input type="number" class="form-control" name="gp_rta_sta_all"/></td>
+                    <td><input type="number" class="form-control" name="mr_mva_treatment"/></td>
+                    <td><input type="number" class="form-control" name="mrm_treatment"/></td>
+                    <td><input type="number" class="form-control" name="total_via_positive"/></td>
+                    <td><input type="number" class="form-control" name="total_via_negative"/></td>
+                    <td><input type="number" class="form-control" name="total_cbe_positive"/></td>
+                    <td><input type="number" class="form-control" name="total_cbe_negative"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-7-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৭</th>
+            </tr>
+            <tr>
+                <td rowspan="4"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="4">ইউনিয়নের নাম<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="18"><b>শিশু (০-৫ বৎসর) সেবা</b></td>
+                <td colspan="13"><b>জন্ম-মৃত্যু</b></td>
+            </tr>
+            <tr>
+                <td rowspan="3"><span class="r-v">কেএমসি প্রপ্ত নবজাতকের সংখ্যা</span></td>
+                <td colspan="14">টিকা প্রাপ্ত (০-১৫ মাস বয়সী) শিশুর সংখ্যা</td>
+                <td colspan="3" rowspan="2">রেফারকৃত শিশুর সংখ্যা</td>
+                <td rowspan="3"><span class="r-v">মোট জীবিত জন্মের সংখ্যা</span></td>
+                <td rowspan="3"><span class="r-v">কম জন্ম ওজনে (জন্ম ওজন ২৫০০ গ্রামের কম) <br/>জন্মগ্রহণকারী নবজাতক এর
+                        সংখ্যা</span>
+                </td>
+                <td rowspan="3"><span class="r-v">কম জন্ম ওজনে (জন্ম ওজন ২০০০ গ্রামের কম) <br/>জন্মগ্রহণকারী নবজাতক এর
+                        সংখ্যা</span>
+                </td>
+                <td rowspan="3"><span class="r-v">অপরিণত (৩৭ সপ্তাহের পূর্বে জন্ম) নবজাতক এর সংখ্যা</span>
+                </td>
+                <td rowspan="3"><span class="r-v">মৃত জন্ম (Still Birth)</span></td>
+                <td colspan="8">মৃত্যুর সংখ্যা</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="r-v">বিসিজি</span></td>
+                <td colspan="3">
+                    <p>ওপিভি ও পেন্টাভ্যালেন্ট</p>
+
+                    <p>(ডিপিটি, হেপ-বি, হিব)</p>
+                </td>
+                <td colspan="3">পিসিভি টিকা</td>
+                <td colspan="3">বিওপিভি</td>
+                <td colspan="2">
+                    <p>আইপিভি</p>
+
+                    <p>(ফ্রাকশনাল)</p>
+                </td>
+                <td colspan="2">এমআর টিকা</td>
+                <td colspan="4">এক বৎসরের কম মৃত শিশুর সংখ্যা</td>
+                <td rowspan="2"><span class="r-v">১-&lt;৫ বৎসর মৃত শিশুর সংখ্যা</span></td>
+                <td rowspan="2"><span class="r-v"> মাতৃ মৃত্যুর সংখ্যা</span></td>
+                <td rowspan="2"><span class="r-v">অন্যান্য মৃত্যুসংখ্যা</span></td>
+                <td rowspan="2"><span class="r-v"> সর্বমোট মৃত্যুর সংখ্যা</span></td>
+            </tr>
+            <tr>
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td>১</td>
+                <td>২</td>
+                <td>১</td>
+                <td>২</td>
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td><span class="r-v">০-৭ দিন</span></td>
+                <td><span class="r-v">৮-২৮ দিন</span></td>
+                <td><span class="r-v">২৯ দিন-&lt;১ বৎসর</span></td>
+                <td><span class="r-v">মোট</span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>১৫৮</td>
+                <td>১৫৯</td>
+                <td>১৬০</td>
+                <td>১৬১</td>
+                <td>১৬২</td>
+                <td>১৬৩</td>
+                <td>১৬৪</td>
+                <td>১৬৫</td>
+                <td>১৬৬</td>
+                <td>১৬৭</td>
+                <td>১৬৮</td>
+                <td>১৬৯</td>
+                <td>১৭০</td>
+                <td>১৭১</td>
+                <td>১৭২</td>
+                <td>১৭৩</td>
+                <td>১৭৪</td>
+                <td>১৭৫</td>
+                <td>১৭৬</td>
+                <td>১৭৭</td>
+                <td>১৭৮</td>
+                <td>১৭৯</td>
+                <td>১৮০</td>
+                <td>১৮১</td>
+                <td>১৮২</td>
+                <td>১৮৩</td>
+                <td>১৮৪</td>
+                <td>১৮৫</td>
+                <td>১৮৬</td>
+                <td>১৮৭</td>
+                <td>১৮৮</td>
+            </tr>
+            <tbody id="mis4Page7">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="kmc_started_child"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bcg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_ipv_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_ipv_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_mr_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_mr_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_dangerous_disease_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_neumonia_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_diahoea_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tot_live_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="less_weight_birth_less_then_2500g_fwa"/></td>
+                    <td><input type="number" class="form-control" name="less_weight_birth_less_then_2000g_fwa"/></td>
+                    <td><input type="number" class="form-control" name="immature_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="still_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_0to7days_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_8to28days_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_29dystoless1yr_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_tot_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_1yrto5yr_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_maternal_death_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_other_death_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_all_death_fwa"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="kmc_started_child"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bcg_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pentavalent_3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_pcv3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_bopv_3_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_ipv_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_ipv_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_mr_1_fwa"/></td>
+                    <td><input type="number" class="form-control" name="vaccinated_child_0to15mnths_mr_2_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_dangerous_disease_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_neumonia_fwa"/></td>
+                    <td><input type="number" class="form-control" name="referred_child_diahoea_fwa"/></td>
+                    <td><input type="number" class="form-control" name="tot_live_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="less_weight_birth_less_then_2500g_fwa"/></td>
+                    <td><input type="number" class="form-control" name="less_weight_birth_less_then_2000g_fwa"/></td>
+                    <td><input type="number" class="form-control" name="immature_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="still_birth_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_0to7days_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_8to28days_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_29dystoless1yr_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_less_1yr_tot_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_1yrto5yr_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_maternal_death_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_other_death_fwa"/></td>
+                    <td><input type="number" class="form-control" name="death_number_all_death_fwa"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-8-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৮</th>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="2">ইউনিয়নের নাম<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="6">বহির্বিভাগে সেবা গ্রহণকারী রোগী</td>
+                <td colspan="4">অনতবিভাগে ভর্তি রোগীর সংখ্যা</td>
+                <td rowspan="2"><span class="r-v">কেন্দ্রে কয়টি স্বাস্থ্য &nbsp;শিক্ষা (বিসিসি) কার্যক্রম সমপন্ন
+                        করা হয়েছে</span>
+                </td>
+                <td rowspan="2"><span class="r-v">এসএসিএমও (SACMO) কর্তৃক কয়টি স্কুলে&nbsp;স্বাস্থ্য &nbsp; শিক্ষা
+                        (বিসিসি) <br/>কার্যক্রম সম্পাদন করা
+                        হয়েছে</span>
+                </td>
+                <td colspan="17">পুুষ্টি সেবা</td>
+            </tr>
+            <tr>
+                <td><span class="r-v">পুরুষ</span></td>
+                <td><span class="r-v">মহিলা</span></td>
+                <td><span class="r-v">শিশু (০-১ বছর)</span></td>
+                <td><span class="r-v">শিশু (১-৫ বছর)</span></td>
+                <td><span class="r-v">অন্যান্য</span></td>
+                <td><span class="r-v">মোট</span></td>
+                <td><span class="r-v">মহিলা</span></td>
+                <td><span class="r-v">শিশু (০-১ বছর)</span></td>
+                <td><span class="r-v">শিশু (১-৫ বছর)</span></td>
+                <td><span class="r-v">মোট</span></td>
+                <td><span class="r-v">আইওয়াইসিএফ, আইএফএ, ভিটামিন-এ, হাত ধোয়া, মায়ের <br/>পুষ্টি বিষয়ক কাউন্সেলিং</span>
+                </td>
+                <td><span class="r-v">কতজন গর্ভবতী&nbsp; মাকে আয়রন ফলিক এসিড এবং ক্যালসিয়াম <br/>বড়ি দেওয়া হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ০-২৩ মাস বয়সী শিশুর মাকে আয়রন ফলিক এসিড এবং <br/>ক্যালসিয়াম বড়ি দেওয়া
+                        হয়েছে</span>
+                </td>
+                <td><span class="r-v">কত জন শিশুকে ৬ মাস পর্যন্ত শুধুমাত্র বুকের দুধ খাওয়ানো <br/>হয়েছে</span>
+                </td>
+                <td><span class="r-v"><span class="r-v"><span class="r-v">কতজন ২৪-৫৯ মাস বয়সী শিশুকে পরিপূরক খাবার খাওয়ানো <br/>হয়েছে</span></span></span>
+                </td>
+                <td><span
+                        class="r-v">কতজন ২৪-৫৯ মাস বয়সী শিশুকে পরিপূরক খাবার খাওয়ানো <br/>হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ৬-২৩ মাস বয়সী শিশুকে মাল্টিপল মাইক্রোনিউট্রিয়েন্ট <br/>পাউডার (এমএনপি) দেয়া
+                        হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ২৪-৫৯ মাস বয়সী শিশুকে মাল্টিপল মাইক্রোনিউট্রিয়েন্ট <br/>পাউডার (এমএনপি) দেয়া
+                        হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ৬-৫৯ মাস বয়সী শিশুকে ভিটামিন-এ দেয়া হয়েছে</span></td>
+                <td><span class="r-v">কতজন ২৪-৫৯ মাস বয়সী শিশুকে কৃমিনাশক বড়ি দেয়া হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ৬-৫৯ মাস বয়সী ডায়রিয়া আক্রান্ত শিশুকে খাবার <br/>স্যালাইনের সাথে জিংক বড়ি
+                        দেয়া হয়েছে</span>
+                </td>
+                <td><span
+                        class="r-v">কতজন ৬-৫৯ মাস বয়সী শিশুকে গ্রোথ মনিটরিং (GMP) করা <br/>হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ৬-৫৯ মাস বয়সী MAM (মাঝারি তীব্র অপুষ্টি) আক্রান্ত <br/>শিশুকে সনাক্ত এবং
+                        চিকিৎসা প্রদান&nbsp; করা হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ৬-৫৯ মাস বয়সী SAM (মারাত্বক তীব্র অপুষ্টি) আক্রান্ত <br/>শিশুকে সনাক্ত করা
+                        হয়েছে এবং রেফার করা হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ০-৫৯ মাস বয়সী শিশুর Stunting (বয়সের তুলনায় <br/>কম উচ্চতা সম্পন্ন) সনাক্ত
+                        করা হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ০-৫৯ মাস বয়সী শিশুর Wasting (উচ্চতার তুলনায় <br/>কম ওজন সম্পন্ন) সনাক্ত করা
+                        হয়েছে</span>
+                </td>
+                <td><span class="r-v">কতজন ০-৫৯ মাস বয়সী শিশুর Underweight (বয়সের <br/>তুলনায় কম ওজন সম্পন্ন) সনাক্ত
+                        করা হয়েছে</span>
+                </td>
+            </tr>
+            <tr class="serial-color">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>১৮৯</td>
+                <td>১৯০</td>
+                <td>১৯১</td>
+                <td>১৯২</td>
+                <td>১৯৩</td>
+                <td>১৯৪</td>
+                <td>১৯৫</td>
+                <td>১৯৬</td>
+                <td>১৯৭</td>
+                <td>১৯৮</td>
+                <td>১৯৯</td>
+                <td>২০০</td>
+                <td>২০১</td>
+                <td>২০২</td>
+                <td>২০৩</td>
+                <td>২০৪</td>
+                <td>২০৫</td>
+                <td>২০৬</td>
+                <td>২০৭</td>
+                <td>২০৮</td>
+                <td>২০৯</td>
+                <td>২১০</td>
+                <td>২১১</td>
+                <td>২১২</td>
+                <td>২১৩</td>
+                <td>২১৪</td>
+                <td>২১৫</td>
+                <td>২১৬</td>
+                <td>২১৭</td>
+            </tr>
+            <tbody id="mis4Page8">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="gp_male"/></td>
+                    <td><input type="number" class="form-control" name="gp_female"/></td>
+                    <td><input type="number" class="form-control" name="gp_outdoor_child_0_1"/></td>
+                    <td><input type="number" class="form-control" name="gp_outdoor_child_1_5"/></td>
+                    <td><input type="number" class="form-control" name="external_other_patient"/></td>
+                    <td><input type="number" class="form-control" name="total_outdoor_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_female_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_oneyear_child_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_onetofive_child_patient"/></td>
+                    <td><input type="number" class="form-control" name="total_indoor_patient"/></td>
+                    <td><input type="number" class="form-control" name="bcc_done"/></td>
+                    <td><input type="number" class="form-control" name="sacmo_done"/></td>
+                    <td><input type="number" class="form-control" name="nutrition_iycf_counseling"/></td>
+                    <td><input type="number" class="form-control" name="iron_folicacid_distribute_preg_woman"/></td>
+                    <td><input type="number" class="form-control" name="iron_folicacid_distribute_child_0to23months"/></td>
+                    <td><input type="number" class="form-control" name="child_number_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="birth_1hr_bfeed_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="birth_only_bfeed_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="v0_59_child_complementary_food_6to23mon"/></td>
+                    <td><input type="number" class="form-control" name="v0_59_child_complementary_food_24to59mon"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_month_child_vitamin_a_given"/></td>
+                    <td><input type="number" class="form-control" name="v24_59_month_child_wormpills_given"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_child_saline_given"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_gmp"/></td>
+                    <td><input type="number" class="form-control" name="mnp_given_24toless60mon__mam_child_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="mam_child_24to60mon__sam_child_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="stunting"/></td>
+                    <td><input type="number" class="form-control" name="wasting"/></td>
+                    <td><input type="number" class="form-control" name="under_weight"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="gp_male"/></td>
+                    <td><input type="number" class="form-control" name="gp_female"/></td>
+                    <td><input type="number" class="form-control" name="gp_outdoor_child_0_1"/></td>
+                    <td><input type="number" class="form-control" name="gp_outdoor_child_1_5"/></td>
+                    <td><input type="number" class="form-control" name="external_other_patient"/></td>
+                    <td><input type="number" class="form-control" name="total_outdoor_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_female_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_oneyear_child_patient"/></td>
+                    <td><input type="number" class="form-control" name="internal_onetofive_child_patient"/></td>
+                    <td><input type="number" class="form-control" name="total_indoor_patient"/></td>
+                    <td><input type="number" class="form-control" name="bcc_done"/></td>
+                    <td><input type="number" class="form-control" name="sacmo_done"/></td>
+                    <td><input type="number" class="form-control" name="nutrition_iycf_counseling"/></td>
+                    <td><input type="number" class="form-control" name="iron_folicacid_distribute_preg_woman"/></td>
+                    <td><input type="number" class="form-control" name="iron_folicacid_distribute_child_0to23months"/></td>
+                    <td><input type="number" class="form-control" name="child_number_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="birth_1hr_bfeed_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="birth_only_bfeed_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="v0_59_child_complementary_food_6to23mon"/></td>
+                    <td><input type="number" class="form-control" name="v0_59_child_complementary_food_24to59mon"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_month_child_vitamin_a_given"/></td>
+                    <td><input type="number" class="form-control" name="v24_59_month_child_wormpills_given"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_child_saline_given"/></td>
+                    <td><input type="number" class="form-control" name="v6_59_gmp"/></td>
+                    <td><input type="number" class="form-control" name="mnp_given_24toless60mon__mam_child_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="mam_child_24to60mon__sam_child_0to6mon"/></td>
+                    <td><input type="number" class="form-control" name="stunting"/></td>
+                    <td><input type="number" class="form-control" name="wasting"/></td>
+                    <td><input type="number" class="form-control" name="under_weight"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <!--page-9-->
+    <div class="table-responsive" >
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-৯</th>
+            </tr>
+            <tr>
+                <td rowspan="3"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="3">ইউনিয়নের নাম</td>
+                <td colspan="4">পরিবার কল্যাণ সহকারী কর্তৃক <br/>সম্পাদিত সেবা কার্যক্রম</td>
+                <td colspan="9">এফপিআই কর্তৃক প্রদত্ত সেবা কার্যক্রম</td>
+                <td rowspan="3"><span class="r-v">পরিবার কল্যাণ পরিদর্শিকার জন্য স্যাটেলাইট ক্লিনিকের <br/>লক্ষ্যমাত্রা&nbsp;</span>
+                </td>
+                <td rowspan="3"><span class="r-v">পরিবার কল্যাণ পরিদর্শিকা কর্তৃক অনুষ্ঠিত স্যাটেলাইট ক্লিনিক</span>
+                </td>
+                <td rowspan="3"><span
+                        class="r-v">SACMO কর্তৃক NSV ক্লায়েন্ট রেফার লক্ষ্যমাত্রা</span></td>
+                <td rowspan="3"><span
+                        class="r-v">SACMO কর্র্তৃক NSV ক্লায়েন্ট রেফার সংখ্যা</span></td>
+                <td rowspan="3"><span class="r-v">২৪/৭ ডেলিভারী সেবা &nbsp;প্রদানকারী&nbsp; কেন্দ্রের সংখ্যা</span>
+                </td>
+                <td colspan="5">প্রাতিষ্ঠানিক প্রসব সেবার তথ্য</td>
+                <td colspan="2" rowspan="2">অসুস্থ শিশুর<br/>সমন্বিত<br/>চিকিৎসা<br/>ব্যবস্থাপনা<br/>(IMCI)</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="r-v">স্যাটলাইট ক্লিনিকে উপস্থিতি</span></td>
+                <td rowspan="2"><span class="r-v">ইপিআই সেশনে&nbsp; উপস্থিতি</span></td>
+                <td rowspan="2"><span class="r-v">কমিউনিটি ক্লিনিকে উপস্থিতি</span></td>
+                <td rowspan="2"><span class="r-v">অনুষ্ঠিত উঠান বৈঠকে উপস্থিতি</span></td>
+                <td rowspan="2"><span class="r-v">কতজনকে NSV সম্পর্কে উদ্বুদ্ধ করা হয়েছে</span>
+                </td>
+                <td rowspan="2"><span class="r-v">এভি ভ্যানের মাধ্যমে প্রদর্শনির আয়োজনের&nbsp; সংখ্যা</span>
+                </td>
+                <td rowspan="2"><span class="r-v">কতদিন দম্পতির উপাত্ত যাচাই করা হয়েছে</span>
+                </td>
+                <td rowspan="2"><span class="r-v">কতজন দম্পতির উপাত্ত যাচাই করা হয়েছে</span>
+                </td>
+                <td rowspan="2"><span
+                        class="r-v">কতবার&nbsp; FWA রেজিস্টার যাচাই করা হয়েছে</span></td>
+                <td rowspan="2"><span class="r-v">দলগত সভা/ উঠান বৈঠক</span></td>
+                <td rowspan="2"><span class="r-v">পাক্ষিক সভা</span></td>
+                <td rowspan="2"><span class="r-v">ইউনিয়ন পরিবার পরিকল্পনা কমিটির সভা</span></td>
+                <td rowspan="2"><span class="r-v">স্যাটেলাইট ক্লিনিকে উপস্থিতি</span></td>
+                <td rowspan="2"><span class="r-v">ইউনয়িন স্বাস্থ্য ও পরবিার কল্যাণ কেন্দ্রে স্বাভাবিক <br/>প্রসব
+                        সংখ্যা &nbsp;</span>
+                </td>
+                <td colspan="4">মা ও শিশু কল্যাণ কেন্দ্র</td>
+            </tr>
+            <tr>
+                <td><span class="r-v">স্বাভাবিক প্রসব সংখ্যা</span></td>
+                <td><span class="r-v">সিজারিয়ান প্রসব সংখ্যা&nbsp;</span></td>
+                <td><span class="r-v">অন্যান্য প্রসব সংখ্যা</span></td>
+                <td><span class="r-v">মোট</span></td>
+                <td><span class="r-v">০-৫৯ দিন বয়সী শিশু</span></td>
+                <td><span class="r-v">২ মাস-৫ বছর বয়সী শিশু</span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>২১৮</td>
+                <td>২১৯</td>
+                <td>২২০</td>
+                <td>২২১</td>
+                <td>২২২</td>
+                <td>২২৩</td>
+                <td>২২৪</td>
+                <td>২২৫</td>
+                <td>২২৬</td>
+                <td>২২৭</td>
+                <td>২২৮</td>
+                <td>২২৯</td>
+                <td>২৩০</td>
+                <td>২৩১</td>
+                <td>২৩২</td>
+                <td>২৩৩</td>
+                <td>২৩৪</td>
+                <td>২৩৫</td>
+                <td>২৩৬</td>
+                <td>২৩৭</td>
+                <td>২৩৮</td>
+                <td>২৩৯</td>
+                <td>২৪০</td>
+                <td>২৪১</td>
+                <td>২৪২</td>
+            </tr>
+            <tbody id="mis4Page9">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="satelite_clinic_presence"/></td>
+                    <td><input type="number" class="form-control" name="epi_session_presence"/></td>
+                    <td><input type="number" class="form-control" name="community_clinic_presence"/></td>
+                    <td><input type="number" class="form-control" name="yard_meeting_presence"/></td>
+                    <td><input type="number" class="form-control" name="nsv_inspired_fpi"/></td>
+                    <td><input type="number" class="form-control" name="av_van_display_fpi"/></td>
+                    <td><input type="number" class="form-control" name="elco_day_count_fpi"/></td>
+                    <td><input type="number" class="form-control" name="no_of_elco_count_fpi"/></td>
+                    <td><input type="number" class="form-control" name="fwa_register_fpi"/></td>
+                    <td><input type="number" class="form-control" name="yard_meeting_fpi"/></td>
+                    <td><input type="number" class="form-control" name="fortnightly_meeting_fpi"/></td>
+                    <td><input type="number" class="form-control" name="union_fp_committee_fpi"/></td>
+                    <td><input type="number" class="form-control" name="satellite_clinic_presence_fpi"/></td>
+                    <td><input type="number" class="form-control" name="terget_clinic"/></td>
+                    <td><input type="number" class="form-control" name="achieved_clinic"/></td>
+                    <td><input type="number" class="form-control" name="terget_sacmo_nsv_client_refer"/></td>
+                    <td><input type="number" class="form-control" name="achieved_sacmo_nsv_client_refer"/></td>
+                    <td><input type="number" class="form-control" name="delivery_facility"/></td>
+                    <td><input type="number" class="form-control" name="normaldelivery_uhnfwc"/></td>
+                    <td><input type="number" class="form-control" name="normaldelivery_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="csectiondelivery_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="others_forcep_center_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="maternal_child_welfare_total"/></td>
+                    <td><input type="number" class="form-control" name="zero_to_fifty_nine_month_child"/></td>
+                    <td><input type="number" class="form-control" name="two_to_five_years_child"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type="number" class="form-control" name="satelite_clinic_presence"/></td>
+                    <td><input type="number" class="form-control" name="epi_session_presence"/></td>
+                    <td><input type="number" class="form-control" name="community_clinic_presence"/></td>
+                    <td><input type="number" class="form-control" name="yard_meeting_presence"/></td>
+                    <td><input type="number" class="form-control" name="nsv_inspired_fpi"/></td>
+                    <td><input type="number" class="form-control" name="av_van_display_fpi"/></td>
+                    <td><input type="number" class="form-control" name="elco_day_count_fpi"/></td>
+                    <td><input type="number" class="form-control" name="no_of_elco_count_fpi"/></td>
+                    <td><input type="number" class="form-control" name="fwa_register_fpi"/></td>
+                    <td><input type="number" class="form-control" name="yard_meeting_fpi"/></td>
+                    <td><input type="number" class="form-control" name="fortnightly_meeting_fpi"/></td>
+                    <td><input type="number" class="form-control" name="union_fp_committee_fpi"/></td>
+                    <td><input type="number" class="form-control" name="satellite_clinic_presence_fpi"/></td>
+                    <td><input type="number" class="form-control" name="terget_clinic"/></td>
+                    <td><input type="number" class="form-control" name="achieved_clinic"/></td>
+                    <td><input type="number" class="form-control" name="terget_sacmo_nsv_client_refer"/></td>
+                    <td><input type="number" class="form-control" name="achieved_sacmo_nsv_client_refer"/></td>
+                    <td><input type="number" class="form-control" name="delivery_facility"/></td>
+                    <td><input type="number" class="form-control" name="normaldelivery_uhnfwc"/></td>
+                    <td><input type="number" class="form-control" name="normaldelivery_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="csectiondelivery_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="others_forcep_center_mcwc"/></td>
+                    <td><input type="number" class="form-control" name="maternal_child_welfare_total"/></td>
+                    <td><input type="number" class="form-control" name="zero_to_fifty_nine_month_child"/></td>
+                    <td><input type="number" class="form-control" name="two_to_five_years_child"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <!--page-19-->
+    <div class="table-responsive">
+        <table class="page1 mis_table tg insert-mis4-manual-data-table">
+            <tr>
+                <th colspan="2" style="text-align: left;border:1px solid #fff!important;border-bottom:1px solid #000!important;" class="page-no">পৃষ্ঠা-১৯</th>
+            </tr>
+            <tr>
+                <td rowspan="4"><span class="r-v">ক্রমিক নম্বর </span></td>
+                <td rowspan="4">ইউনিয়নের নাম</td>
+                <td colspan="23"><b>বিতরণ</b></td>
+                <td colspan="4">সম্পাদন</td>
+            </tr>
+            <tr>
+                <td colspan="2">খাবার<b> </b>বড়ি<b> </b>(চক্র)</td>
+                <td rowspan="3"><span class="r-v">কনডম<b> </b>(নিরাপদ)<b> </b>পিস</span></td>
+                <td colspan="2">ইনজেকটেবল</td>
+                <td colspan="2">আইইউডি</td>
+                <td colspan="3">ইমপ্ল্যান্ট</td>
+                <td rowspan="3"><span class="r-v">ইসিপি</span></td>
+                <td rowspan="3"><span class="r-v">মিসো-প্রোস্টল (ডোজ)</span></td>
+                <td rowspan="3"><span class="r-v">এমআরএম&nbsp; (প্যাক)</span></td>
+                <td rowspan="3"><span class="r-v">৭.১% ক্লোরোহেক্সিডিন</span></td>
+                <td rowspan="3"><span class="r-v">ইনজেকশন MgSO4</span></td>
+                <td rowspan="3"><span class="r-v">ইনজেকশন অক্সিটোক্সিন ডোজ)</span></td>
+                <td rowspan="3"><span class="r-v">এমএনপি (স্যাসেট)</span></td>
+                <td rowspan="3"><span class="r-v">স্যানিটারী প্যাড (সংখ্যা)</span></td>
+                <td rowspan="3"><span class="r-v">এমআর (এমভিএ) কিট&nbsp; (সংখ্যা)</span></td>
+                <td rowspan="3"><span class="r-v">ডেলিভারী কিট (সংখ্যা)</span></td>
+                <td rowspan="3"><span class="r-v">ডিডিএস কিট (সংখ্যা)</span></td>
+                <td rowspan="3"><span class="r-v">ইনজেকশন এন্টিন্যাটাল <br/>করটিকোস্টেরয়ড</span></td>
+                <td rowspan="3"><span class="r-v">ইনজেকশন জেন্টামাইসিন</span></td>
+                <td colspan="4">স্থায়ী পদ্ধতি</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="r-v">সুখী</span></td>
+                <td rowspan="2"><span class="r-v">আপন</span></td>
+                <td rowspan="2"><span class="r-v">ভায়াল</span></td>
+                <td rowspan="2"><span class="r-v">সিরিঞ্জ</span></td>
+                <td rowspan="2"><span class="r-v">বিতরণ</span></td>
+                <td rowspan="2"><span class="r-v">খুলে<b> </b>ফেলা</span></td>
+                <td rowspan="2"><span class="r-v">ইমপ্ল্যানন</span></td>
+                <td rowspan="2"><span class="r-v">জেডেল</span></td>
+                <td rowspan="2"><span class="r-v">খুলে<b> </b>ফেলা</span></td>
+                <td rowspan="2"><span class="r-v">পুুরুষ<b> </b>(সংখ্যা)</span></td>
+                <td colspan="3">মহিলা<b> </b>(সংখ্যা)</td>
+            </tr>
+            <tr>
+                <td><span class="r-v">স্বাভাবিক</span></td>
+                <td><span class="r-v">প্রসব<b> </b>পরবর্তী</span></td>
+                <td><span class="r-v">মোট</span></td>
+            </tr>
+            <tr class="serial-color">
+                <td>১</td>
+                <td>২</td>
+                <td>৩</td>
+                <td>৪</td>
+                <td>৫</td>
+                <td>৬</td>
+                <td>৭</td>
+                <td>৮</td>
+                <td>৯</td>
+                <td>১০</td>
+                <td>১১</td>
+                <td>১২</td>
+                <td>১৩</td>
+                <td>১৪</td>
+                <td>১৫</td>
+                <td>১৬</td>
+                <td>১৭</td>
+                <td>১৮</td>
+                <td>১৯</td>
+                <td>২০</td>
+                <td>২১</td>
+                <td>২২</td>
+                <td>২৩</td>
+                <td>২৪</td>
+                <td>২৫</td>
+                <td>২৬</td>
+                <td>২৭</td>
+                <td>২৮</td>
+                <td>২৯</td>
+            </tr>
+            <tbody id="mis4Page19">
+                <tr>
+                    <td colspan="2" class="left">*অসরকারি সংস্থার মোট</td>
+                    <td><input type='number' class='form-control' name='lmis_03' /></td>
+                    <td><input type='number' class='form-control' name='lmis_04' /></td>
+                    <td><input type='number' class='form-control' name='lmis_05' /></td>
+                    <td><input type='number' class='form-control' name='lmis_06' /></td>
+                    <td><input type='number' class='form-control' name='lmis_07' /></td>
+                    <td><input type='number' class='form-control' name='lmis_08' /></td>
+                    <td><input type='number' class='form-control' name='lmis_09' /></td>
+                    <td><input type='number' class='form-control' name='lmis_10' /></td>
+                    <td><input type='number' class='form-control' name='lmis_11' /></td>
+                    <td><input type='number' class='form-control' name='lmis_12' /></td>
+                    <td><input type='number' class='form-control' name='lmis_13' /></td>
+                    <td><input type='number' class='form-control' name='lmis_14' /></td>
+                    <td><input type='number' class='form-control' name='lmis_15' /></td>
+                    <td><input type='number' class='form-control' name='lmis_16' /></td>
+                    <td><input type='number' class='form-control' name='lmis_17' /></td>
+                    <td><input type='number' class='form-control' name='lmis_18' /></td>
+                    <td><input type='number' class='form-control' name='lmis_19' /></td>
+                    <td><input type='number' class='form-control' name='lmis_20' /></td>
+                    <td><input type='number' class='form-control' name='lmis_21' /></td>
+                    <td><input type='number' class='form-control' name='lmis_22' /></td>
+                    <td><input type='number' class='form-control' name='lmis_23' /></td>
+                    <td><input type='number' class='form-control' name='lmis_24' /></td>
+                    <td><input type='number' class='form-control' name='lmis_25' /></td>
+                    <td><input type='number' class='form-control' name='lmis_26' /></td>
+                    <td><input type='number' class='form-control' name='lmis_27' /></td>
+                    <td><input type='number' class='form-control' name='lmis_28' /></td>
+                    <td><input type='number' class='form-control' name='lmis_29' /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="left">*বহুমূখী সংস্থার মোট</td>
+                    <td><input type='number' class='form-control' name='lmis_03' /></td>
+                    <td><input type='number' class='form-control' name='lmis_04' /></td>
+                    <td><input type='number' class='form-control' name='lmis_05' /></td>
+                    <td><input type='number' class='form-control' name='lmis_06' /></td>
+                    <td><input type='number' class='form-control' name='lmis_07' /></td>
+                    <td><input type='number' class='form-control' name='lmis_08' /></td>
+                    <td><input type='number' class='form-control' name='lmis_09' /></td>
+                    <td><input type='number' class='form-control' name='lmis_10' /></td>
+                    <td><input type='number' class='form-control' name='lmis_11' /></td>
+                    <td><input type='number' class='form-control' name='lmis_12' /></td>
+                    <td><input type='number' class='form-control' name='lmis_13' /></td>
+                    <td><input type='number' class='form-control' name='lmis_14' /></td>
+                    <td><input type='number' class='form-control' name='lmis_15' /></td>
+                    <td><input type='number' class='form-control' name='lmis_16' /></td>
+                    <td><input type='number' class='form-control' name='lmis_17' /></td>
+                    <td><input type='number' class='form-control' name='lmis_18' /></td>
+                    <td><input type='number' class='form-control' name='lmis_19' /></td>
+                    <td><input type='number' class='form-control' name='lmis_20' /></td>
+                    <td><input type='number' class='form-control' name='lmis_21' /></td>
+                    <td><input type='number' class='form-control' name='lmis_22' /></td>
+                    <td><input type='number' class='form-control' name='lmis_23' /></td>
+                    <td><input type='number' class='form-control' name='lmis_24' /></td>
+                    <td><input type='number' class='form-control' name='lmis_25' /></td>
+                    <td><input type='number' class='form-control' name='lmis_26' /></td>
+                    <td><input type='number' class='form-control' name='lmis_27' /></td>
+                    <td><input type='number' class='form-control' name='lmis_28' /></td>
+                    <td><input type='number' class='form-control' name='lmis_29' /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="row" id="areaPanel">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <input type="hidden" value="${userLevel}" id="userLevel">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="division">বিভাগ</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="division" id="division"> 
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-xs-2">
+                        <label for="division">জেলা</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="district" id="district"> 
+                            <option value="">- সিলেক্ট করুন -</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="upazila">উপজেলা</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="upazila" id="upazila">
+                            <option value="">-সিলেক্ট করুন-</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="union">ইউনিয়ন</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="union" id="union">
+                            <option value="">-সিলেক্ট করুন-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row secondRow">
+                    <div class="col-md-1 col-xs-2">
+                        <label for="ward">ওয়ার্ড</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="ward" id="ward">
+                            <option value="">-সিলেক্ট করুন-</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="month">মাস</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="month" id="month">
+                            <option value="1">জানুয়ারী</option>
+                            <option value="2">ফেব্রুয়ারি</option>
+                            <option value="3">মার্চ </option>
+                            <option value="4">এপ্রিল</option>
+                            <option value="5">মে</option>
+                            <option value="6">জুন</option>
+                            <option value="7">জুলাই</option>
+                            <option value="8">আগষ্ট</option>
+                            <option value="9">সেপ্টেম্বর</option>
+                            <option value="10">অক্টোবর</option>
+                            <option value="11">নভেম্বর</option>
+                            <option value="12">ডিসেম্বর</option>
+                        </select> 
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        <label for="year">সন</label>
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <select class="form-control input-sm" name="year" id="year">    
+                        </select>
+                    </div>
+
+                    <div class="col-md-1 col-xs-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                            <b><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp; রিপোর্ট দেখুন</b>
+                        </button>
+                    </div>
+                </div>
+                <div class="row export">
+                    <div class="col-md-1 col-xs-2">
+                    </div>
+                    <div class="col-md-2 col-md-offset-10">
+                        <button type="button" id="exportWarningModal" onclick="exportWarningModal()" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block" autocomplete="off">
+                            <i class="fa fa-database" aria-hidden="true"></i> Export to DHIS2
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

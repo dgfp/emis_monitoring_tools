@@ -1,0 +1,13 @@
+<div class="col-md-1">
+    <label for="one" id="">From</label>
+</div>
+<div class="col-md-2">
+    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd-mm-yyyy" name="startDate" id="startDate" />
+</div>
+
+<div class="col-md-1">
+    <label for="one" id="">To</label>
+</div>
+<div class="col-md-2">
+    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd-mm-yyyy" name="endDate" id="endDate" />
+</div>

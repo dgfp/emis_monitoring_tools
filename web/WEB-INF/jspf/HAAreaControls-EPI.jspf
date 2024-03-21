@@ -1,0 +1,108 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="row" id="areaPanel">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <!-- /.box-header -->
+          <input type="hidden" value="${userLevel}" id="userLevel">
+          <div class="box-body">
+            <div class="row">
+                <div class="col-md-1 col-xs-2">
+                    <label for="division">বিভাগ</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="division" id="division"> 
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="district">জেলা</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="district" id="district"> 
+                        <option value="">- সিলেক্ট করুন -</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+                    <label for="upazila">উপজেলা</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="upazila" id="upazila">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+                    <label for="union">ইউনিয়ন</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="union" id="union">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+            </div>
+              
+            <div class="row">
+                <div class="col-md-1 col-xs-2">
+                    <label for="ward">ওয়ার্ড</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="ward" id="ward">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="subblock">সাব ব্লক</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="subblock" id="subblock">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-1 col-xs-2">
+                    <label for="year">সন</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                     <select class="form-control input-sm" name="year" id="year">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+                    <label for="nameOfEPICenter">টিকাদান কেন্দ্র</label>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <select class="form-control input-sm" name="nameOfEPICenter" id="nameOfEPICenter">
+                        <option value="">-সিলেক্ট করুন-</option>
+                    </select>
+                </div>
+            </div>
+<!--            <div class="row">
+              <div class="col-md-1 col-xs-2">
+              </div>
+              <div class="col-md-2 col-xs-4">
+                 <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                     <b><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;  ডাটা দেখান</b>
+                  </button>
+              </div>
+            </div>-->
+              
+              
+              
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-2 col-xs-4 col-md-offset-9">
+                        <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                            <b><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp; রিপোর্ট দেখুন</b>
+                        </button>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>

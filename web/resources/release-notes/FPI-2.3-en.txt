@@ -1,0 +1,70 @@
+<center>
+        <h1>Release notes</h1>
+        <img src="resources/release-notes/logo-emis/logo-emis-fpi.png" width=90 alt="">
+        <h3>Module: FPI eSupervision System</h3>
+        <h4>Version: 2.3 </h4>
+        <h4>Date: May 15, 2019</h4>
+    </center>
+    <h4>About the release:</h4>
+    <p>FPI eSupervision System version 2.3 is the modified version of 2.1 containing fixes for some issues as well as
+        some enhancements.</p>
+    <h4>Issues fixed: </h4>
+    <ol>
+        <ol>
+            <li>Issues with work plan submission status (resubmitted and submitted) by FWA have been fixed.</li>
+            <li>Appropriate color has been assigned to different status of work plan submission by FWAs (with regard to
+                changes made by the FWA subsequent to submission). Validation also added so that FWAs can make changes
+                to the submitted work plan only after getting input from FPI. In other words, FWAs would not be able to
+                re-submit their work plan before getting FPI&rsquo;s feedback.</li>
+            <li>Validation included in the field for inputting number of days on leave (only one digit is acceptable,
+                which was unlimited in previous version).</li>
+            <li>Text input field for EPI activities has been added in FWA e-register and correspondingly, FPI can now
+                select EPI activities for monitoring purposes based on the selection made by the FWA in her work plan.
+            </li>
+            <li>Problems with multiple windows popping up due to repetitive presses in work plan items have been solved.
+            </li>
+            <li>An FPI can now select multiple FWAs while adding item in his/her work plan. Earlier, the FPI was able to
+                select one FWA only. (পরিবার কল্যাণ সহকারীর অগ্রিম কর্মসূচি যাচাই ও অনুমোদন করা)</li>
+            <li>Issues with workplan item: FWA activity visit; has been solved.(পরিবার কল্যাণ সহকারীর কার্যক্রম
+                পরিদর্শন)</li>
+            <li>FPI would be able to add &ldquo;community clinic visit&rdquo; without particular name of the community
+                clinic (FPIs were facing problem in adding community clinic visits in the catchment area, as the list of
+                community clinics were not showing in the list).</li>
+            <li>Issues with Data sync has been fixed (in some cases it was getting halted at 1%).</li>
+            <li>During work plan submission, sometimes raw codes became visible, which has been solved.</li>
+            <li>FPI is now able to generate reports for multiple unions (with additional charge) from
+                Tab<strong>.</strong></li>
+            <li>Mandatory approval of work plans within 3 days&rsquo; of submission has been removed or it could be
+                approved later than that.</li>
+        </ol>
+    </ol>
+    <h4>Enhancements:</h4>
+    <p>Lists of changes made on new version release</p>
+    <ol type="a">
+
+        <li>
+            <p><strong><em>Modification:</em></strong></p>
+            <ul>
+                <li>Texts modified to bring conformity with the new version</li>
+                <li>Work plan progress view is shown in 4 different colors (সম্পন্ন<strong><em>, </em></strong>আংশিক
+                    সম্পন্ন<strong><em>, </em></strong>পরিবর্তিত ও<strong><em>&nbsp; </em></strong>অসম্পন্ন).</li>
+                <li>Logic for ELCO data verification page has been modified, now data would show only when an ELCO visit
+                    is included in the work plan of the FWA.</li>
+                <li>Notification view is now newly rearranged for both FPI and UFPO.</li>
+                <li>Work plan can now be edited while updating progress status. New items can be added with a different
+                    color code.</li>
+                <li>Entry of community clinic visit can be done without name in the FPI eSupervision System.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong><em>Addition:</em></strong></p>
+
+            <ul>
+                <li>2 new work plan items (NSV motivation, FWA Register verification) have been added.</li>
+                <li>Auto suggestion is incorporated in work plan on some input fields.</li>
+                <li>Input field for adding advice to FWA during verification of activities has been added.</li>
+                <li>Release note is incorporated in the APK.</li>
+            </ul>
+        </li>
+
+    </ol>

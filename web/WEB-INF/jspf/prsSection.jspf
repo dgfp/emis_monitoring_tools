@@ -1,0 +1,203 @@
+<%@ page pageEncoding="UTF-8" %>
+<section class="content">
+    <div class="row"  id="areaPanel">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body" id="a">
+                    <form action="prs-coverage" method="post" id="showData">
+                        <div class="row">
+                            <div class="col-md-1 col-xs-2">
+                                <label for="division">Division</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="divid" id="divid">
+                                    <option selected="selected">- Select Division -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="zilla">District</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="zillaid" id="zillaid">
+                                    <option selected="selected">- Select District -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="upazila">Upazila</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="upazilaid" id="upazilaid">
+                                    <option selected="selected">- Select Upazila -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 col-xs-2">
+                                <label for="union">Union</label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="unionid" id="unionid">
+                                    <option selected="selected">- Select Union -</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span id="unitDiv">
+                                <div class="col-md-1 col-xs-2">
+                                    <label for="unit">Unit</label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="unitid" id="unitid" >
+                                        <option value="">- select Unit -</option>
+                                    </select>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="row" id="viewTypeBlock">
+                            <div class="col-md-1 col-xs-12">
+                                <label for="viewType">Type</label>
+                            </div>
+                            <div class="col-md-2 col-xs-6">
+                                <label><input type="radio" id="atPoint" name="level" value="atPoint"> <span class="view-inactive warp">Status up to date</span></label>
+                            </div>
+                            <div class="col-md-2 col-xs-6">
+                                <label><input type="radio" id="monthly" name="level" value="monthly"> <span class="view-inactive warp">Monthly status</span></label>
+                            </div>
+                        </div>
+
+                        <div class="row" id="dateBlock">
+                            <div class="col-md-1 col-xs-2">
+                                <label for="one" id="">Date</label>
+                            </div>
+                            <span id="_atPoint">
+                                <input type="hidden" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="startDate" id="startDate" />
+                                <div class="col-md-1 col-xs-1">
+                                    <label for="one" id="">On</label>
+                                </div>
+                                <div class="col-md-2 col-xs-3">
+                                    <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="endDate" id="endDate" />
+                                </div>
+                            </span>
+                            <span id="_monthly">
+                                <div class="col-md-1 col-xs-1">
+                                    <label for="one" id="">From</label>
+                                </div>
+                                <div class="col-md-2 col-xs-3">
+                                    <input type="text" class="form-control input-sm mtz-monthpicker-widgetcontainer monthPickerChoose" placeholder="mm/yyyy" name="startMonthYear" id="startMonthYear">
+                                </div>
+                                <div class="col-md-1 col-xs-1">
+                                    <label for="one" id="">To</label>
+                                </div>
+                                <div class="col-md-2 col-xs-3">
+                                    <input type="text" class="form-control input-sm mtz-monthpicker-widgetcontainer monthPickerChoose" placeholder="mm/yyyy" name="endMonthYear" id="endMonthYear">
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="viewBtnBlock">
+                                <div class="col-md-1 col-xs-2 btn-label col-md-offset-4 col-xs-offset-2">
+                                    <label for="one" id=""></label>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <button type="submit" class="btn btn-flat btn-primary btn-block btn-sm bold" autocomplete="off">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp; Show Data
+                                    </button>
+                                </div>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row info-box-md-container prs-info">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="info-box bg-white selected-color clickable">
+                        <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text"><h4></h4></span>
+                            <span class="info-box-number center">Table</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="info-box bg-white clickable">
+                        <span class="info-box-icon bg-aqua"><i class="fa fa-pie-chart"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text"><h4></h4></span>
+                            <span class="info-box-number center">Chart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--PRS Data Table-->
+    <div class="box box-primary full-screen" id="tableView">
+        <div class="box-header with-border" style="padding: 0px;">
+            <p class="box-title bold" style="font-size: 15px;padding: 2px;padding-left: 5px;"></p>
+            <div class="box-tools pull-right" style="margin-top: -10px;">
+                <button type="button" class="btn btn-flat btn-default btn-xs bold" id="exportPrint"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print - PDF</button>
+                <a href="#" id ="exportCSV" role='button' class="btn btn-flat btn-default btn-xs bold" style="width:80px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp;Excel</a>
+                <button type="button" class="btn btn-box-tool" id="panel-fullscreen"><i class="fa fa-expand" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="box-body">   
+            <div class="col-md-12 table-responsive">
+                <h2 class="viewTitle"><span class="label label-default" style="font-size:21px;"></span></h2>
+            </div>
+            <div class="table-responsive fixed" id="export">
+                <table class="table table-bordered table-striped table-hover" id="data-table">
+                    <thead id="tableHeader" class="data-table">
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                    <tfoot id="tableFooter">
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--PRS Data Chart-->
+    <div class="box box-primary full-screen" id="graphView">
+        <div class="box-header with-border" style="padding: 0px;">
+            <p class="box-title bold" style="font-size: 15px;padding: 2px;padding-left: 5px;"></p>
+            <div class="box-tools pull-right" style="margin-top: -10px;">
+                <button type="button" class="btn btn-flat btn-default btn-xs bold" id="exportPrintChart"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print - PDF</button>
+                <a href="#" id="exportImageChart" download="national_id_coverage.png" target="_blank" class="btn btn-flat btn-default btn-xs bold"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Image</a>
+                <button type="button" class="btn btn-box-tool" id="panel-fullscreen"><i class="fa fa-expand" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="box-body" id="printChart">
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <h2 class="viewTitle"><span class="label label-default" style="font-size:21px;"></span></h2>
+                </div>
+                <div class="col-md-10 col-md-offset-1" id="chartCanvas">
+                    <div id="chart"></div>
+                </div>
+            </div><br/>
+        </div>
+    </div>
+    <!--PRS Data Map-->
+    <div class="box box-primary" id="mapView">
+        <div class="box-header with-border">
+            <h3 class="box-title"><b></b>Map Presentation</h3>
+            <div class="box-tools pull-right" style="margin-top: 0px;">
+                <button type="button" class="btn btn-box-tool"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print</button>
+                <button type="button" class="btn btn-box-tool"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;PDF</button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                <button id="closeGraph" type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table-responsive" >
+            </div>
+        </div>
+    </div>
+</section>

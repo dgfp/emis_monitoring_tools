@@ -1,0 +1,101 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="modal-report-view" class="modal fade" role="dialog">
+    <div class="modal-dialog report-view">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <button type="button" class="btn btn-flat btn-default btn-xs bold print" onclick="window.print();"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print / PDF</button>
+                <h4 class="modal-title"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; <span id="reportViewTitle">Loading ...</span></b><span id="provider-info"></span></h4>
+            </div>
+            <div class="modal-body" id="report">
+                <p id="_car"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    .callout.callout-success, .callout.callout-danger, .callout.callout-warning {
+        border:none!important;
+    }
+    .callout {
+        border-radius: 50px!important;
+    }
+/*    .mis-form-1 .table-responsive {
+        border: 1px solid #87bbf9!important;
+        border-top-color: #87bbf9!important;
+        border-bottom-color: #87bbf9!important;
+        border-left-color: #87bbf9!important;
+        border-right-color: #87bbf9!important;
+    }*/
+    .mis1 table, th, td {
+        padding: 3px;
+    }
+    .mis1 table.table-bordered{
+        border:1px solid yellow;
+    }
+    .mis1 table.table-bordered{
+        border:1px solid #000!important;
+    }
+    .mis1 table.table-bordered > thead > tr > th{
+        border:1px solid #000!important;
+    }
+    .mis1 table.table-bordered > tbody > tr > td{
+        border:1px solid #000!important;
+    }
+    #slogan{
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 2px;
+        margin-top: 45px;
+        word-wrap: break-word;
+        font-size: 13px;
+    }
+    #page{
+        margin-top: -55px;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-left: 5px;
+        width:50px;
+        height:50px;
+    }
+    @font-face {
+        font-family: NikoshBAN;
+        src: url('resources/fonts/NikoshBAN.ttf');
+    }
+    .v_field{
+        font-family: NikoshBAN;
+        font-size: 17px;
+    }
+    textarea {
+        resize: vertical;
+    }
+    @media print {
+        .box, .carTable{
+            border: 0!important;
+        }
+        #areaPanel, #back-to-top, .box-header, .main-footer, #viewStatus{
+            display: none !important;
+        }
+        .mis1   { display: block; page-break-before: always; }
+
+        .mis-form-1 .table-responsive {
+            border: 1px solid #fff!important;
+            border-top-color: #fff!important;
+            border-bottom-color: #fff!important;
+            border-left-color: #fff!important;
+            border-right-color: #fff!important;
+        }
+    }
+    .print{
+        float: right;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+</style>

@@ -1,0 +1,407 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="resources/css/newStyle.css" rel="stylesheet" type="text/css"/>
+<style>
+    #_yearly, #dateBlock{
+        display: none;
+    }
+    #printTable{
+        display: none;
+    }
+    #tableView{
+        display: none;
+    }
+    .box-body {
+        padding: 10px 10px 0px 10px!important;
+    }
+    #areaDropDownPanel [class*="col"] { margin-bottom: 10px; }
+    #radioDiv { margin-bottom: 0px!important; }
+    span.td {
+        border-top-color: #e0e0e0;
+    }
+    #rightAlign{
+        text-align: right!important;
+        vertical-align: middle;
+    }
+    #areaDropDownPanel .box {
+        margin-bottom: 0px!important;
+    }
+    #tableFooter {
+        background-color: #fff;
+        font-weight: bold;
+    }
+    .label-progress{
+        width: 100%;
+        padding: 0.4em .7em .4em;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: .25em;
+    }
+
+    .ui-widget-header {
+        background: #3C8DBC!important;
+    }   
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+        border-radius: 0px!important;
+    }
+    .mtz-monthpicker{
+        cursor: pointer!important;
+    }
+    .warp{
+        padding: 2px 4px; 
+        color: #fff;
+        border-radius: 7px;
+    }
+    .type-active{
+        background-color: #EC971F;
+    }
+    .type-inactive{
+        background-color: #dbdbdb; 
+        color: #6d6d6d;
+    }
+    .view-active{
+        background-color: #31B0D5; 
+
+    }
+    .view-inactive{
+        background-color: #dbdbdb; 
+        color: #6d6d6d;
+    }
+    .viewTitle{
+        margin-top: 0px!important;
+        margin-bottom: 16px!important;
+        text-align: center;
+    }
+    .viewTitle > .label-default {
+        background-color: #efefef;
+    }
+    .monthPickerChoose{
+        background-color: rgb(255, 255, 255)!important;
+    }
+    #area{
+        text-align: center;
+    }
+    /*    @page { size: auto;  margin: 0mm; }*/
+</style>
+<script>
+    $(function () {
+        var dateText = $(".date-div").html();
+        $('input[type=radio][name=viewType]').change(function () {
+            resetViewType();
+            if (this.value == 'atPoint') {
+                $(".date-div").html(dateText).removeClass("col-md-offset-2 col-xs-offset-4");
+                setViewType(this.value);
+            } else if (this.value == 'yearly') {
+                //$(".date-div").html("")
+                $(".date-div").html("").addClass("col-md-offset-2 col-xs-offset-4");
+                $('#startYear, #endYear').find('option').remove();
+                $('<option>').val("").text('- Select year -').appendTo('#startYear, #endYear');
+                for (i = new Date().getFullYear(); i > 2014; i--)
+                {
+                    $('#startYear, #endYear').append($('<option />').val(i).html(i));
+                }
+                setViewType(this.value);
+            }
+        });
+
+        $('input[type=radio][name=yearlyViewType]').change(function () {
+            $("#0,#2,#4").next("span").removeClass("type-active").addClass("type-inactive");
+
+            $("#" + this.value).next("span").removeClass("type-inactive").addClass("type-active");
+
+            console.log(this.value);
+            //resetViewType();
+
+//            if (this.value == 'atPoint') {
+//                setViewType(this.value);
+//            } else if (this.value == 'yearly') {
+//                $('#startYear, #endYear').find('option').remove();
+//                $('<option>').val("").text('- Select year -').appendTo('#startYear, #endYear');
+//                for (i = new Date().getFullYear(); i > 2014; i--)
+//                {
+//                    $('#startYear, #endYear').append($('<option />').val(i).html(i));
+//                }
+//                setViewType(this.value);
+//            }
+        });
+
+
+//        $('#provtypeWise').on('change', function () {
+//            $('label[for=provtypeWise]').toggleClass('checked');
+//            $("#providerwise").val() == "0" ? $("#providerwise").val(1) : $("#providerwise").val(0);
+//        });
+//        $('input[type=radio][name=level]').change(function () {
+//            resetViewType();
+//            if (this.value == 'household') {
+//                setViewType(this.value);
+//            } else if (this.value == 'population') {
+//                setViewType(this.value);
+//            }
+//        });
+        var $clickable = $('.clickable').on('click', function (e) {
+            var $target = $(e.currentTarget);
+            var index = $clickable.index($target)
+            $clickable.removeClass('selected-color');
+            $target.toggleClass('selected-color');
+            if (index == 0) {
+                $("#graphView").fadeOut(100);
+                $("#tableView").fadeIn(100);
+                $("table").fadeIn(100);
+            } else if (index == 1) {
+                $("#tableView").fadeOut(100);
+                $("#graphView").fadeIn(100);
+                $("table").fadeOut(100);
+            } else {
+            }
+        });
+        function resetViewType() {
+            $("#_atPoint, #_yearly").css("display", "none");
+            $("#atPoint, #yearly").next("span").removeClass("view-active").addClass("view-inactive");
+            $("#dateBlock").slideDown();
+        }
+        function setViewType(selector) {
+            $("#" + selector).next("span").removeClass("view-inactive").addClass("view-active");
+            $("#_" + selector).fadeIn();
+        }
+    })
+</script>
+<div class="row" id="areaPanel">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <input type="hidden" value="${userLevel}" id="userLevel">
+            <div class="box-body">
+                <form role="form" id="viewReports">
+                    <div class="row">
+                        <div class="col-md-1 col-xs-2">
+                            <label for="division">বিভাগ</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="division" id="division"> 
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <label for="district">জেলা</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="district" id="district"> 
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+                        <span id="break1"></span>
+                        <div class="col-md-1 col-xs-2">
+                            <label for="upazila">উপজেলা</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="upazila" id="upazila">
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 col-xs-2">
+                            <label for="union">ইউনিয়ন</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="union" id="union">
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row secondRow">
+                        <div class="col-md-1 col-xs-2">
+                            <label for="unit">ইউনিট</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="unit" id="unit">
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 col-xs-2">
+                            <label for="provCode" style="margin-left:-10px;">প্রোভাইডার</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <select class="form-control input-sm" name="provCode" id="provCode">
+                                <option value="">- সিলেক্ট করুন -</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row" id="viewTypeBlock">
+                        <div class="col-md-1 col-xs-12">
+                            <label for="viewType">ধরন</label>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <label><input type="radio" id="atPoint" name="viewType" value="atPoint"> <span class="view-inactive warp">তারিখ ভিত্তিক</span></label>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <label><input type="radio" id="yearly" name="viewType" value="yearly"> <span class="view-inactive warp">বছর ভিত্তিক</span></label>
+                        </div>
+                    </div>
+
+                    <div class="row" id="dateBlock">
+                        <div class="col-md-1 col-xs-2 date-div">
+                            <label for="one" id="">তারিখ</label>
+                        </div>
+                        <span id="_atPoint">
+                            <input type="hidden" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="startDate" id="startDate" />
+                            <div class="col-md-2 col-xs-3">
+                                <input type="text" class="input form-control input-sm datePickerChoose" placeholder="dd/mm/yyyy" name="endDate" id="endDate" />
+                            </div>
+                            <div class="col-md-1 col-xs-1">
+                                <label for="one" id="">পর্যন্ত</label>
+                            </div>
+                        </span>
+
+                        <span id="_yearly">
+                            <div class="col-md-2 col-xs-6">
+                                <label><input type="radio" id="0" name="yearlyViewType" value="0"> <span class="type-inactive warp">বর্তমান বছর</span></label>
+                            </div>
+                            <div class="col-md-2 col-xs-6">
+                                <label><input type="radio" id="2" name="yearlyViewType" value="2"> <span class="type-inactive warp">সর্বশেষ ৩ বছর</span></label>
+                            </div>
+                            <div class="col-md-2 col-xs-6">
+                                <label><input type="radio" id="4" name="yearlyViewType" value="4"> <span class="type-inactive warp">সর্বশেষ ৫ বছর</span></label>
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <span class="viewBtnBlock">
+                            <div class="col-md-1 col-xs-2 btn-label col-md-offset-4 col-xs-offset-2">
+                                <label for="one" id=""></label>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <button type="button" id="showData" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm bold" autocomplete="off">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp; রিপোর্ট দেখুন
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function getYearlyTotal(years, data) {
+        var parsedData = "";
+        $.each(years, function (index, value) {
+            var d = data.filter(function (obj) {
+                return obj.year == value;
+            });
+            var cal = new Calc(d);
+            parsedData += "<td>" + e2b(cal.sum.male_count) + "</td>\
+                                                    <td>" + e2b(cal.sum.female_count) + "</td>\
+                                                    <td>" + e2b(cal.sum.population - (cal.sum.male_count + cal.sum.female_count)) + "</td>\
+                                                    <td>" + e2b(cal.sum.population) + "</td>";
+        });
+        return parsedData;
+    }
+
+    function validateReport(data) {
+        var success = false;
+
+        if (data.division == "") {
+            toast("error", "বিভাগ সিলেক্ট করুন");
+
+        } else if (data.district == "") {
+            toast("error", "জেলা সিলেক্ট করুন");
+
+        } else if (data.upazila == "") {
+            toast("error", "উপজেলা সিলেক্ট করুন");
+
+        } else if (data.union == "") {
+            toast("error", "ইউনিয়ন সিলেক্ট করুন");
+
+        } else if (data.unit == "") {
+            toast("error", "ইউনিট সিলেক্ট করুন");
+
+        } else if (data.viewType == "" || data.viewType == undefined) {
+            toast("error", "ধরন সিলেক্ট করুন");
+
+        } else if (data.viewType == "atPoint" && data.endDate == "") {
+            toast("error", "তারিখ সিলেক্ট করুন");
+
+        } else if (data.viewType == "yearly" && data.yearlyViewType == undefined) {
+            toast("error", "বছর সিলেক্ট করুন");
+
+        } else {
+            success = true;
+        }
+        return success;
+    }
+
+    function getBlankFiltered(data) {
+        return data.filter(function (d) {
+            return d.male_count != 'null' && d.female_count != 'null' && d.population != 'null';
+        });
+    }
+
+    function getPayload(d) {
+        return {
+            zillaid: d.district,
+            upazilaid: d.upazila,
+            reporting_unionid: d.union,
+            unit: d.unit,
+            viewType: d.viewType,
+            startDate: $.app.date().date,
+            endDate: d.endDate,
+            startYear: $.app.date().year,
+            endYear: ($.app.date().year) - parseInt(d.yearlyViewType || 0)
+        };
+    }
+    function toast(type, message) {
+        toastr[type]("<h4><b>" + message + "</b></h4>");
+    }
+    function getDistinct(array, sub) {
+        return array.map(function (item) {
+            return item[sub];
+        }).filter(function (value, index, self) {
+            return self.indexOf(value) === index;
+        });
+    }
+
+    function nullCheck(value) {
+        if (value == "null" || value == null) {
+            return "-";
+        } else {
+            return value;
+        }
+    }
+
+    function nullZero(value) {
+        if (value == "null" || value == null) {
+            return 0;
+        } else {
+            return value;
+        }
+    }
+
+    function printCatchmentarea() {
+        var division = "বিভাগ: <b style='color:#3C8DBC'>" + $("#division option:selected").text() + "</b>";
+        var district = " জেলা: <b style='color:#3C8DBC'>" + $("#district option:selected").text() + "</b>";
+        var upazila = " উপজেলা: <b style='color:#3C8DBC'>" + $("#upazila option:selected").text() + "</b>";
+        var union = " ইউনিয়ন: <b style='color:#3C8DBC'>" + $("#union option:selected").text() + "</b>";
+        var unit = " ইউনিট: <b style='color:#3C8DBC'>" + $("#unit option:selected").text() + "</b>";
+        $("#area").html(division + ',&nbsp;&nbsp;' +
+                district + ',&nbsp;&nbsp;' +
+                upazila + '&nbsp;&nbsp;' +
+                union + '&nbsp;&nbsp;' +
+                unit);
+    }
+
+    $(document).ready(function () {
+        var _print = window.print;
+        window.print = function () {
+            document.title = ".";
+            printCatchmentarea();
+            _print();
+            document.title = "eMIS";
+            $("#area").text("");
+        }
+    });
+</script>

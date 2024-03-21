@@ -1,0 +1,88 @@
+    <center>
+        <h1>Release notes</h1>
+        <img src="http://emis.dgfp.gov.bd:8091/emis-monitoringtools/resources/release-notes/logo-emis/logo-emis-fwa.png" width=90 alt="">
+        <h3>Module: Family Welfare Assistant (FWA) eRegister</h3>
+        <h4>Version: 2.7 </h4>
+        <h4>Date: May 15, 2019</h4>
+    </center>
+    <h4>About the release:</h4>
+
+    <p>eMIS-FWA 2.7 is a new release (based on the version of 2.4) that contains list of issue fixes,&nbsp;
+        enhancements and some new features.</p>
+
+    <h4>Issues fixed: </h4>
+    <ol>
+        <li>PRS: Multiple units are displayed during Khana creation were shown earlier which has been resolved in
+            instead of existing PRS</li>
+        <li>PRS and ELCO: FWAs who have been assigned multiple wards/units could now see all wards/units at every level
+        </li>
+        <li>ELCO: age mismatch between member and ELCO list resolved (resolved in search results also).</li>
+        <li>ELCO: husband name made editable in the ELCO registration page.</li>
+        <li>Death module: ELCO number is not shown in death view list for male death.</li>
+        <li>Death module: Name of the husband is displayed for married women</li>
+        <li>0-15 month module: View-only page for EPI has been modified to entered EPI data</li>
+        <li>WorkPlan: added fields for: (i) participation in satellite clinic, (ii) EPI activities, (iii) Court-yard
+            meeting (Uthan Boithak), (iv) school meeting and (v) mobile movie display.</li>
+        <li>New Tab [Model: Lenovo TB-8504X] related issues (crash &amp; UI) resolved.</li>
+    </ol>
+    <h4>Enhancements:</h4>
+    <p><em>Lists of changes made on FWA 9<sup>th</sup> edition; compared to 8<sup>th</sup> edition</em></p>
+    <ol type="a">
+
+        <li>
+            <p><strong><em>Modification:</em></strong></p>
+            <ul>
+
+                <li>Texts modified to bring conformity with the new and 9<sup>th</sup> edition of FWA paper register</li>
+                <li>Logo</li>
+            </ul>
+        </li>
+
+        <li>
+            <p><strong><em>Addition:</em></strong></p>
+            <p>The following additions are incorporated in to the 9<sup>th</sup> edition such as,</p>
+            <ul>
+                <li> Last child&rsquo;s age in <strong>ELCO module</strong>;</li>
+                <li> Vaccines provided through EPI; prevention of <strong>violence</strong>,</li>
+                <li>Psychological problems, drug addiction prevention and healing in <strong>adolescent module</strong>;
+                </li>
+                <li>Yes/no options for Counseling on the postnatal family planning process, 7.1% Cholrohexedine
+                    &nbsp;and Loading dose of MgSO4, IFA doses in <strong>ANC service</strong></li>
+                <li>Yes/no options for the delivery conducted following AMTSL in <strong>delivery</strong>; </li>
+                <li>Yes/no options for skin-to-skin care for newborn; resuscitation using bag and mask <strong>newborn baby</strong>;</li>
+                <li>Counseling on the post-delivery family planning process in <strong>PNC services; </strong></li>                                                                                                    
+                <li>Migration-out within and outside the catchment area is available</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong><em>Deletion:</em></strong></p>
+            <ul>
+                <li> Khana no. &nbsp;and delayed bathing</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h4>New features (added into the 9<sup>th</sup> version of the FWA eRegister)</h4>
+    <ol>
+        <li>
+            <p><strong>Autism module</strong></p>
+            <ul>
+                <li>Registration: Select household &gt; go to member &gt; and then select Autism list</li>
+                <li>List View: touch Autism list in logged in page</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Stock and distribution module</strong></p>
+            <ul>
+                <li>To view current stock: touch current stock button in logged in page</li>
+                <li>To view stock distribution status: touch stock distribution button in logged page</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Ashrayan areas</strong></p>
+            <ul>
+                <li>Special area i.e Ashroyon project can be selected during household registration</li>
+                <li>Monthly report on Ashroyon area can be generated in report section</li>
+            </ul>
+        </li>
+    </ol>

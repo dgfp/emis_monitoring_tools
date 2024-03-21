@@ -1,0 +1,19 @@
+.callout.callout-success, .callout.callout-danger, .callout.callout-warning {
+    background-color: #fff !important;
+    border-radius: 35px!important;
+}
+.callout.callout-success {
+    border: 3px solid #00A65A!important;
+    color: #00A65A!important;
+    box-shadow: inset 0 0 6px #00A65A!important;
+}
+.callout.callout-danger {
+    border: 3px solid #DD4B39!important;
+    color: #DD4B39!important;
+    box-shadow: inset 0 0 6px #DD4B39!important;
+}
+.callout.callout-warning {
+    border: 3px solid #F39C12!important;
+    color: #F39C12!important;
+    box-shadow: inset 0 0 6px #F39C12!important;
+}

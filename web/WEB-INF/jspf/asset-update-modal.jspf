@@ -1,0 +1,128 @@
+<%@ page pageEncoding="UTF-8" %>
+<link href="resources/css/centerModal.css" rel="stylesheet" type="text/css"/>
+<style>
+    .modal-body thead tr th:first-child,
+    .modal-body tbody tr td:first-child {
+        width: 10em;
+        text-align: right;
+    }
+</style>
+<div id="assetUpdate" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close bold" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <h4 class="modal-title bold">Asset update</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="imei1">IMEI 1</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" placeholder="imei1" name="imei1" id="imei1">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="imei2">IMEI 2</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" placeholder="imei2" name="imei2" id="imei2">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="imei1">Purchased date</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input form-control input-sm datePickerChooseAll" placeholder="dd/mm/yyyy" name="purchaseddate" id="purchaseddate" autocomplete="off">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="">Warrenty period</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" placeholder="" name="" id="">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="imei1">Expired date</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input form-control input-sm datePickerChooseAll" placeholder="dd/mm/yyyy" name="purchaseddate" id="purchaseddate" autocomplete="off">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="model">Model</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="model" id='model'>
+                        </select>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="purchasedby">Purchased by</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="purchasedby" id='purchasedby'>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="purchaseorderno">Purchase order no</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" placeholder="" name="purchaseorderno" id="purchaseorderno">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="podocument">PO document</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" placeholder="" name="podocument" id="podocument">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="nsno">NSNO</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" name="nsno" id="nsno">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="telcoid">Telcom</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="telcoid" id='telcoid'>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="simnumber">SIM Number</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="" name="simnumber" id="simnumber" pattern="01\d{9}" required>
+                    </div>
+                </div>
+                <br/>
+            </div>
+            <div class="modal-footer">
+                    <button type="submit"  id="btnConfirmToEdit" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Updating" class="btn btn-flat btn-warning bold"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Update</button>
+                    <button type="button" class="btn btn-flat btn-default bold" data-dismiss="modal"><i class="fa fa-window-close-o" aria-hidden="true"></i>&nbsp;Cancel</button>
+                </div>
+        </div>
+    </div>
+</div>

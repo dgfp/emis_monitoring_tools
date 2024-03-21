@@ -1,0 +1,93 @@
+<div class="row" id="areaPanel">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+              <div class="box-tools pull-right" style="margin-top: -10px;">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool btn-remove" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <input type="hidden" value="${userLevel}" id="userLevel">
+          <div class="box-body">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="district">Division</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="division" id="division"> </select>
+                </div>
+                <div class="col-md-1">
+                    <label for="district">District</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="district" id="district"> 
+                        <option value="">- Select -</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1">
+                    <label for="upazila">Upazila</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="upazila" id="upazila">
+                        <option value="">- Select -</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1">
+                    <label for="union">Union</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="union" id="union">
+                        <option value="">- Select -</option>
+                    </select>
+                </div>
+                
+            </div>
+            <br>
+            <div class="row secondRow">
+                
+                <div class="col-md-1">
+                    <label for="unit">Unit</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="unit" id="unit">
+                        <option value="">- Select -</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-1">
+                    <label for="provCode">Provider</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="provCode" id="provCode">
+                        <option value="">- Select -</option>
+                    </select>
+                </div>
+
+                <div class="col-md-1">
+                    <label for="year">Year</label>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-control input-sm" name="year" id="year"> </select>
+                </div>
+                
+                
+                <div class="col-md-1">
+                    <label for="year"></label>
+                </div>
+                <div class="col-md-2">
+                   <button type="button" id="showdataButton" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Loading" class="btn btn-flat btn-primary btn-block btn-sm" autocomplete="off">
+                        <b><i class="fa fa-bar-chart" aria-hidden="true"></i> View Data</b>
+                    </button>
+                </div>
+
+            </div>
+                          
+                          
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,116 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%
+    String roleName = session.getAttribute("role").toString();
+    String newMenu = "none";
+    if(roleName.equals("Super admin")){
+        newMenu = "block";
+    }
+%>
+<style>
+    .highlight{
+        color:#f58812
+    }
+    .wrapword{
+        white-space: pre-wrap; /* css-3 */    
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */    
+        white-space: -o-pre-wrap; /* Opera 7 */    
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+        text-transform: capitalize;
+    }
+    .disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.6;
+    }
+    .sidebar-menu{
+        /*        background-color: #045889;*/
+    }
+    .navbar-static-top{
+        box-shadow: 0 1px 0px rgba(0,0,0,.3)
+    }
+
+    .sidebar-menu li>a>.pull-right-container {
+        right: 0px;
+    }
+    .new-submenu {
+        background-color: #008548;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: bold;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-size: 12px;
+        display: <%=newMenu%>;
+    }
+</style>
+<script>
+    $(function () {
+        if ($.app.supportTicketAceess.indexOf($.app.user.role) < 0) {
+            $(".supportTicket").hide();
+        }
+    });
+</script>
+<div action="#" method="get" class="sidebar-form">
+    <div class="input-group">
+        <input id="input-search-menu" type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</div>
+<ul class="sidebar-menu">
+    <%
+        if (session.getAttribute("username").equals("06067") //Haque
+                || session.getAttribute("username").equals("12457") // NIbras
+                || session.getAttribute("username").equals("12455") //Helal
+                || session.getAttribute("username").equals("269999") //Sir
+                || session.getAttribute("username").equals("07490") //Suman
+                || session.getAttribute("username").equals("01552") //Twaha
+                || session.getAttribute("username").equals("05314") //Oabyed
+                || session.getAttribute("username").equals("gabriela_maria") //Gavi
+                || session.getAttribute("username").equals("program_manager") //Nury
+                ) {
+    %>
+<!--    <li>
+        <a href="dgfp-dashboard"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span>
+            <span class="pull-right-container">
+                <small class="label pull-right bg-green">New</small>
+            </span>
+        </a>
+    </li>-->
+    <%
+        }
+    %>
+    <c:forEach var="category" items="${sessionScope.categories}">
+        <li class="treeview ${(menu == category.name) ?'active':'' } level-0">
+            <a href="#">
+                <i class="${category.icon}"> </i>
+                <span class="wrapword">${category.name}</span></span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+
+            <ul class="treeview-menu">
+                <c:forEach var="item" items="${category.items}">
+                    <li  ${(submenu == item.url) ? 'class="active"' : ''}><a ${(item.url == null) ? 'class="disabled"' : ''} href="${item.url}"><i class="fa fa-circle-o"></i> <span class="wrapword"> ${item.name} </span></a></li>
+                    </c:forEach>
+            </ul>
+        </li>
+    </c:forEach>
+    <li class="supportTicket">
+        <a href="http://mchdrhis.icddrb.org:8085/eticketing/public/" target="_blank"><i class="fa fa-ticket" aria-hidden="true"></i> <span>SUPPORT TICKET</span>
+        </a>
+    </li>
+</ul>
+<script type="text/javascript">
+    $(function () {
+        $("#input-search-menu").on("input", {
+            sidebar: '.sidebar-menu'
+        }, UTIL.inputText);
+    });
+</script>

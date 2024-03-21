@@ -1,0 +1,133 @@
+<%@ page pageEncoding="UTF-8" %>
+<link href="resources/css/centerModal.css" rel="stylesheet" type="text/css"/>
+<style>
+    .modal-body thead tr th:first-child,
+    .modal-body tbody tr td:first-child {
+        width: 10em;
+        text-align: right;
+    }
+</style>
+<div id="assetRedistribution" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close bold" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <h4 class="modal-title bold">Asset redistribution</h4>
+            </div>
+            <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="statusid">Accessories</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="checkbox" value="">&nbsp;Charger</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="checkbox" value="">&nbsp;Cover</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="checkbox" value="">&nbsp;Screen Protector</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label><input type="checkbox" value="">&nbsp;Water Proof Bag</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="statusid">Status</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="statusid" id='statusid'>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="locationid">Location</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="locationid" id='locationid'>
+                                <option value="">- select -</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row" id="userTypeForm">
+                        <div class="col-md-2">
+                            <label for="statusid">User type</label>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <label><input type="radio" class="provider" id="provider" name="userType" value="provider"> <span class="warp type-inactive">Provider</span></label>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <label><input type="radio" class="resourcePerson" id="resourcePerson" name="userType" value="resourcePerson"> <span class="type-inactive warp">Resource person</span></label>
+                        </div>
+                    </div>
+
+                <div id="distributeProviderForm">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="division">Division</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="division" id='division'>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="division">District</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="division" id='division'>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="upazila">Upazila</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="upazila" id='upazila'>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="union">Union</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="union" id='union'>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="providerid">Provider</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="providerid" id='providerid'>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="distributeResourcePersonForm2">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="providerid">Select person</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="providerid" id='providerid'>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                    <button type="submit"  id="btnConfirmToEdit" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Updating" class="btn btn-flat btn-success bold"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Redistribute</button>
+                    <button type="button" class="btn btn-flat btn-default bold" data-dismiss="modal"><i class="fa fa-window-close-o" aria-hidden="true"></i>&nbsp;Cancel</button>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1194 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="mis1-template-9">
+    <div class="col-ld-12 mis1">
+        <div class="col-md-12 mis-form-1"  style="padding: -100px;">
+            <div class="table-responsive" >
+                <table  style="text-align: left; width: 100%;border: 0!important;" id="topHeader">
+                    <tr>
+                        <th style="border:none!important;">
+                            <div id='slogan'>ছেলে হোক মেয়ে হোক<br/>দু’টি সন্তানই যথেষ্ট </div>
+                            <img id='logo' src="resources/logo/Fpi_logo.png"  alt="9th"/>
+                        </th>
+                        <th style="text-align:center;border:none!important;" colspan="2">
+                            <small>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার<br>পরিবার পরিকল্পনা অধিদপ্তর</small>
+                            <br>পরিবার পরিকল্পনা, মা ও শিশু স্বাস্থ্য কার্যক্রমের মাসিক অগ্রগতির প্রতিবেদন
+                            <br>মাসঃ <span id='monthValue'>...............................</span> সালঃ <span id="yearValue">...............................</span>
+                        </th>
+                        <th style="text-align:right;border:none!important;" id="page">এম আই এস ফরম - ১<br>পৃষ্ঠা-১</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center;border:none!important;"><br>
+                            ইউনিট নম্বরঃ<span id='unitValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            ওয়ার্ড নম্বরঃ<span id='wardValue'> ..........................</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+                            ইউনিয়নঃ<span id='unionValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            উপজেলা/থানাঃ<span id='upazilaValue'> ..........................</span>     &nbsp;&nbsp;&nbsp;&nbsp;
+                            জেলাঃ<span id='districtValue'> ..........................</span>   
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p> <strong> ক) পরিবার পরিকল্পনা পদ্ধতিঃ </strong> </p>
+            <div class="table-responsive" >
+                <table class="table-bordered mis_form1_ka_new" id="mis_form1_ka_new_9v" style="width: 100%;">
+                    <tr>
+                        <td colspan="2" rowspan="4"></td>
+                        <td colspan="22" class="center">পদ্ধতি গ্রহনকারী</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="2">খাবার বড়ি</td>
+                        <td rowspan="1" colspan="2" >কনডম</td>
+                        <td rowspan="1" colspan="2" >ইনজেকটেবল</td>
+                        <td rowspan="1" colspan="2" >আইইউডি</td>
+                        <td rowspan="1" colspan="2" >ইমপ্ল্যান্ট</td>
+                        <td colspan="4" class="center">স্থায়ী পদ্ধতি</td>
+                        <td rowspan="2" colspan="2" class="middle">মোট</td>
+                        <td rowspan="3" colspan="2"  class="middle_">সর্বমোট</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="p1"><span class="r-v">স্বাভাবিক</span></td>
+                        <td rowspan="2" class="p2"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td rowspan="2" class="p1"><span class="r-v">স্বাভাবিক</span></td>
+                        <td rowspan="2" class="p2"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td rowspan="2" class="p1"><span class="r-v">স্বাভাবিক</span></td>
+                        <td rowspan="2" class="p2"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td rowspan="2" class="p1"><span class="r-v">স্বাভাবিক</span></td>
+                        <td rowspan="2" class="p2"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td rowspan="2" class="p1"><span class="r-v">স্বাভাবিক</span></td>
+                        <td rowspan="2" class="p2"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td colspan="2">পুরুষ</td>
+                        <td colspan="2">মহিলা</td>
+                    </tr>
+                    <tr>
+                        <td class="p3"><span class="r-v">স্বাভাবিক</span></td>
+                        <td class="p4"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td class="p3"><span class="r-v">স্বাভাবিক</span></td>
+                        <td class="p4"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                        <td class="p3"><span class="r-v">স্বাভাবিক</span></td>
+                        <td class="p4"><span class="r-v">*প্রসব পরবর্তী </span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">পুরাতন </td>
+                        <td  id="r_old_pill_normal"></td>
+                        <td  id="r_old_pill_after_delivery"></td>
+                        <td  id="r_old_condom_normal"></td>
+                        <td  id="r_old_condom_after_delivery"></td>
+                        <td  id="r_old_inject_normal" ></td>
+                        <td  id="r_old_inject_after_delivery" ></td>
+                        <td  id="r_old_iud_normal" ></td>
+                        <td  id="r_old_iud_after_delivery" ></td>
+                        <td  id="r_old_implant_normal" ></td>
+                        <td  id="r_old_implant_after_delivery" ></td>
+                        <td  id="r_old_permanent_man_normal" ></td>
+                        <td  id="r_old_permanent_man_after_delivery" ></td>
+                        <td  id="r_old_permanent_woman_normal" ></td>
+                        <td  id="r_old_permanent_woman_after_delivery" ></td>
+                        <td  id="r_old_normal_total" ></td>
+                        <td  id="r_old_after_delivery_total" ></td>
+                        <td  id="r_old_all_total" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">নতুন</td>
+                        <td  id="r_new_pill_normal" ></td>
+                        <td  id="r_new_pill_after_delivery" ></td>
+                        <td  id="r_new_condom_normal" ></td>
+                        <td  id="r_new_condom_after_delivery" ></td>
+                        <td  id="r_new_inject_normal" ></td>
+                        <td  id="r_new_inject_after_delivery" ></td>
+                        <td  id="r_new_iud_normal" ></td>
+                        <td  id="r_new_iud_after_delivery" ></td>
+                        <td  id="r_new_implant_normal" ></td>
+                        <td  id="r_new_implant_after_delivery" ></td>
+                        <td  id="r_new_permanent_man_normal" ></td>
+                        <td  id="r_new_permanent_man_after_delivery" ></td>
+                        <td  id="r_new_permanent_woman_normal" ></td>
+                        <td  id="r_new_permanent_woman_after_delivery" ></td>
+                        <td  id="r_new_normal_total" ></td>
+                        <td  id="r_new_after_delivery_total" ></td>
+                        <td  id="r_new_all_total" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">চলতি মাসের মোট</td>
+                        <td  id="r_curr_month_pill_normal_total" ></td>
+                        <td  id="r_curr_month_pill_after_delivery_total" ></td>
+                        <td  id="r_curr_month_condom_normal_total" ></td>
+                        <td  id="r_curr_month_condom_after_delivery_total" ></td>
+                        <td  id="r_curr_month_inject_normal_total" ></td>
+                        <td  id="r_curr_month_inject_after_delivery_total" ></td>
+                        <td  id="r_curr_month_iud_normal_total" ></td>
+                        <td  id="r_curr_month_iud_after_delivery_total" ></td>
+                        <td  id="r_curr_month_implant_normal_total" ></td>
+                        <td  id="r_curr_month_implant_after_delivery_total" ></td>
+                        <td  id="r_curr_month_permanent_normal_man" ></td>
+                        <td  id="r_curr_month_permanent_after_delivery_man" ></td>
+                        <td  id="r_curr_month_permanent_normal_woman" ></td>
+                        <td  id="r_curr_month_permanent_after_delivery_woman" ></td>
+                        <td  id="r_curr_month_normal_total" ></td>
+                        <td  id="r_curr_month_after_delivery_total" ></td>
+                        <td  id="r_curr_month_all_total" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">পূর্ববর্তী মাসের মোট</td>
+                        <td  id="r_prev_month_pill_normal_total" ></td>
+                        <td  id="r_prev_month_pill_after_delivery_total" ></td>
+                        <td  id="r_prev_month_condom_normal_total" ></td>
+                        <td  id="r_prev_month_condom__after_delivery_total" ></td>
+                        <td  id="r_prev_month_inject_normal_total" ></td>
+                        <td  id="r_prev_month_inject_after_delivery_total" ></td>
+                        <td  id="r_prev_month_iud_normal_total" ></td>
+                        <td  id="r_prev_month_iud_after_delivery_total" ></td>
+                        <td  id="r_prev_month_implant_normal_total" ></td>
+                        <td  id="r_prev_month_implant_after_delivery_total" ></td>
+                        <td  id="r_prev_month_permanent_normal_man" ></td>
+                        <td  id="r_prev_month_permanent_after_delivery_man" ></td>
+                        <td  id="r_prev_month_permanent_normal_woman" ></td>
+                        <td  id="r_prev_month_permanent_after_delivery_woman" ></td>
+                        <td  id="r_prev_month_all_normal_total" ></td>
+                        <td  id="r_prev_month_all_after_delivery_total" ></td>
+                        <td  id="r_prev_month_all_total" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">ইউনিটের সর্বমোট</td>
+                        <td  id="r_unit_pill_tot_normal" ></td>
+                        <td  id="r_unit_pill_tot_after_delivery" ></td>
+                        <td  id="r_unit_condom_tot_normal" ></td>
+                        <td  id="r_unit_condom_tot_after_delivery" ></td>
+                        <td  id="r_unit_inject_tot_normal" ></td>
+                        <td  id="r_unit_inject_tot_after_delivery" ></td>
+                        <td  id="r_unit_iud_tot_normal" ></td>
+                        <td  id="r_unit_iud_tot_after_delivery" ></td>
+                        <td  id="r_unit_implant_tot_normal" ></td>
+                        <td  id="r_unit_implant_tot_after_delivery" ></td>
+                        <td  id="r_unit_permanent_man_tot_normal" ></td>
+                        <td  id="r_unit_permanent_man_tot_after_delivery" ></td>
+                        <td  id="r_unit_permanent_woman_tot_normal" ></td>
+                        <td  id="r_unit_permanent_woman_tot_after_delivery" ></td>
+                        <td  id="r_unit_all_normal_total" ></td>
+                        <td  id="r_unit_all_after_delivery_total" ></td>
+                        <td  id="r_unit_all_total_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="center"><span class="r-v">চলতি মাসে<br/>ছেড়ে দিয়েছে <br/>/পরিবর্তন<br/>হয়েছে</span></td>
+                        <td>কোন পদ্ধতি নেয়নি </td>
+                        <td  id="r_curr_month_left_no_method_pill_normal" ></td>
+                        <td  id="r_curr_month_left_no_method_pill_after_delivery" ></td>
+                        <td  id="r_curr_month_left_no_method_condom_normal" ></td>
+                        <td  id="r_curr_month_left_no_method_condom_after_delivery" ></td>
+                        <td  id="r_curr_month_left_no_method_inject_normal" ></td>
+                        <td  id="r_curr_month_left_no_method_inject_after_delivery"></td>
+                        <td  id="r_curr_month_left_no_method_iud_normal"></td>
+                        <td  id="r_curr_month_left_no_method_iud_after_delivery" ></td>
+                        <td  id="r_curr_month_left_no_method_implant_normal" ></td>
+                        <td  id="r_curr_month_left_no_method_implant_after_delivery" ></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="r_curr_month_left_no_method_normal_total" ></td>
+                        <td  id="r_curr_month_left_no_method_after_delivery_total" ></td>
+                        <td  id="r_curr_month_left_no_method_all_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td>অন্য পদ্ধতি নিয়েছে </td>
+                        <td  id="r_curr_m_left_pill_oth_method_normal" ></td>
+                        <td  id="r_curr_m_left_pill_oth_method_after_delivery" ></td>
+                        <td  id="r_curr_m_left_condom_oth_method_normal" ></td>
+                        <td  id="r_curr_m_left_condom_oth_method_after_delivery" ></td>
+                        <td  id="r_curr_m_left_inj_oth_method_normal" ></td>
+                        <td  id="r_curr_m_left_inj_oth_method_after_delivery" ></td>
+                        <td  id="r_curr_m_left_iud_oth_method_normal" ></td>
+                        <td  id="r_curr_m_left_iud_oth_method_after_delivery" ></td>
+                        <td  id="r_curr_m_left_implant_oth_method_normal" ></td>
+                        <td  id="r_curr_m_left_implant_oth_method_after_delivery" ></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="" class="disabled-color"></td>
+                        <td  id="r_curr_m_left_oth_method_normal_total" ></td>
+                        <td  id="r_curr_m_left_oth_method_after_delivery_total" ></td>
+                        <td  id="r_curr_m_left_oth_method_all_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td>প্রসব পরবর্তী মেয়াদ<br/>উত্তীর্ণ </td>
+                        <td  ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_pill_after_delivery" ></td>
+                        <td></td>
+                        <td  id="r_curr_m_left_ppfp_expired_condom_after_delivery" ></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_inject_after_delivery" ></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_iud_after_delivery" ></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_implan_after_delivery" ></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_perm_men_after_delivery" ></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_perm_women_after_delivery"></td>
+                        <td ></td>
+                        <td  id="r_curr_m_left_ppfp_expired_after_delivery_tot"></td>
+                        <td  id="r_curr_m_left_ppfp_expired_all_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">পদ্ধতির জন্য প্রেরণ</td>
+                        <td class="disabled-color"></td>
+                        <td class="disabled-color"></td>
+                        <td class="disabled-color"></td>
+                        <td class="disabled-color"></td>
+                        <td id="r_sent_method_inj_normal" ></td>
+                        <td id="r_sent_method_inj_after_delivery" ></td>
+                        <td id="r_sent_method_iud_normal" ></td>
+                        <td id="r_sent_method_iud_after_delivery" ></td>
+                        <td id="r_sent_method_implant_normal" ></td>
+                        <td id="r_sent_method_implant_after_delivery" ></td>
+                        <td id="r_sent_method_per_man_normal" ></td>
+                        <td id="r_sent_method_per_man_after_delivery" ></td>
+                        <td id="r_sent_method_per_woman_normal" ></td>
+                        <td id="r_sent_method_per_woman_after_delivery" ></td>
+                        <td id="r_sent_method_normal_total" ></td>
+                        <td id="r_sent_method_after_delivery_total" ></td>
+                        <td id="r_sent_method_all_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">পার্শ্ব প্রতিক্রিয়ার জন্য প্রেরণ /জটিলতার জন্য প্রেরণ</td>
+                        <td  id="r_sent_side_effect_pill_normal" ></td>
+                        <td  id="r_sent_side_effect_pill_after_delivery" ></td>
+                        <td  class="disabled-color"></td>
+                        <td  class="disabled-color"></td>
+                        <td  id="r_sent_side_effect_inj_normal" ></td>
+                        <td  id="r_sent_side_effect_inj_after_delivery" ></td>
+                        <td  id="r_sent_side_effect_iud_normal" ></td>
+                        <td  id="r_sent_side_effect_iud_after_delivery" ></td>
+                        <td  id="r_sent_side_effect_implant_normal" ></td>
+                        <td  id="r_sent_side_effect_implant_after_delivery" ></td>
+                        <td  id="r_sent_side_effect_per_man_normal" ></td>
+                        <td  id="r_sent_side_effect_per_man_after_delivery" ></td>
+                        <td  id="r_sent_side_effect_per_woman_normal" ></td>
+                        <td  id="r_sent_side_effect_per_woman_after_delivery" ></td>
+                        <td  id="r_sent_side_effect_normal_total" ></td>
+                        <td  id="r_sent_side_effect_after_delivery_total" ></td>
+                        <td  id="r_sent_side_effect_all_tot" ></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <table class="table-bordered table-car1" style="width: 100%">
+                    <colgroup>
+                        <col style="width: 301px">
+                        <col style="width: 101px">
+                        <col style="width: 301px">
+                        <col style="width: 101px">
+                    </colgroup>
+                    <tr>
+                        <td>চলতি মাসে পরিদর্শিত সক্ষম দম্পতির সংখ্যা</td>
+                        <td class="center" id="r_curr_m_shown_capable_elco_tot" ></td>
+                        <td>ইউনিটের মোট সক্ষম দম্পতির সংখ্যা</td>
+                        <td class="center" id="r_unit_capable_elco_tot" ></td>
+                    </tr>
+                    <tr>
+                        <td>পূর্ববর্তী মাসে পরিদর্শিত সক্ষম দম্পতির সংখ্যা</td>
+                        <td class="center" id="r_priv_m_shown_capable_elco_tot" ></td>
+                        <td>চলতি মাসে নবদম্পতির সংখ্যা</td>
+                        <td class="center" id="r_curr_m_v_new_elco_tot" ></td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <!--Car Table-->
+            <div class="table-responsive1">
+                <table class="table-car2" style="width: 100%;">
+                    <tr>
+                        <td rowspan="2" style="width: 200px;text-align: center;padding: 3px;">পদ্ধতি গ্রহনকারীর হার (CAR):</td>
+                        <td class="center" style="border-bottom: 1px solid black!important;">ইউনিটের সর্বমোট পদ্ধতি গ্রহণকারী</td>
+                        <td rowspan="2" style="text-align: left;width: 90px;">&nbsp;&#10006; ১০০= </td>
+                        <td style="width: 60px;text-align: center;padding: 4px;border-bottom: 1px solid black!important;" id="r_unit_all_total_tot"></td>
+                        <td rowspan="2" style="text-align: left;width: 90px;">&nbsp;&#10006; ১০০= </td>
+                        <td  rowspan="2" style="text-align: left;width: 100px;"><span id="r_car"></span>%</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;text-align: center;padding: 4px;">ইউনিটের সর্বমোট সক্ষম দম্পতি</th>
+                        <td  id="r_unit_capable_elco_tot" style="width: 80;text-align: center;padding: 4px;"></td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <p> <strong>খ) প্রজনন স্বাস্থ্য সেবাঃ </strong> </p>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="table-responsive">
+                        <table class="table-bordered mis_table table-kha1" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 40px">
+                                <col style="width: 40px">
+                                <col style="width: 140px">
+                                <col style="width: 40px">
+                                <col style="width: 40px">
+                            </colgroup>
+                            <tr class="center">
+                                <td colspan="3" class="left">সেবার ধরণ</td>
+                                <td >তথ্য</td>
+                                <td >সেবা<br></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" rowspan="3">চলতি মাসে গর্ভবতীর সংখ্যা<br></td>
+                                <td class="left">পুরাতন</td>
+                                <td  id="r_curr_month_preg_old_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">নতুন</td>
+                                <td  id="r_curr_month_preg_new_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">মোট</td>
+                                <td  id="r_curr_month_preg_tot_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="3" class="left">পূর্ববতী মাসে মোট গর্ভবতীর সংখ্যা<br></td>
+                                <td  id="r_prir_month_tot_preg_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="3" class="left">গর্ভপাত/মিসক্যারেজ এর  সংখ্যা</td>
+                                <td  id="r_abortion_or_miscarriage"></td>
+                                <td class="ka_table_inactive_field disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="3" class="left">ইউনিটের সর্বমোট গর্ভবতীর সংখ্যা<br></td>
+                                <td  id="r_unit_tot_preg_fwa"></td>
+                                <td class="ka_table_inactive_field disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="7"><span class="r-v">গর্ভকালীন  সেবা</span></td>
+                                <td colspan="2" class="left">পরিদর্শন-১</td>
+                                <td  id="r_preg_anc_service_visit1_fwa"></td>
+                                <td  id="r_preg_anc_service_visit1_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">পরিদর্শন-২</td>
+                                <td  id="r_preg_anc_service_visit2_fwa"></td>
+                                <td  id="r_preg_anc_service_visit2_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">পরিদর্শন-৩</td>
+                                <td  id="r_preg_anc_service_visit3_fwa"></td>
+                                <td  id="r_preg_anc_service_visit3_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">পরিদর্শন-৪</td>
+                                <td  id="r_preg_anc_service_visit4_fwa"></td>
+                                <td  id="r_preg_anc_service_visit4_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">প্রসব পরবর্তী পরিবার পরিকল্পনা পদ্ধতি বিষয়ে কাউন্সেলিং</td>
+                                <td  id="r_preg_anc_counselling_after_delivery_fwa"></td>
+                                <td  id="r_preg_anc_counselling_after_delivery_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">মিসোপ্রোস্টল বড়ি সরবরাহ প্রাপ্ত গর্ভবতী</td>
+                                <td  id="r_preg_anc_misoprostol_supplied_fwa"></td>
+                                <td  id="r_preg_anc_misoprostol_supplied_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">৭.১% ক্লোরোহেক্সিডিন সরবরাহ প্রাপ্ত গর্ভবতী</td>
+                                <td  id="r_preg_anc_chlorohexidin_supplied_fwa"></td>
+                                <td  id="r_preg_anc_chlorohexidin_supplied_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="7"><span class="r-v">প্রসব  সেবা</span></td>
+                                <td rowspan="2" class="left">বাড়ী</td>
+                                <td class="left"> প্রশিক্ষণ প্রাপ্ত ব্যাক্তি দ্বারা</td>
+                                <td  id="r_delivary_service_home_trained_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left"> প্রশিক্ষণ বিহীন ব্যক্তি দ্বারা</td>
+                                <td  id="r_delivary_service_home_untrained_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="2" class="left">হাসপাতাল/ক্লিনিক</td>
+                                <td class="left">স্বাভাবিক</td>
+                                <td  id="r_delivary_service_hospital_normal_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">সিজারিয়ান<br></td>
+                                <td  id="r_delivary_service_hospital_operation_fwa"></td>
+                                <td class="disabled-color"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">বাড়ীতে প্রসব করানো হয়েছে</td>
+                                <td class="disabled-color"></td>
+                                <td  id="r_delivary_service_delivery_done_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">প্রসবের তৃতীয় ধাপের সক্রিয় ব্যবস্থাপনা (AMTSL) অনুসরণ <br/>করে প্রসব করানো হয়েছে</td>
+                                <td class="disabled-color"></td>
+                                <td  id="r_delivary_service_3rd_amtsl_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">মিসোপ্রোস্টল বড়ি খাওয়ানো হয়েছে</td>
+                                <td id="r_delivary_service_misoprostol_taken"></td>
+                                <td id="r_delivary_service_misoprostol_taken_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="6"><span class="r-v">প্রসবোত্তর সেবা</span></td>
+                                <td rowspan="6"><span class="r-v" style="width: 10px!important;">মা</span></td>
+                                <td class="left">পরিদর্শন-১</td>
+                                <td  id="r_pnc_mother_visit1_fwa"></td>
+                                <td  id="r_pnc_mother_visit1_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-২</td>
+                                <td  id="r_pnc_mother_visit2_fwa"></td>
+                                <td  id="r_pnc_mother_visit2_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-৩</td>
+                                <td  id="r_pnc_mother_visit3_fwa"></td>
+                                <td  id="r_pnc_mother_visit3_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-৪</td>
+                                <td  id="r_pnc_mother_visit4_fwa"></td>
+                                <td  id="r_pnc_mother_visit4_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">বাড়ীতে ডেলিভারীর ক্ষেত্রে প্রশিক্ষণ প্রাপ্ত ব্যক্তি দ্বারা ২<br/> দিনের মধ্যে প্রসবোত্তর সেবা গ্রহণকারী</td>
+                                <td id="r_pnc_mother_home_delivery_training_fwa"></td>
+                                <td id="r_pnc_mother_home_delivery_training_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">প্রসব পরবর্তী পরিবার পরিকল্পনা পদ্ধতি বিষয়ে কাউন্সেলিং</td>
+                                <td id="r_pnc_mother_family_planning_counselling_fwa"></td>
+                                <td id="r_pnc_mother_family_planning_counselling_csba"></td>
+                            </tr>
+                        </table>
+                        <p>*প্রসব পরবর্তী > প্রসবের পর হতে ১ বছরের মধ্যে।</p>
+                    </div>
+                </div>
+
+                <!--MIS1 - KHA (2nd Part)-->
+                <div class="col-md-5">
+                    <div class="table-responsive">
+                        <table class="table-bordered mis_table table-kha2" style="width: 100%">
+                            <colgroup>
+                                <col style="width: 30px">
+                                <col style="width: 30px">
+                                <col style="width: 150px">
+                                <col style="width: 40px">
+                                <col style="width: 40px">
+                            </colgroup>
+                            <tr class="center">
+                                <td colspan="3" class="left">সেবার ধরণ<br></td>
+                                <td >তথ্য</td>
+                                <td >সেবা<br></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="9"><span class="r-v">প্রসবোত্তর সেবা</span></td>
+                                <td rowspan="9"><span class="r-v">নবজাতক</span></td>
+                                <td class="left">১ মিনিটের মধ্যে মোছানোর সংখ্যা</td>
+                                <td  id="r_newborn_1min_washed_fwa"></td>
+                                <td  id="r_newborn_1min_washed_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">নাড়ি কাটার পর ৭.১% <br/>ক্লোরোহেক্সিডিন ব্যবহারের সংখ্যা</td>
+                                <td id="r_newborn_71_chlorohexidin_used_fwa"></td>
+                                <td id="r_newborn_71_chlorohexidin_used_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">নাড়ি কাটার পর মায়ের ত্বকে-ত্বক <br/>স্পর্শ প্রাপ্ত নবজাতকের সংখ্যা</td>
+                                <td id="r_newborn_with_mother_skin_fwa"></td>
+                                <td id="r_newborn_with_mother_skin_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">জন্মের ১ ঘন্টার মধ্যে বুকের দুধ <br/>খাওয়ানোর সংখ্যা</td>
+                                <td id="r_newborn_1hr_bfeeded_fwa"></td>
+                                <td id="r_newborn_1hr_bfeeded_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">জন্মকালীন শ্বাসকষ্টে আক্রান্ত  শিশুকে <br/>ব্যাগ ও মাস্ক ব্যবহার করে <br/>রিসাসিটেইট করার সংখ্যা  </td>
+                                <td id="r_newborn_diff_breathing_resassite_fwa"></td>
+                                <td id="r_newborn_diff_breathing_resassite_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-১</td>
+                                <td  id="r_pnc_newborn_visit1_fwa"></td>
+                                <td  id="r_pnc_newborn_visit1_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-২</td>
+                                <td  id="r_pnc_newborn_visit2_fwa"></td>
+                                <td  id="r_pnc_newborn_visit2_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-৩</td>
+                                <td  id="r_pnc_newborn_visit3_fwa"></td>
+                                <td  id="r_pnc_newborn_visit3_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="left">পরিদর্শন-৪</td>
+                                <td  id="r_pnc_newborn_visit4_fwa"></td>
+                                <td  id="r_pnc_newborn_visit4_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="3" class=""><span class="r-v">রেফারকৃত</span></td>
+                                <td colspan="2" class="left">ঝুঁকিপূর্ণ/জটিল গর্ভবতীর সংখ্যা</td>
+                                <td id="r_ref_risky_preg_cnt_fwa"></td>
+                                <td id="r_ref_risky_preg_cnt_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">একলাম্পসিয়া রোগীকে লোডিং ডোজ <br/>MgSO4 ইনজেকশন দিয়ে রেফার সংখ্যা<br></td>
+                                <td id="r_ref_eclampsia_mgso4_inj_refer_fwa"></td>
+                                <td id="r_ref_eclampsia_mgso4_inj_refer_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">নবজাতককে জটিলতার জন্য রেফার সংখ্যা</td>
+                                <td id="r_ref_newborn_difficulty_fwa"></td>
+                                <td id="r_ref_newborn_difficulty_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td rowspan="9"><span class="r-v">কিশোর কিশোরীর সেবা (১০-১৯ বছর) কাউন্সেলিং</span></td>
+                                <td colspan="2" class="left">বয়ঃসন্ধিকালীন পরিবর্তন</td>
+                                <td id="r_teen_counseling_adolescent_change_fwa"></td>
+                                <td id="r_teen_counseling_adolescent_change_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">বাল্যবিবাহ ও কিশোরী মাতৃত্বের কুফল</td>
+                                <td id="r_teen_counseling_child_marriage_preg_effect_fwa"></td>
+                                <td id="r_teen_counseling_child_marriage_preg_effect_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">কিশোরীকে আয়রন ও ফলিক এসিড বড়ি</td>
+                                <td id="r_teen_counseling_iron_folic_fwa"></td>
+                                <td id="r_teen_counseling_iron_folic_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">প্রজননতন্ত্রের সংক্রমন ও যৌনবাহিত রোগ</td>
+                                <td id="r_teen_counseling_sexual_disease_fwa"></td>
+                                <td id="r_teen_counseling_sexual_disease_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">বিভিন্ন ধরণের পুষ্টিকর ও সুষম খাবার</td>
+                                <td id="r_teen_counseling_healthy_balanced_diet_fwa"></td>
+                                <td id="r_teen_counseling_healthy_balanced_diet_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">কৈশোর সহিংসতা প্রতিরোধ</td>
+                                <td id="r_teen_counseling_adolescence_violence_prevention_fwa"></td>
+                                <td id="r_teen_counseling_adolescence_violence_prevention_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">মানসিক সমস্যা এবং মাদকাসক্তি প্রতিরোধ <br/>ও নিরাময়</td>
+                                <td id="r_teen_counseling_mental_prob_drug_addict_prevention_fwa"></td>
+                                <td id="r_teen_counseling_mental_prob_drug_addict_prevention_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">কিশোর-কিশোরীর পরিষ্কার-পরিচ্ছন্নতা <br/>ও কিশোরীর স্যানিটারি প্যাড ব্যবহার </td>
+                                <td id="r_teen_counseling_cleanliness_sanitary_pad_fwa"></td>
+                                <td id="r_teen_counseling_cleanliness_sanitary_pad_csba"></td>
+                            </tr>
+                            <tr class="center">
+                                <td colspan="2" class="left">রেফার</td>
+                                <td id="r_teen_counseling_referred_fwa"></td>
+                                <td id="r_teen_counseling_referred_csba"></td>
+                            </tr>
+                        </table><br/>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------Page 2------------------------------------------------------------------------->
+    <div class="col-ld-12 mis1">
+        <div class="col-md-12 mis-form-1"><br/>
+            <p class="bold right">এম আই এস ফরম - ১<br>পৃষ্ঠা-২</p>
+            <div class="table-responsive">
+                <table class="table-bordered center table-kha3" style="width: 100%">
+                    <colgroup>
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                        <col style="width: 10px">
+                    </colgroup>
+                    <tr>
+                        <td colspan="8" class="bold left">খ) প্রজনন স্বাস্থ্য সেবাঃ</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">টি টি প্রাপ্ত মহিলার সংখ্যা (তথ্য)</td>
+                        <td rowspan="2">ইসিপি গ্রহণকারীার সংখ্যা (তথ্য)</td>
+                        <td colspan="2">বন্ধ্যা দম্পতির তথ্য</td>
+                    </tr>
+                    <tr>
+                        <td>১ম</td>
+                        <td>২য়</td>
+                        <td>৩য়</td>
+                        <td>৪র্থ</td>
+                        <td>৫ম</td>
+                        <td>পরামর্শ প্রাপ্ত</td>
+                        <td>রেফারকৃত</td>
+                    </tr>
+                    <tr>
+                        <td id="r_tt_women_1st_fwa"></td>
+                        <td id="r_tt_women_2nd_fwa"></td>
+                        <td id="r_tt_women_3rd_fwa"></td>
+                        <td id="r_tt_women_4th_fwa"></td>
+                        <td id="r_tt_women_5th_fwa"></td>
+                        <td id="r_ecp_taken"></td>
+                        <td id="r_infertile_consultstatus"></td>
+                        <td id="r_infertile_referstatus"></td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+
+
+            <div class="table-responsive">
+                <table class="table-bordered center" style="width: 100%;">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tr>
+                        <td class="left bold">গ) শিশু (০-৫ বছর) সেবাঃ</td>
+                        <td class="left bold">ঘ) জন্ম-মৃত্যুঃ</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="table-bordered mis_table table-ga" style="width: 100%;">
+                                <colgroup>
+                                    <col style="width: 40px">
+                                    <col style="width: 40px">
+                                    <col style="width: 140px">
+                                    <col style="width: 40px">
+                                    <col style="width: 40px">
+                                </colgroup>
+                                <tr>
+                                    <td colspan="3" class="left">সেবার ধরণ</td>
+                                    <td id="">তথ্য</td>
+                                    <td id="">সেবা<br></td>
+                                </tr>
+                                <tr >
+                                    <td rowspan="14"><span class="r-v">টিকা প্রাপ্ত (০- ১৫ মাস বয়সী) শিশুর সংখ্যা</span></td>
+                                    <td colspan="2" class="left">বিসিজি</td>
+                                    <td id="r_vaccinated_child_0to15mnths_bcg_fwa"></td>
+                                    <td class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">পেন্টাভ্যালেন্ট<br/>(ডিপিটি, হেপ-বি,<br/> হিব)</td>
+                                    <td class="left">১</td>
+                                    <td id="r_vaccinated_child_0to15mnths_pentavalent_1_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_pentavalent_2_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">৩</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_pentavalent_3_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" class="left">পিসিভি টিকা</td>
+                                    <td class="left">১</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_pcv1_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_pcv2_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">৩</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_pcv3_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" class="left">বিওপিভি</td>
+                                    <td class="left">১</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_bopv_1_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_bopv_2_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">৩</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_bopv_3_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="left">আইপিভি(ফ্রাকশনাল)</td>
+                                    <td class="left">১</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_ipv_1_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_ipv_2_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="left">এমআর টিকা</td>
+                                    <td class="left">১</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_mr_1_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২</td>
+                                    <td  id="r_vaccinated_child_0to15mnths_mr_2_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" colspan="2">রেফারকৃত শিশুর সংখ্যা</td>
+                                    <td class="left">খুব মারাত্মক রোগ</td>
+                                    <td id="r_referred_child_dangerous_disease_fwa"></td>
+                                    <td id="" class=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">নিউমোনিয়া</td>
+                                    <td id="r_referred_child_neumonia_fwa"></td>
+                                    <td id="" class=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">ডায়রিয়া</td>
+                                    <td id="r_referred_child_diahoea_fwa"></td>
+                                    <td id="" class=""></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table-bordered mis_table table-gha" style="width: 100%">
+                                <colgroup>
+                                    <col style="width: 40px">
+                                    <col style="width: 40px">
+                                    <col style="width: 140px">
+                                    <col style="width: 40px">
+                                    <col style="width: 40px">
+                                </colgroup>
+                                <tr>
+                                    <td colspan="3" class="left">সেবার ধরণ</td>
+                                    <td >তথ্য</td>
+                                    <td >সেবা<br></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left">মোট জীবিত জন্মের সংখ্যা</td>
+                                    <td id="r_tot_live_birth_fwa"></td>
+                                    <td id="r_tot_live_birth_csba"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left">কম জন্ম ওজনে (জন্ম ওজন ২৫০০ গ্রামের কম) <br/>জন্মগ্রহণকারী নবজাতক এর সংখ্যা</td>
+                                    <td id="r_less_weight_birth_less_then_2500g_fwa"></td>
+                                    <td class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left">কম জন্ম ওজনে (জন্ম ওজন ২০০০ গ্রামের কম) <br/>জন্মগ্রহণকারী নবজাতক এর সংখ্যা</td>
+                                    <td id="r_less_weight_birth_less_then_2000g_fwa"></td>
+                                    <td class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left">অপরিণত (৩৭ সপ্তাহের পূর্বে জন্ম) নবজাতক<br/>এর সংখ্যা</td>
+                                    <td id="r_immature_birth_fwa"></td>
+                                    <td id="r_immature_birth_csba"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left">মৃত জন্ম (Still Birth)</td>
+                                    <td id="r_still_birth_fwa"></td>
+                                    <td id="r_still_birth_csba"></td>
+                                </tr>
+                                <tr >
+                                    <td rowspan="8"><span class="r-v">মৃতের সংখ্যা</span></td>
+                                    <td class="left"  rowspan="4"><span class="r-v">এক বছরের কম <br/>মৃত শিশুর সংখ্যা</span></td>
+                                    <td class="left">০-৭ দিন</td>
+                                    <td id="r_death_number_less_1yr_0to7days_fwa"></td>
+                                    <td class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">৮-২৮ দিন</td>
+                                    <td  id="r_death_number_less_1yr_8to28days_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">২৯ দিন-<১ বছর</td>
+                                    <td  id="r_death_number_less_1yr_29dystoless1yr_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">মোট</td>
+                                    <td  id="r_death_number_less_1yr_tot_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left" colspan="2">১-<৫ বছর মৃত শিশুর সংখ্যা</td>
+                                    <td  id="r_death_number_1yrto5yr_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left" colspan="2">মাতৃ মৃত্যুর সংখ্যা</td>
+                                    <td  id="r_death_number_maternal_death_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left" colspan="2">অন্যান্য মৃতের সংখ্যা</td>
+                                    <td  id="r_death_number_other_death_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left" colspan="2">সর্বমোট মৃতের সংখ্যা</td>
+                                    <td  id="r_death_number_all_death_fwa"></td>
+                                    <td  class="disabled-color"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+
+
+            <div class="table-responsive">
+                <table class="table-bordered center" style="width: 100%">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tr>
+                        <td class="left bold" colspan="2">ঙ) পুষ্টি সেবাঃ</td>
+                    </tr>
+                    <tr>
+                        <td class="bold left">গর্ভবতী ও ০-২৩ মাস বয়সী শিশুর মা</td>
+                        <td class="bold left">০-৫৯ মাস বয়সী শিশু</td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <table class="table-bordered center table-uma1" style="width: 100%">
+                                <tr>
+                                    <td class="left">সেবার ধরণ</td>
+                                    <td >গর্ভবতী মা</td>
+                                    <td > শিশুর মা <br>০-২৩ মাস</td>
+                                </tr>
+                                <tr> 
+                                    <td class="left">আয়রন ফলিক এসিড বড়ি এবং বাড়তি খাবারের <br/>উপর কাউন্সেলিং</td>
+                                    <td  id="r_iron_folicacid_extrafood_counsiling_preg_woman"></td>
+                                    <td  id="r_iron_folicacid_extrafood_counsiling_child_0to23months"></td>
+                                </tr>
+                                <tr> 
+                                    <td class="left">আয়রন ফলিক এসিড বড়ি বিতরণ করা হয়েছে</td>
+                                    <td  id="r_iron_folicacid_distribute_preg_woman"></td>
+                                    <td  id="r_iron_folicacid_distribute_child_0to23months"></td>
+                                </tr>
+                                <tr> 
+                                    <td class="left">মায়ের দুধ ও পরিপূরক খাবারের উপর <br/>কাউন্সেলিং</td>
+                                    <td  id="r_bfeeding_complementary_food_counsiling_preg_woman" ></td>
+                                    <td  id="r_bfeeding_complementary_food_counsiling_child_0to23months"></td>
+                                </tr>
+                                <tr> 
+                                    <td class="left">শিশুকে মাল্টিপল মাইক্রোনিউট্রিয়েন্ট পাউডার (এমএনপি) <br/>খাওয়ানো বিষয়ে কাউন্সেলিং</td>
+                                    <td class="disabled-color"></td>
+                                    <td  id="r_mnp_ounsiling_child_0to23months" ></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+
+                            <table class="table-bordered mis_table table-uma2" style="width: 100%">
+                                <tr >
+                                    <td class="left">সেবার ধরণ<br></td>
+                                    <td>০-৫ মাস</td>
+                                    <td>৬-২৩ মাস</td>
+                                    <td>২৪-৫৯ <br/>মাস</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">৬ মাস পর্যন্ত শুধু মাত্র বুকের দুধ খাওয়ানো <br/>হয়েছে/হচ্ছে</td>
+                                    <td  id="r_birth_only_bfeed_0to6mon"></td>
+                                    <td class="disabled-color"></td>
+                                    <td class="disabled-color"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">জন্মের ৬ মাস পর হতে পরিপূরক খাবার <br/>খাওয়ানো হয়েছে/হচ্ছে</td>
+                                    <td class="disabled-color"></td>
+                                    <td  id="r_0_59_child_complementary_food_6to23mon"></td>
+                                    <td  id="r_0_59_child_complementary_food_24to59mon"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">মাল্টিপল মাইক্রোনিউট্রিয়েন্ট পাউডার <br/>(এমএনপি) পেয়েছে</td>
+                                    <td class="disabled-color"></td>
+                                    <td  id="r_mnp_given_6to23mon"></td>
+                                    <td  id="r_mnp_given_24toless60mon"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">MAM আক্রান্ত শিশুর সংখ্যা</td>
+                                    <td  id="r_mam_child_0to6mon"></td>
+                                    <td  id="r_mam_child_6to23mon"></td>
+                                    <td  id="r_mam_child_24to60mon"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">SAM আক্রান্ত রেফারকৃত শিশুর সংখ্যা</td>
+                                    <td  id="r_sam_child_0to6mon"></td>
+                                    <td  id="r_sam_child_6to23mon"></td>
+                                    <td  id="r_sam_child_24toless60mon"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <table class="table-uma3" style="width: 100%;padding: 10px!important;">
+                    <colgroup>
+                        <col style="width: 301px">
+                        <col style="width: 101px">
+                        <col style="width: 301px">
+                        <col style="width: 101px">
+                    </colgroup>
+                    <tr>
+                        <td>স্যাটেলাইট ক্লিনিকে উপস্থিতির সংখ্যা</td>
+                        <td class="center" id="r_satelite_clinic_presence" style="border: 1px solid #000;"></td>
+                        <td> &nbsp;&nbsp;ইপিআই সেশনে উপস্থিতির সংখ্যা</td>
+                        <td class="center" id="r_epi_session_presence" style="border: 1px solid #000;"></td>
+                    </tr>
+                    <tr>
+                        <td>কমিউনিটি ক্লিনিকে উপস্থিতির সংখ্যা</td>
+                        <td class="center" id="r_community_clinic_presence" style="border: 1px solid #000;"></td>
+                        <td> &nbsp;&nbsp;অনুষ্ঠিত উঠান বৈঠকে উপস্থিতির সংখ্যা</td>
+                        <td class="center" id="r_yard_meeting_presence" style="border: 1px solid #000;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br><h5 style="font-weight:bold;text-align: center">মাসিক মওজুদ ও বিতরণের হিসাব বিষয়কঃ</h5>
+                </div>
+                <div class="col-md-12">
+                    <div class="table-responsive e2b">
+                        <table class="table-bordered mis_table" style="table-layout: fixed; width: 100%;">
+                            <colgroup>
+                                <col style="width: 93px">
+                                <col style="width: 120px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 91px">
+                                <col style="width: 100px">
+                                <col style="width: 91px">
+                                <col style="width: 93px">
+                            </colgroup>
+                            <tr class="center">
+                                <td class="tg-glis" style="text-align: left;">ইস্যু ভাউচার নং</td>
+                                <td class="tg-031e"></td>
+                                <td class="tg-s6z2" colspan="2">খাবার বড়ি <br/> (চক্র)</td>
+                                <td class="tg-s6z2" rowspan="2" >কনডম<br>(নিরাপদ)<br>(পিস)<br></td>
+                                <td class="tg-s6z2" colspan="2" >ইনজেকটেবল</td>
+                                <td class="tg-s6z2" rowspan="2" >ইসিপি<br>(ডোজ)<br></td>
+                                <td class="tg-s6z2" rowspan="2" >মিসো-<br>প্রোস্টল<br>(ডোজ)<br></td>
+                                <td class="tg-s6z2" rowspan="2" >৭.১% ক্লোরোহেক্সিডিন  (বোতল)</td>
+                                <td class="tg-s6z2" rowspan="2" >এমএনপি<br>(স্যাসেট)<br></td>
+                                <td class="tg-s6z2" rowspan="2" >আয়রন<br>ফলিক<br>এসিড<br>(সংখ্যা)<br></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-glis" style="text-align: left;">তারিখ</td>
+                                <td class="tg-031e"></td>
+                                <td class="tg-s6z2 center">সুখী<br></td>
+                                <td class="tg-s6z2 center">আপন<br></td>
+                                <td class="tg-s6z2 center" >ভায়াল</td>
+                                <td class="tg-s6z2 center" >সিরিঞ্জ</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">পূর্বের মওজুদ<br></td>
+                                <td class="tg-031e " id="openingbalance_sukhi"></td>
+                                <td class="tg-031e " id="openingbalance_apon"></td>
+                                <td class="tg-031e " id="openingbalance_condom"></td>
+                                <td class="tg-031e " id="openingbalance_inject_vayal"></td>
+                                <td class="tg-031e " id="openingbalance_inject_syringe"></td>
+                                <td class="tg-031e " id="openingbalance_ecp"></td>
+                                <td class="tg-031e" id="openingbalance_misoprostol"></td>
+                                <td class="tg-031e" id="openingbalance_chlorhexidine"></td>
+                                <td class="tg-031e" id="openingbalance_mnp"></td>
+                                <td class="tg-031e" id="openingbalance_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে পাওয়া গেছে (+)<br></td>
+                                <td class="tg-031e " id="receiveqty_sukhi"></td>
+                                <td class="tg-031e " id="receiveqty_apon"></td>
+                                <td class="tg-031e " id="receiveqty_condom"></td>
+                                <td class="tg-031e " id="receiveqty_inject_vayal"></td>
+                                <td class="tg-031e " id="receiveqty_inject_syringe"></td>
+                                <td class="tg-031e " id="receiveqty_ecp"></td>
+                                <td class="tg-031e" id="receiveqty_misoprostol"></td>
+                                <td class="tg-031e" id="receiveqty_chlorhexidine"></td>
+                                <td class="tg-031e" id="receiveqty_mnp"></td>
+                                <td class="tg-031e" id="receiveqty_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসের মোট মওজুদ<br></td>
+                                <td class="tg-031e " id="current_month_stock_sukhi"></td>
+                                <td class="tg-031e " id="current_month_stock_apon"></td>
+                                <td class="tg-031e " id="current_month_stock_condom"></td>
+                                <td class="tg-031e " id="current_month_stock_inject_vayal"></td>
+                                <td class="tg-031e " id="current_month_stock_inject_syringe"></td>
+                                <td class="tg-031e " id="current_month_stock_ecp"></td>
+                                <td class="tg-031e" id="current_month_stock_misoprostol"></td>
+                                <td class="tg-031e" id="current_month_stock_chlorhexidine"></td>
+                                <td class="tg-031e" id="current_month_stock_mnp"></td>
+                                <td class="tg-031e" id="current_month_stock_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" rowspan="2" style="text-align: left;">সমন্বয়</td>
+                                <td class="tg-031e " style="text-align: left;">(+)</td>
+                                <td class="tg-031e " id="adjustment_plus_sukhi"></td>
+                                <td class="tg-031e " id="adjustment_plus_apon"></td>
+                                <td class="tg-031e " id="adjustment_plus_condom"></td>
+                                <td class="tg-031e " id="adjustment_plus_inject_vayal"></td>
+                                <td class="tg-031e " id="adjustment_plus_inject_syringe"></td>
+                                <td class="tg-031e " id="adjustment_plus_ecp"></td>
+                                <td class="tg-031e" id="adjustment_plus_misoprostol"></td>
+                                <td class="tg-031e" id="adjustment_plus_chlorhexidine"></td>
+                                <td class="tg-031e" id="adjustment_plus_mnp"></td>
+                                <td class="tg-031e" id="adjustment_plus_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" style="text-align: left;">(-)</td>
+                                <td class="tg-031e " id="adjustment_minus_sukhi"></td>
+                                <td class="tg-031e " id="adjustment_minus_apon"></td>
+                                <td class="tg-031e " id="adjustment_minus_condom"></td>
+                                <td class="tg-031e " id="adjustment_minus_inject_vayal"></td>
+                                <td class="tg-031e " id="adjustment_minus_inject_syringe"></td>
+                                <td class="tg-031e " id="adjustment_minus_ecp"></td>
+                                <td class="tg-031e" id="adjustment_minus_misoprostol"></td>
+                                <td class="tg-031e" id="adjustment_minus_chlorhexidine"></td>
+                                <td class="tg-031e" id="adjustment_minus_mnp"></td>
+                                <td class="tg-031e" id="adjustment_minus_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">সর্বমোট</td>
+                                <td class="tg-031e " id="total_sukhi"></td>
+                                <td class="tg-031e " id="total_apon"></td>
+                                <td class="tg-031e " id="total_condom"></td>
+                                <td class="tg-031e " id="total_inject_vayal"></td>
+                                <td class="tg-031e " id="total_inject_syringe"></td>
+                                <td class="tg-031e " id="total_ecp"></td>
+                                <td class="tg-031e" id="total_misoprostol"></td>
+                                <td class="tg-031e" id="total_chlorhexidine"></td>
+                                <td class="tg-031e" id="total_mnp"></td>
+                                <td class="tg-031e" id="total_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে বিতরণ করা হয়েছে(-)</td>
+                                <td class="tg-031e " id="distribution_sukhi"></td>
+                                <td class="tg-031e " id="distribution_apon"></td>
+                                <td class="tg-031e " id="distribution_condom"></td>
+                                <td class="tg-031e " id="distribution_inject_vayal"></td>
+                                <td class="tg-031e " id="distribution_inject_syringe"></td>
+                                <td class="tg-031e " id="distribution_ecp"></td>
+                                <td class="tg-031e" id="distribution_misoprostol"></td>
+                                <td class="tg-031e" id="distribution_chlorhexidine"></td>
+                                <td class="tg-031e" id="distribution_mnp"></td>
+                                <td class="tg-031e" id="distribution_iron"></td>
+                            </tr>
+                            <tr  class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">অবশিষ্ট<br></td>
+                                <td class="tg-031e " id="closingbalance_sukhi"></td>
+                                <td class="tg-031e " id="closingbalance_apon"></td>
+                                <td class="tg-031e " id="closingbalance_condom"></td>
+                                <td class="tg-031e " id="closingbalance_inject_vayal"></td>
+                                <td class="tg-031e " id="closingbalance_inject_syringe"></td>
+                                <td class="tg-031e " id="closingbalance_ecp"></td>
+                                <td class="tg-031e" id="closingbalance_misoprostol"></td>
+                                <td class="tg-031e" id="closingbalance_chlorhexidine"></td>
+                                <td class="tg-031e" id="closingbalance_mnp"></td>
+                                <td class="tg-031e" id="closingbalance_iron"></td>
+                            </tr>
+                            <tr class="center">
+                                <td class="tg-031e" colspan="2" style="text-align: left;">চলতি মাসে কখনও মওজুদ শূন্যতা হয়ে থাকলে কারণ (কোড) লিখুন <br></td>
+                                <td class="tg-031e " id="stockvacuum_sukhi"></td>
+                                <td class="tg-031e " id="stockvacuum_apon"></td>
+                                <td class="tg-031e " id="stockvacuum_condom"></td>
+                                <td class="tg-031e " id="stockvacuum_inject_vayal"></td>
+                                <td class="tg-031e " id="stockvacuum_inject_syringe"></td>
+                                <td class="tg-031e " id="stockvacuum_ecp"></td>
+                                <td class="tg-031e" id="stockvacuum_misoprostol"></td>
+                                <td class="tg-031e" id="stockvacuum_chlorhexidine"></td>
+                                <td class="tg-031e" id="stockvacuum_mnp"></td>
+                                <td class="tg-031e" id="stockvacuum_iron"></td>
+                            </tr>
+                        </table>
+                    </div> <!--End Table Responsive-->
+                    
+                    <div class="row" style="font-size: 13px; margin-top:-10px;">
+                        <div class="col-md-2">
+                            <p>
+                                <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom: 0px;">
+                                        মওজুদ শূন্যতার কোডঃ
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <p style="margin-left: 0px">
+                                <div class="row">
+                                    <div class="col-xs-6" style="margin-bottom: 0px;">
+                                        <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">ক</span>&nbsp;সরবরাহ পাওয়া যায়নি &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="col-xs-6" style="margin-bottom: 0px;">
+                                        <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;margin-left: 15px;">খ</span>&nbsp;অপর্যাপ্ত সরবরাহ
+                                    </div>
+                                </div>
+<!--                                <span style="border: 1px solid black;padding-left: 15px;padding-right: 5px;">ক</span>&nbsp;সরবরাহ পাওয়া যায়নি &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="border: 1px solid black;padding-left: 15px;padding-right: 5px;margin-left: 15px;">খ</span>&nbsp;অপর্যাপ্ত সরবরাহ-->
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            
+                            <p>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">গ</span>&nbsp;হঠাৎ চাহিদা বৃদ্ধি পাওয়া &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="col-xs-6" style="padding-left: 30px;">
+                                        <span style="border: 1px solid black;padding-left: 5px;padding-right: 5px;">ঘ</span>&nbsp;অন্যান্য
+                                    </div>
+                                </div>
+                            
+<!--                                <span style="border: 1px solid black;padding-left: 15px;padding-right: 5px;">গ</span>&nbsp;হঠাৎ চাহিদা বৃদ্ধি পাওয়া &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="border: 1px solid black;padding-left: 15px;padding-right: 5px;">ঘ</span>&nbsp;অন্যান্য-->
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="row" style="font-size: 13px;">
+                        <div class="col-md-6">
+                            পরিবার  কল্যাণ সহকারীর নামঃ<span id='providerName'>........................................</span>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            স্বাক্ষরঃ<span id=''>........................................</span>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            তারিখঃ<span id='submissionDate'>........................................</span>
+                        </div>
+                    </div>
+                </div>
+                <br/> 
+            </div>
+        </div>
+    </div>
+</div>

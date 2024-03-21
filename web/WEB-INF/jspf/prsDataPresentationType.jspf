@@ -1,0 +1,44 @@
+<style>
+    .clickable { cursor:pointer; }
+</style>
+<div class="row" id="presentationType">
+    <div style="text-align: center;">
+        
+<!--    <div class="col-lg-4 col-xs-12">
+        <div class="info-box bg-white clickable" style="background-color: #FFFFFF;" id="mapViewByBtnClick">
+            <span class="info-box-icon bg-gray" id="mapImgBackground"><img id="mapImg" src="resources/icon/map.jpg" alt=""/></span>
+
+            <div class="info-box-content clickable">
+                <span class="info-box-text"><h4></h4></span><br>
+                <span class="info-box-number">Map View</span>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="col-lg-6 col-xs-12 no-margin">
+        <div class="info-box bg-white clickable" style="background-color: #00ACD6;" id="graphViewByBtnClick">
+            <span class="info-box-icon bg-aqua" id="graphImgBackground"><img id="graphImg" src="resources/icon/graph.png" alt=""/></span>
+
+            <div class="info-box-content clickable">
+                                <span class="info-box-text"><h4></h4></span><br>
+                <span class="info-box-number">Chart View</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 no-margin">
+        <div class="info-box bg-white clickable" style="background-color: #FFFFFF;" id="tableViewByBtnClick">
+            <span class="info-box-icon bg-gray" id="tableImgBackground"><img id="tableImg" src="resources/icon/table.jpg" alt=""/></span>
+
+            <div class="info-box-content clickable">
+                                <span class="info-box-text"><h4></h4></span><br>
+                <span class="info-box-number">Table View</span>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</div>
+<!--Transparent Text For Blank Space-->
+<section class="content-header" id="transparentTextForBlank" style="display: block;">
+    <center class="emis_hologram">eMIS</center>
+</section>

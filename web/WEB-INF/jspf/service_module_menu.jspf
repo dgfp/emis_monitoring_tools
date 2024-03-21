@@ -1,0 +1,40 @@
+
+<%@ page pageEncoding="UTF-8" %>
+
+<ul class="nav" id="side-menu">
+
+    <li>
+        <a href="mis-1">MIS - 1</a>
+    </li>
+
+    <li>
+        <a href="#">MIS - 5</a>
+    </li>
+
+    <li>
+        <a href="epi">  দৈনিক টিকা রিপোর্ট (শিশু) </a>
+    </li>
+
+    <li>
+        <a href="elco_details">List of Eligible Couple</a>
+    </li>
+
+    <li>
+        <a href="eddlist">EDD List</a>
+    </li>
+
+    <li>
+        <a href="elco_summary">ELCO By Provider</a>
+    </li>
+
+    <li>
+        <a href="#">Pregnant Summery</a>
+    </li>
+
+
+
+    <li>
+        <a href="ha_report">স্বাস্থ্য সেবা কার্যক্রমের মাসিক অগ্রগতির রিপোর্ট </a>
+    </li>
+
+</ul>

@@ -1,0 +1,23 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="modal-report-submit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header label-info">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <h4 class="modal-title"><b><i class="fa fa-question-circle" aria-hidden="true"></i><span> আপনি কি নিশ্চিত ?</span></b></h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="note">মন্তব্য</label>
+                    <textarea class="form-control" rows="4" id="note"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="button"  id="btnConfirmToSubmit" data-loading-text=" <i class='fa fa-spinner fa-pulse'></i> Submitting" class="btn btn-flat btn-info"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; Submit</b></button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-flat btn-default" data-dismiss="modal"><b><i class="fa fa-window-close"></i>&nbsp; Close</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

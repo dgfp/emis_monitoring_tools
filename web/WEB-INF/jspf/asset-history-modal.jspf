@@ -1,0 +1,94 @@
+<%@ page pageEncoding="UTF-8" %>
+<link href="resources/css/centerModal.css" rel="stylesheet" type="text/css"/>
+<style>
+    .modal-body thead tr th:first-child,
+    .modal-body tbody tr td:first-child {
+        width: 10em;
+        text-align: right;
+    }
+</style>
+<style>
+    .timeline {
+        margin: 0 0 30px -18px;
+    }
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+    ul.timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+    ul.timeline > li {
+        margin: 35px 0;
+        padding-left: 50px;
+    }
+    ul.timeline > li > a{
+        pointer-events: none;
+        left: -1px;
+    }
+    ul.timeline > li:before {
+        content: ' ';
+        background: white;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #22c0e8;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        z-index: 400;
+    }
+    .modal-header .close {
+        margin-top: 2px;
+    }
+    ul.timeline > li > p {
+        margin: 0 0 0px;
+    }
+</style>
+<div id="assetHistory" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close bold" data-dismiss="modal">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-flat btn-default btn-xs bold pull-right" onclick="printContent('historyPrintableArea', 'Asset History', 'asset_history_print')"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print - PDF</button>
+                <h4 class="modal-title bold">Asset history</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container mt-5 mb-5">
+                    <div class="row" id="historyPrintableArea">
+                        <div class="col-md-6 offset-md-3">
+                            <p class="tab-history">IMEI: - Model: -</p>
+                            <ul class="timeline">
+                                <li>
+                                    <a href="#"><span class="bold">Received on:</span> 1 October, 2016</a>&nbsp;<br/>
+                                    <a href="#"><span class="bold">Received by:</span> Begum Parvin Shahnewas Jabin</a>
+                                    <p><span class="bold">Status:</span> Functional &nbsp;-&nbsp; <span class="bold">Location:</span> User &nbsp;-&nbsp; <span class="bold">Duration:</span> 1 years 19 days</p>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="bold">Received on:</span> 1 August, 2015</a>&nbsp;<br/>
+                                    <a href="#"><span class="bold">Received by:</span> Daisy Sarwar</a>
+                                    <p><span class="bold">Status:</span> Functional &nbsp;-&nbsp; <span class="bold">Location:</span> User &nbsp;-&nbsp; <span class="bold">Duration:</span> 1 years 2 months</p>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="bold">Received on:</span> 01 March, 2015</a>&nbsp;<br/>
+                                    <a href="#"></a>
+                                    <p><span class="bold">Status:</span> Functional &nbsp;-&nbsp; <span class="bold">Location:</span> Central store &nbsp;-&nbsp; <span class="bold">Duration:</span> 6 months</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default bold" data-dismiss="modal"><i class="fa fa-window-close-o" aria-hidden="true"></i>&nbsp;Close</button>
+            </div>
+        </div>
+    </div>
+</div>

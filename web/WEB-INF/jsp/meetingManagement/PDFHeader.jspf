@@ -1,0 +1,54 @@
+
+<%@ page pageEncoding="UTF-8" %>
+<thead>
+    <tr>
+        <th style="text-align:center;" colspan="2">
+            <h5 class="bold">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</h5>
+            <h5 class="bold">পরিবার পরিকল্পনা অধিদপ্তর</h5>
+        </th>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <!--বিজ্ঞপ্তি নংঃ<span class='notice-no' style="margin-right: 50%;"> ${noticeMaster.meeting_type}</span> তারিখঃ <span class='meeting-circulate-date'> ${noticeMaster.meeting_circulate_date}</span>-->   
+        </td>
+    </tr>
+    
+    <tr style="text-align: center">
+        <td colspan="4">
+            জেলাঃ <span id='zilla' style="margin-right: 17%;"> ${catchment.zillaname}</span> 
+            উপজেলাঃ <span id='upazila' style="margin-right: 17%;"> ${catchment.upazilaname}</span> 
+            ইউনিয়নঃ <span id='union'> ${catchment.unionname}</span>   
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <br/><h5 class="bold center" style="margin-bottom: 3%;">ইউনিয়ন পর্যায়ে পাক্ষিক সভার বিজ্ঞপ্তি </h5>
+        </th>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <br/>সভার তারিখঃ <span class="meeting-date" style="margin-right: 11%;"> ${noticeMaster.meeting_date}</span><br />
+            সময়ঃ <span class='meeting-time'> ${noticeMaster.meeting_time}</span> টা
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center">
+            <br/>সভার স্থান: ${mi.meeting_place}<span id='upazila'> ${catchment.unionname} ইউনিয়ন</span>
+        </td>
+    </tr>
+    <!--    <tr>
+            <th colspan="2">
+                <br/><h5 class="bold">সভার আলোচ্য বিষয়সমূহ</h5>
+            </th>
+        </tr>-->
+</thead>
+<script>
+    function printContent() {
+        $('.meeting-time').text($('.meeting-time').text().replace('am', ''))
+        var divContents = document.getElementById("printContent").innerHTML;
+        var oldPage = document.body.innerHTML;
+        document.body.innerHTML = "<html><head><title></title><style>body{font-family: SolaimanLipi; font-size: 18px;} h5{font-family: SolaimanLipi; font-size: 20px;}</style></head><body>" + divContents + "</body>";
+        window.print();
+        document.body.innerHTML = oldPage;
+    }
+</script>

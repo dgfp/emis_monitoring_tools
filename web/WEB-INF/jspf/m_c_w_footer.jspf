@@ -1,0 +1,44 @@
+</div>
+<!-- /#wrapper -->
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="resources/metisMenu/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="resources/js/sb-admin-2.js"></script>
+
+
+<!-- Bootstrap DatePicker Javascripts -->
+<script src="resources/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="resources/datepicker/locales/bootstrap-datepicker.en-GB.min.js"></script>
+
+<script>
+    //Date picker related JQuery
+    $('#datepicker-container .input-daterange').datepicker({
+        todayBtn: "linked",
+        clearBtn: true,
+        autoclose: true,
+        format: 'yyyy-mm-dd',
+        startDate : new Date('2014-12-25')
+    });
+
+
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
+
+    //$(".datepicker").datepicker("setDate", "25/12/2014");
+    //$(".datepicker").datepicker("setDate", $(".pprsSD").val());
+    //$("select#district").val()
+    $(".datepicker").datepicker("setDate", new Date());
+   
+
+</script>
+
+</body>
+</html>
+

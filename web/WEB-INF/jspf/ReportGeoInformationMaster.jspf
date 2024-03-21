@@ -1,0 +1,109 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--<c:set var="pageurl"  />--%>
+<%@include file="/WEB-INF/jspf/templateHeader.jspf" %>
+<!--<script src="resources/js/reporting_status.js"></script>-->
+<%
+    String active = request.getParameter("action");
+%>
+<style>
+
+    .stepwizard-step p {
+        margin-top: 10px;
+    }
+
+    .stepwizard-row {
+        display: table-row;
+    }
+
+    .stepwizard {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+
+    .stepwizard-step button[disabled] {
+        opacity: 1 !important;
+        filter: alpha(opacity=100) !important;
+    }
+
+    .stepwizard-row:before {
+        top: 14px;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        z-order: 0;
+
+    }
+
+    .stepwizard-step {
+        display: table-cell;
+        text-align: center;
+        position: relative;
+    }
+
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+    }
+    .customradio {
+        font-weight: normal;
+        display: inline;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default radio button */
+    .customradio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .setup-content h3 {
+        margin-top: 0px!important;
+    }
+
+</style>
+
+<section class="content-header">
+    <h1 style="margin-bottom: 25px;">Reporting geo information</h1>
+    <div class="stepwizard">
+        <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+                <a href="report-geo-info?action=ReportingUpazila" type="button" 
+                   class="btn btn-circle <%=active.equals("ReportingUpazila") ? "btn-primary" : "btn-default"%>">
+                    1
+                </a>
+                <p class="bold">Reporting Upazila (UFPO)</p>
+            </div>
+            <div class="stepwizard-step">
+                <a href="report-geo-info?action=ReportingUnion" type="button" 
+                   class="btn btn-circle  <%=active.equals("ReportingUnion") ? "btn-primary" : "btn-default"%>">
+                    2
+                </a>
+                <p class="bold">Reporting Union (FPI)</p>
+            </div>
+            <div class="stepwizard-step">
+                <a href="report-geo-info?action=ReportingUnit" type="button" 
+                   class="btn btn-circle  <%=active.equals("ReportingUnit") ? "btn-primary" : "btn-default"%>">
+                    3
+                </a>
+                <p class="bold">Reporting Unit (FWA)</p>
+            </div>
+        </div>
+    </div>
+</section>

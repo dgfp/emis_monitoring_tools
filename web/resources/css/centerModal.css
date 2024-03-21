@@ -1,0 +1,20 @@
+/* 
+    Created on : Mar 5, 2019, 3:01:38 PM
+    Author     : Helal
+*/
+.modal {
+    text-align: center;
+}
+@media screen and (min-device-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}

@@ -1,0 +1,101 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="modal-report-view" class="modal fade" role="dialog">
+    <div class="modal-dialog report-view">
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+                <button type="button" class="btn btn-flat btn-default btn-xs bold print" id="printTableBtn"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print / PDF</button>
+                <h4 class="modal-title"><b><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; <span id="reportViewTitle">Loading ...</span></b><span id="provider-info"></span></h4>
+            </div>
+            <div class="modal-body" id="report">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #slogan{
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 2px;
+        margin-top: 45px;
+        word-wrap: break-word;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-left: 5px;
+        width:50px;
+        height:50px;
+    }
+    #name{
+        font-size: 11px;
+    }
+    .serial-color{
+        background-color: #e8ebf2;
+    }
+    .not-submitted{
+        background-color: #ffeded;
+    }
+    .mis_table th, .mis_table td{ 
+        border: 1px solid #000;
+        padding: 5px;
+    }
+
+    .tableTitle{
+        font-family: SolaimanLipi;
+        display: none;
+    }
+    .mis2 table{
+        font-family: SolaimanLipi;
+        font-size: 13px;
+    }
+    .mis2 table th, .mis2 table td{
+        padding: 3px!important;
+        padding-left: 5px!important;
+        text-align: center;
+    }
+    .print{
+        float: right;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+</style>
+<script>
+    $(function () {
+        $('#printTableBtn').click(function () {
+            $('.mis2').each(function () {
+                $(this).css({
+                    "page-break-after": "always"
+                });
+            });
+            // window.print();
+            var contents = $("#printContent").html();
+            var frame1 = $('<iframe />');
+            frame1[0].name = "frame1";
+            frame1.css({"position": "absolute", "top": "-1000000px"});
+            $("body").append(frame1);
+            var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+            frameDoc.document.open();
+            frameDoc.document.write('<html><head><title>eMIS Initiative</title>');
+            frameDoc.document.write('</head><body>');
+            frameDoc.document.write('<style>.r-v {white-space: nowrap;writing-mode: vertical-rl;transform: rotate(180deg);vertical-align: bottom!important;}   #logo{margin-top: 10px;margin-left: 5px;width:65px;height:65px;}</style>');
+            frameDoc.document.write('<style>table, th{font-weight:normal} , td{} .tg  {border-collapse:collapse;border-spacing:0;} #topheader{border: none; margin-bottom:10px;}</style>');
+            frameDoc.document.write('<style>.tg td{font-family: SolaimanLipi;font-size:12px;padding:7px 9px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}</style>');
+            frameDoc.document.write('<style>.tf td{font-family: SolaimanLipi;font-size:12px;padding:0px!important;padding-right: 26px!important;border-width:0px;overflow:hidden;}</style>');
+            frameDoc.document.write('<style>table, th, td{border:1px solid black; border-collapse: collapse;text-align: center;vertical-align: bottom!important} .head{ font-weight:normal!important;text-align:center}</style>');
+            frameDoc.document.write('<style>#slogan{text-align:center;border: 1px solid #000!important;width: 180px;text-align: center;padding: 2px;}</style>');
+            frameDoc.document.write('<style>.lmis-title{ text-align:center!important;} .lmis-title-table{margin: auto!important;width: 60%!important;padding: 20px!important;} .car-table{float: right!important;}</style>');
+            frameDoc.document.write(contents);
+            frameDoc.document.write('</body></html>');
+            frameDoc.document.close();
+            setTimeout(function () {
+                window.frames["frame1"].focus();
+                window.frames["frame1"].print();
+                frame1.remove();
+            }, 500);
+        });
+    })
+</script>

@@ -1,0 +1,156 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="resources/logo/rhis-logo.png">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>RHIS</title>
+        <!-- Bootstrap Core CSS -->
+
+        <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="resources/metisMenu/metisMenu.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="resources/css/sb-admin-2.css" rel="stylesheet">
+        <link href="resources/css/custom.css" rel="stylesheet">
+        <!-- Bootstrap DatePicker CSS -->
+        <link href="resources/datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- jQuery -->
+        <script src="resources/jquery/jquery.min.js"></script>
+        <!-- Bootstrap DatePicker Javascripts -->
+        <script src="resources/datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="resources/datepicker/locales/bootstrap-datepicker.en-GB.min.js"></script>
+        <script src="resources/js/d3.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+    </head>
+
+    <body>
+        <script>
+            $(document).ready(function () {
+                $(function () {
+                    if (window.location.pathname === "/rhis/home" || window.location.pathname === "/rhis/") {
+                        $('#side-menu').hide();
+                    }
+                });
+
+                $("#changePwdForm").submit(function (e) {
+                    e.preventDefault();
+                    var postData = $(this).serializeArray();
+                    var formURL = $(this).attr("action");
+                    var formMethod = $(this).attr("method");
+
+                    $.ajax(
+                            {
+                                url: formURL,
+                                type: formMethod,
+                                data: postData,
+                                success: function (result) {
+                                    if (result === "1") {
+                                        $('#changePwdForm')[0].reset();
+                                        alert("Password Changed Successfully");
+                                    }
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) {
+                                    alert("Errow while changing password");
+                                }
+                            });
+                    e.preventDefault();	//STOP default action
+                });
+            });
+        </script>
+
+
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home"> <img src="resources/logo/rhis-logo.png" width="80" height="36" alt="RHIS Logo"/>
+                    </a>
+                </div>
+
+                <!-- /.navbar-header -->
+
+                <ul class="nav navbar-top-links navbar-right">
+
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> <strong> ${sessionScope.username} </strong>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#" data-toggle="modal" data-target="#modalChangePwd"><i class="fa fa-gear fa-fw"></i> Change Password</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+
+                <!-- /.navbar-top-links -->
+
+                <div id="sidebar"  class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+
+                        <%@include file="/WEB-INF/jspf/menu.jspf" %>
+
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+
+            <!-- Change Password Modal -->
+            <div class="modal fade" id="modalChangePwd" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" id="changePwdForm" action="home" class="form-horizontal" role="form">
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-5 col-sm-offset-2">
+                                        <input type="password" class="form-control" name="newpwd" placeholder="Enter new password" required>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-5 col-sm-offset-2">          
+                                        <input type="password" class="form-control" name="checknewpwd" placeholder="Retype your password" required>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-offset-2 col-sm-2">
+                                        <button type="submit" class="btn btn-primary btn-sm" >Change</button>
+                                    </div>
+                                    <div class="col-sm-offset-1">
+                                        <button type="reset" class="btn btn-primary btn-sm" >Clear</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
