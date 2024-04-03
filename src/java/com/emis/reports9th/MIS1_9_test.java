@@ -254,15 +254,20 @@ public class MIS1_9_test extends HttpServlet {
 
                 String query = "INSERT INTO rpt_mis_form1_lmis_9v_dgfp (%s) VALUES (%s) ON CONFLICT(%s) DO UPDATE SET (%s)=row(%s);";
                 query = String.format(query, _keys, _vals, pKeys, _keys, String.join(",", excludedKeys));
-//                System.out.println("SQL LMIS: " + report_submission);
-//                System.out.println("SQL report_submission: " + report_submission);
-//                System.out.println("SQL report_review: " + report_review);
+                //System.out.println("SQL LMIS: " + query);
+                //System.out.println("SQL report_submission: " + report_submission);
+                //System.out.println("SQL report_review: " + report_review);
 
                 DBManagerDistrict db = new DBManagerDistrict(Integer.parseInt(districtId));
                 db.start();
                 int resultReportSubmission = db.update(report_submission);
                 int resultReportReview = db.update(report_review);
                 int resultLmis = db.update(query);
+                
+                System.out.println("resultReportSubmission: " + resultReportSubmission);
+                System.out.println("resultReportReview: " + resultReportReview);
+                System.out.println("resultLmis: " + resultLmis);
+
                 System.out.println("SQL LMIS: " + "--" + resultReportSubmission + "--"
                         + resultReportReview + "--" + resultLmis);
                 if (resultReportSubmission == 1 && resultReportReview == 1 && resultLmis == 1) {
